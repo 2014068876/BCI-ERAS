@@ -1,16 +1,18 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "4710540F5608C5EC3667EDC3F537F0FEA65E5301",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "72EAF10B9D11A8699FFC6022F13D4CC7A46DDFC8",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "4710540F5608C5EC3667EDC3F537F0FEA65E5301" : 0,
-    "AFDED0BF0F7E8E1BF210B65D4D9AD1201BFB1312" : 0
+    "AFDED0BF0F7E8E1BF210B65D4D9AD1201BFB1312" : 0,
+    "72EAF10B9D11A8699FFC6022F13D4CC7A46DDFC8" : 9223372036854775807,
+    "4710540F5608C5EC3667EDC3F537F0FEA65E5301" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A26CBEEB-6F5A-49FD-8716-26C6A2CDE07B",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "4710540F5608C5EC3667EDC3F537F0FEA65E5301" : "iComPAsS\/",
-    "AFDED0BF0F7E8E1BF210B65D4D9AD1201BFB1312" : "..\/XCode%20-%20Workspace\/iComPAsS"
+    "AFDED0BF0F7E8E1BF210B65D4D9AD1201BFB1312" : "..\/XCode%20-%20Workspace\/iComPAsS",
+    "72EAF10B9D11A8699FFC6022F13D4CC7A46DDFC8" : "bcidevelopers-bci-ios-7fe634fc8933\/",
+    "4710540F5608C5EC3667EDC3F537F0FEA65E5301" : "iComPAsS\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "iComPAsS",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -20,6 +22,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/bcidevelopers\/bci-ios.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4710540F5608C5EC3667EDC3F537F0FEA65E5301"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/2014068876\/BCI-ERAS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "72EAF10B9D11A8699FFC6022F13D4CC7A46DDFC8"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/ultimatesuperduperse\/icompass2.git",

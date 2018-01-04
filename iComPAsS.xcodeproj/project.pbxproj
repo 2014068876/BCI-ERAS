@@ -697,7 +697,7 @@
 					C4BF11701DA27671003AD11A = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = FYH3VNU48M;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -1065,19 +1065,19 @@
 				CODE_SIGN_ENTITLEMENTS = iComPAsS/iComPAsS.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Teresa Sy Ortin (3769ANSV72)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = FYH3VNU48M;
+				DEVELOPMENT_TEAM = "";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = iComPAsS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.usthbci.icompass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5dd94179-13cd-4139-81ad-2550fd2d6f72";
-				PROVISIONING_PROFILE_SPECIFIER = "iComPAsS Development Profile";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "iComPAsS/iComPAsS-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 2.3;
@@ -1093,20 +1093,20 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = iComPAsS/iComPAsS.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Teresa Sy Ortin (3769ANSV72)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = FYH3VNU48M;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = iComPAsS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.usthbci.icompass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5173d2fa-0b91-42b3-ba5e-66ae6ce1cfe5";
-				PROVISIONING_PROFILE_SPECIFIER = "iComPAsS Distribution Profile";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "iComPAsS/iComPAsS-Bridging-Header.h";
 				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = 1;
