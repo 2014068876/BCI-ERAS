@@ -1,0 +1,18 @@
+PODS:
+  - OneSignal (2.1.3)
+  - SwiftSpinner (0.9.5)
+  - XCDYouTubeKit (2.3.3)
+
+DEPENDENCIES:
+  - OneSignal
+  - SwiftSpinner
+  - XCDYouTubeKit (~> 2.3.2)
+
+SPEC CHECKSUMS:
+  OneSignal: f3f8ec733d22c9d2bdc3a19a435d7af72cab3e8e
+  SwiftSpinner: c6585a0ae5c67eb33e737695cce88f0262008cce
+  XCDYouTubeKit: 3d7a146c19e0364eac42559672a81bb273e32227
+
+PODFILE CHECKSUM: 6b4bf5461eb0610244d1aecbc9a33bfb4504d79c
+
+COCOAPODS: 1.0.1

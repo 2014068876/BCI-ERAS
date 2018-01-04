@@ -1,0 +1,1186 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C409E30B1DCCCBF800E976A1 /* ListPatientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C409E30A1DCCCBF800E976A1 /* ListPatientTableViewCell.swift */; };
+		C41A25C01DD25B3900DB41A9 /* PatientDoctorProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41A25BF1DD25B3900DB41A9 /* PatientDoctorProfileViewController.swift */; };
+		C42A6D3D1E479AC5003E00FB /* Pods_iComPAsS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C42A6D3C1E479AC5003E00FB /* Pods_iComPAsS.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		C430B85B1DC98A1300627C56 /* DoctorProfileDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C430B85A1DC98A1300627C56 /* DoctorProfileDescriptionViewController.swift */; };
+		C43248761E718F5000F1CD73 /* PatientTakePainDetectElevenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43248751E718F5000F1CD73 /* PatientTakePainDetectElevenViewController.swift */; };
+		C432487A1E719A6700F1CD73 /* DoctorPatientPainDetectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43248791E719A6700F1CD73 /* DoctorPatientPainDetectTableViewController.swift */; };
+		C432487C1E719D8000F1CD73 /* DoctorPatientDatePainDectectResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C432487B1E719D8000F1CD73 /* DoctorPatientDatePainDectectResultsViewController.swift */; };
+		C43440F31DCCC10E006D7B03 /* ListDoctorsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43440F21DCCC10E006D7B03 /* ListDoctorsTableViewCell.swift */; };
+		C43DEE561DEFBEAE002C5AB4 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43DEE551DEFBEAE002C5AB4 /* MessageViewController.swift */; };
+		C44808551E38713500A4F38C /* PatientTakeESASThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44808541E38713500A4F38C /* PatientTakeESASThreeViewController.swift */; };
+		C44808691E38795200A4F38C /* BEMAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C44808641E38795200A4F38C /* BEMAnimationManager.m */; };
+		C448086A1E38795200A4F38C /* BEMCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = C44808661E38795200A4F38C /* BEMCheckBox.m */; };
+		C448086B1E38795200A4F38C /* BEMPathManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C44808681E38795200A4F38C /* BEMPathManager.m */; };
+		C448086D1E38843600A4F38C /* PatientTakeESASFiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448086C1E38843600A4F38C /* PatientTakeESASFiveViewController.swift */; };
+		C448086F1E38AFF300A4F38C /* DoctorPatientProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448086E1E38AFF300A4F38C /* DoctorPatientProfileViewController.swift */; };
+		C44808711E38B2F700A4F38C /* DoctorPatientProfileInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44808701E38B2F700A4F38C /* DoctorPatientProfileInformationViewController.swift */; };
+		C44808731E38B31A00A4F38C /* DoctorPatientPrescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44808721E38B31A00A4F38C /* DoctorPatientPrescriptionViewController.swift */; };
+		C44808751E38B38600A4F38C /* DoctorPatientESASResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44808741E38B38600A4F38C /* DoctorPatientESASResultsViewController.swift */; };
+		C44808771E39AC7700A4F38C /* PatientAskESASViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44808761E39AC7700A4F38C /* PatientAskESASViewController.swift */; };
+		C448087D1E39C69A00A4F38C /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C448087C1E39C69A00A4F38C /* DLRadioButton.m */; };
+		C44B07931DBB1C3E00ECAD61 /* PatientDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44B07921DBB1C3E00ECAD61 /* PatientDescriptionViewController.swift */; };
+		C45D5A441DD71DE300812664 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45D5A431DD71DE300812664 /* Message.swift */; };
+		C46B46991DBB56170070CC6E /* PatientDescriptionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46B46981DBB56170070CC6E /* PatientDescriptionTableViewController.swift */; };
+		C473EE7B1DA2805300109E03 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C473EE7A1DA2805300109E03 /* MediaPlayer.framework */; };
+		C473EE841DA2816400109E03 /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = C473EE7F1DA2816400109E03 /* IQNSArray+Sort.swift */; };
+		C473EE851DA2816400109E03 /* IQUITextFieldView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C473EE801DA2816400109E03 /* IQUITextFieldView+Additions.swift */; };
+		C473EE861DA2816400109E03 /* IQUIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C473EE811DA2816400109E03 /* IQUIView+Hierarchy.swift */; };
+		C473EE871DA2816400109E03 /* IQUIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C473EE821DA2816400109E03 /* IQUIViewController+Additions.swift */; };
+		C473EE881DA2816400109E03 /* IQUIWindow+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C473EE831DA2816400109E03 /* IQUIWindow+Hierarchy.swift */; };
+		C473EE8C1DA2817F00109E03 /* IQKeyboardManagerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C473EE8A1DA2817F00109E03 /* IQKeyboardManagerConstants.swift */; };
+		C473EE8D1DA2817F00109E03 /* IQKeyboardManagerConstantsInternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = C473EE8B1DA2817F00109E03 /* IQKeyboardManagerConstantsInternal.swift */; };
+		C473EE911DA281A000109E03 /* IQKeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C473EE8F1DA281A000109E03 /* IQKeyboardManager.swift */; };
+		C473EE921DA281A000109E03 /* IQKeyboardReturnKeyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C473EE901DA281A000109E03 /* IQKeyboardReturnKeyHandler.swift */; };
+		C473EE941DA281B200109E03 /* IQTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C473EE931DA281B200109E03 /* IQTextView.swift */; };
+		C473EE9B1DA281C900109E03 /* IQBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C473EE971DA281C900109E03 /* IQBarButtonItem.swift */; };
+		C473EE9C1DA281C900109E03 /* IQTitleBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C473EE981DA281C900109E03 /* IQTitleBarButtonItem.swift */; };
+		C473EE9D1DA281C900109E03 /* IQToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C473EE991DA281C900109E03 /* IQToolbar.swift */; };
+		C473EE9E1DA281C900109E03 /* IQUIView+IQKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C473EE9A1DA281C900109E03 /* IQUIView+IQKeyboardToolbar.swift */; };
+		C473EEA11DA281DA00109E03 /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C473EEA01DA281DA00109E03 /* IQKeyboardManager.bundle */; };
+		C475225D1E24E13400CACFEA /* GradientSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475225C1E24E13400CACFEA /* GradientSlider.swift */; };
+		C475225F1E24EDBD00CACFEA /* PatientTakeESASTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475225E1E24EDBD00CACFEA /* PatientTakeESASTwoViewController.swift */; };
+		C47BB9851E496893000BA6D6 /* PatientTakePHQOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47BB9841E496893000BA6D6 /* PatientTakePHQOneViewController.swift */; };
+		C47BB9891E497251000BA6D6 /* PatientTakePHQTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47BB9881E497251000BA6D6 /* PatientTakePHQTwoViewController.swift */; };
+		C47BB98B1E4AF152000BA6D6 /* PatientTakePHQThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47BB98A1E4AF152000BA6D6 /* PatientTakePHQThreeViewController.swift */; };
+		C47BB98F1E4C2BBC000BA6D6 /* PatientTakePainDetectOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47BB98E1E4C2BBC000BA6D6 /* PatientTakePainDetectOneViewController.swift */; };
+		C47BB9931E4C3009000BA6D6 /* PatientTakePainDetectTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47BB9921E4C3009000BA6D6 /* PatientTakePainDetectTwoViewController.swift */; };
+		C47BB9951E4C358D000BA6D6 /* PatientTakePainDetectThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47BB9941E4C358D000BA6D6 /* PatientTakePainDetectThreeViewController.swift */; };
+		C47BB9971E4C466B000BA6D6 /* PatientTakePainDetectTenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47BB9961E4C466B000BA6D6 /* PatientTakePainDetectTenViewController.swift */; };
+		C47BB99A1E4EB159000BA6D6 /* PHQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47BB9991E4EB159000BA6D6 /* PHQ.swift */; };
+		C48145021E71678D00EFFA64 /* PatientTakePainDetectFourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48145011E71678D00EFFA64 /* PatientTakePainDetectFourViewController.swift */; };
+		C48145061E716B4700EFFA64 /* PatientTakePainDetectFiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48145051E716B4700EFFA64 /* PatientTakePainDetectFiveViewController.swift */; };
+		C48145081E7172DC00EFFA64 /* PatientTakePainDetectSixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48145071E7172DC00EFFA64 /* PatientTakePainDetectSixViewController.swift */; };
+		C48848271E1F64BF0092F7CE /* DoctorComposeMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48848261E1F64BF0092F7CE /* DoctorComposeMessageViewController.swift */; };
+		C4A29EF81E42FB6400AD6CEE /* PatientTakeESASSixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A29EF71E42FB6400AD6CEE /* PatientTakeESASSixViewController.swift */; };
+		C4A29EFE1E478FE700AD6CEE /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C44808861E3C81CC00A4F38C /* Charts.framework */; };
+		C4A29EFF1E478FE700AD6CEE /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C44808861E3C81CC00A4F38C /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C4A29F061E4790FD00AD6CEE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C473EE7C1DA2806100109E03 /* AVFoundation.framework */; };
+		C4A69B601E51958300A6353E /* PatientTakePHQFourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A69B5F1E51958300A6353E /* PatientTakePHQFourViewController.swift */; };
+		C4A69B641E52074300A6353E /* PainDetect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A69B631E52074300A6353E /* PainDetect.swift */; };
+		C4A76E771E920C74003A4F45 /* PatientTakePainDetectSevenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A76E761E920C74003A4F45 /* PatientTakePainDetectSevenViewController.swift */; };
+		C4A76E791E920C90003A4F45 /* PatientTakePainDetectEightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A76E781E920C90003A4F45 /* PatientTakePainDetectEightViewController.swift */; };
+		C4A76E7B1E920CA6003A4F45 /* PatientTakePainDetectNineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A76E7A1E920CA6003A4F45 /* PatientTakePainDetectNineViewController.swift */; };
+		C4B6D40F1E2CD5A8005FCFD8 /* PatientTakeESASFourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B6D40E1E2CD5A8005FCFD8 /* PatientTakeESASFourViewController.swift */; };
+		C4B6D4131E31E4B0005FCFD8 /* ESAS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B6D4121E31E4B0005FCFD8 /* ESAS.swift */; };
+		C4BF11751DA27671003AD11A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF11741DA27671003AD11A /* AppDelegate.swift */; };
+		C4BF117D1DA27671003AD11A /* iComPAsS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C4BF117B1DA27671003AD11A /* iComPAsS.xcdatamodeld */; };
+		C4BF118D1DA27671003AD11A /* iComPAsSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF118C1DA27671003AD11A /* iComPAsSTests.swift */; };
+		C4BF11981DA27740003AD11A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4BF11971DA27740003AD11A /* Images.xcassets */; };
+		C4BF119E1DA278FB003AD11A /* Doctor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4BF119B1DA278FB003AD11A /* Doctor.storyboard */; };
+		C4BF119F1DA278FB003AD11A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4BF119C1DA278FB003AD11A /* Login.storyboard */; };
+		C4BF11A01DA278FB003AD11A /* Patient.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4BF119D1DA278FB003AD11A /* Patient.storyboard */; };
+		C4BF11A41DA2797B003AD11A /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF11A21DA2797B003AD11A /* Doctor.swift */; };
+		C4BF11A51DA2797B003AD11A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF11A31DA2797B003AD11A /* Model.swift */; };
+		C4BF11A91DA279B4003AD11A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF11A71DA279B4003AD11A /* LoginViewController.swift */; };
+		C4BF11AA1DA279B4003AD11A /* MessagesListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF11A81DA279B4003AD11A /* MessagesListTableViewController.swift */; };
+		C4BF11B31DA27A15003AD11A /* DoctorChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF11AC1DA27A15003AD11A /* DoctorChangePasswordViewController.swift */; };
+		C4BF11B51DA27A15003AD11A /* DoctorHelpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF11AE1DA27A15003AD11A /* DoctorHelpTableViewController.swift */; };
+		C4BF11B61DA27A15003AD11A /* DoctorHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF11AF1DA27A15003AD11A /* DoctorHelpViewController.swift */; };
+		C4BF11B71DA27A15003AD11A /* DoctorMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF11B01DA27A15003AD11A /* DoctorMenuTableViewController.swift */; };
+		C4BF11B81DA27A15003AD11A /* DoctorPatientListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF11B11DA27A15003AD11A /* DoctorPatientListTableViewController.swift */; };
+		C4BF11B91DA27A15003AD11A /* DoctorProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF11B21DA27A15003AD11A /* DoctorProfileViewController.swift */; };
+		C4BF11D51DA27A7E003AD11A /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BF11D41DA27A7E003AD11A /* SWRevealViewController.m */; };
+		C4BF11D81DA27AA6003AD11A /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF11D71DA27AA6003AD11A /* SwiftyJSON.swift */; };
+		C4BF11DF1DA27D7E003AD11A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4BF11DD1DA27D7E003AD11A /* LaunchScreen.storyboard */; };
+		C4BF11EA1DA27E18003AD11A /* PatientChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF11E01DA27E18003AD11A /* PatientChangePasswordViewController.swift */; };
+		C4BF11EB1DA27E18003AD11A /* PatientHelpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF11E11DA27E18003AD11A /* PatientHelpTableViewController.swift */; };
+		C4BF11EC1DA27E18003AD11A /* PatientHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF11E21DA27E18003AD11A /* PatientHelpViewController.swift */; };
+		C4BF11EE1DA27E18003AD11A /* PatientListOfDoctorsViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF11E41DA27E18003AD11A /* PatientListOfDoctorsViewTableViewController.swift */; };
+		C4BF11EF1DA27E18003AD11A /* PatientMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF11E51DA27E18003AD11A /* PatientMenuTableViewController.swift */; };
+		C4BF11F01DA27E18003AD11A /* PatientPrescriptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF11E61DA27E18003AD11A /* PatientPrescriptionsViewController.swift */; };
+		C4BF11F21DA27E18003AD11A /* PatientTakeEsasOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF11E81DA27E18003AD11A /* PatientTakeEsasOneViewController.swift */; };
+		C4BF11F31DA27E18003AD11A /* PatientViewProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF11E91DA27E18003AD11A /* PatientViewProfileViewController.swift */; };
+		C4CD07D51E0BDA6300247DEE /* IdToken+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CD07D31E0BDA6300247DEE /* IdToken+CoreDataProperties.swift */; };
+		C4CD07D61E0BDA6300247DEE /* IdToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CD07D41E0BDA6300247DEE /* IdToken.swift */; };
+		C4CD07DA1E0D067000247DEE /* DoctorProfileOtherDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CD07D91E0D067000247DEE /* DoctorProfileOtherDetailViewController.swift */; };
+		C4CD07DD1E12CF7700247DEE /* MessagesSentListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CD07DC1E12CF7700247DEE /* MessagesSentListTableViewController.swift */; };
+		C4CDBE4E1E0297DA00369ACF /* DoctorMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CDBE4D1E0297DA00369ACF /* DoctorMessagesViewController.swift */; };
+		C4DD66D71E485EDC0035A147 /* DoctorPatientDateEsasResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DD66D61E485EDC0035A147 /* DoctorPatientDateEsasResultViewController.swift */; };
+		C4DD66DB1E4864330035A147 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DD66DA1E4864330035A147 /* ForgotPasswordViewController.swift */; };
+		C4DD66DD1E486EF70035A147 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DD66DC1E486EF70035A147 /* ResetPasswordViewController.swift */; };
+		C4E2AA381DD7900D00D7FC18 /* MessagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E2AA371DD7900D00D7FC18 /* MessagesTableViewCell.swift */; };
+		C4E2AA3A1DD9C0E300D7FC18 /* NoAssignedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E2AA391DD9C0E300D7FC18 /* NoAssignedTableViewCell.swift */; };
+		C4EFE6101E66687C0029682F /* DoctorPatientPHQTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFE60F1E66687C0029682F /* DoctorPatientPHQTableViewController.swift */; };
+		C4EFE6121E666D2C0029682F /* DoctorPatientDatePHQResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EFE6111E666D2C0029682F /* DoctorPatientDatePHQResultsViewController.swift */; };
+		C4F78B2C1DB74F4F00D1F9C3 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F78B2B1DB74F4F00D1F9C3 /* Patient.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C44808851E3C81CC00A4F38C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C448087F1E3C81CC00A4F38C /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5BA8EC401A9D14DC00CE82E1;
+			remoteInfo = "Charts-iOS";
+		};
+		C44808871E3C81CC00A4F38C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C448087F1E3C81CC00A4F38C /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A52C5C371BAC5CA400594CDD;
+			remoteInfo = "Charts-TV";
+		};
+		C44808891E3C81CC00A4F38C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C448087F1E3C81CC00A4F38C /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06AEE7A21BDC3F8B009875AE;
+			remoteInfo = ChartsTests;
+		};
+		C4A29F001E478FE700AD6CEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C448087F1E3C81CC00A4F38C /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BA8EC3F1A9D14DC00CE82E1;
+			remoteInfo = "Charts-iOS";
+		};
+		C4BF11891DA27671003AD11A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4BF11691DA27671003AD11A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C4BF11701DA27671003AD11A;
+			remoteInfo = iComPAsS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C4A29F021E478FE700AD6CEE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C4A29EFF1E478FE700AD6CEE /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		39063E671AA4013A4CB9FAF2 /* Pods-iComPAsS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iComPAsS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iComPAsS/Pods-iComPAsS.debug.xcconfig"; sourceTree = "<group>"; };
+		9DA55821EBADDD841BA2BABB /* Pods-iComPAsS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iComPAsS.release.xcconfig"; path = "Pods/Target Support Files/Pods-iComPAsS/Pods-iComPAsS.release.xcconfig"; sourceTree = "<group>"; };
+		C409E30A1DCCCBF800E976A1 /* ListPatientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListPatientTableViewCell.swift; sourceTree = "<group>"; };
+		C41A25BF1DD25B3900DB41A9 /* PatientDoctorProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientDoctorProfileViewController.swift; sourceTree = "<group>"; };
+		C42A6D3C1E479AC5003E00FB /* Pods_iComPAsS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_iComPAsS.framework; path = "../../../Library/Developer/Xcode/DerivedData/iComPAsS-dsvxxthzrubteaaigdluojqlwvdc/Build/Products/Debug-iphoneos/Pods_iComPAsS.framework"; sourceTree = "<group>"; };
+		C430B85A1DC98A1300627C56 /* DoctorProfileDescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorProfileDescriptionViewController.swift; sourceTree = "<group>"; };
+		C43248751E718F5000F1CD73 /* PatientTakePainDetectElevenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTakePainDetectElevenViewController.swift; sourceTree = "<group>"; };
+		C43248791E719A6700F1CD73 /* DoctorPatientPainDetectTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorPatientPainDetectTableViewController.swift; sourceTree = "<group>"; };
+		C432487B1E719D8000F1CD73 /* DoctorPatientDatePainDectectResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorPatientDatePainDectectResultsViewController.swift; sourceTree = "<group>"; };
+		C43440F21DCCC10E006D7B03 /* ListDoctorsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDoctorsTableViewCell.swift; sourceTree = "<group>"; };
+		C43DEE551DEFBEAE002C5AB4 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		C44808541E38713500A4F38C /* PatientTakeESASThreeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTakeESASThreeViewController.swift; sourceTree = "<group>"; };
+		C44808631E38795200A4F38C /* BEMAnimationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BEMAnimationManager.h; path = Classes/BEMAnimationManager.h; sourceTree = "<group>"; };
+		C44808641E38795200A4F38C /* BEMAnimationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BEMAnimationManager.m; path = Classes/BEMAnimationManager.m; sourceTree = "<group>"; };
+		C44808651E38795200A4F38C /* BEMCheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BEMCheckBox.h; path = Classes/BEMCheckBox.h; sourceTree = "<group>"; };
+		C44808661E38795200A4F38C /* BEMCheckBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BEMCheckBox.m; path = Classes/BEMCheckBox.m; sourceTree = "<group>"; };
+		C44808671E38795200A4F38C /* BEMPathManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BEMPathManager.h; path = Classes/BEMPathManager.h; sourceTree = "<group>"; };
+		C44808681E38795200A4F38C /* BEMPathManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BEMPathManager.m; path = Classes/BEMPathManager.m; sourceTree = "<group>"; };
+		C448086C1E38843600A4F38C /* PatientTakeESASFiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTakeESASFiveViewController.swift; sourceTree = "<group>"; };
+		C448086E1E38AFF300A4F38C /* DoctorPatientProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorPatientProfileViewController.swift; sourceTree = "<group>"; };
+		C44808701E38B2F700A4F38C /* DoctorPatientProfileInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorPatientProfileInformationViewController.swift; sourceTree = "<group>"; };
+		C44808721E38B31A00A4F38C /* DoctorPatientPrescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorPatientPrescriptionViewController.swift; sourceTree = "<group>"; };
+		C44808741E38B38600A4F38C /* DoctorPatientESASResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorPatientESASResultsViewController.swift; sourceTree = "<group>"; };
+		C44808761E39AC7700A4F38C /* PatientAskESASViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientAskESASViewController.swift; sourceTree = "<group>"; };
+		C448087B1E39C69A00A4F38C /* DLRadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLRadioButton.h; sourceTree = "<group>"; };
+		C448087C1E39C69A00A4F38C /* DLRadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLRadioButton.m; sourceTree = "<group>"; };
+		C448087F1E3C81CC00A4F38C /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = Charts/Charts.xcodeproj; sourceTree = "<group>"; };
+		C44B07921DBB1C3E00ECAD61 /* PatientDescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientDescriptionViewController.swift; sourceTree = "<group>"; };
+		C45D5A431DD71DE300812664 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		C460ED041E5815D600132406 /* iComPAsS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iComPAsS.entitlements; sourceTree = "<group>"; };
+		C46B46981DBB56170070CC6E /* PatientDescriptionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientDescriptionTableViewController.swift; sourceTree = "<group>"; };
+		C473EE7A1DA2805300109E03 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		C473EE7C1DA2806100109E03 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		C473EE7F1DA2816400109E03 /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "IQNSArray+Sort.swift"; path = "IQKeyboardManagerSwift/Categories/IQNSArray+Sort.swift"; sourceTree = "<group>"; };
+		C473EE801DA2816400109E03 /* IQUITextFieldView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "IQUITextFieldView+Additions.swift"; path = "IQKeyboardManagerSwift/Categories/IQUITextFieldView+Additions.swift"; sourceTree = "<group>"; };
+		C473EE811DA2816400109E03 /* IQUIView+Hierarchy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "IQUIView+Hierarchy.swift"; path = "IQKeyboardManagerSwift/Categories/IQUIView+Hierarchy.swift"; sourceTree = "<group>"; };
+		C473EE821DA2816400109E03 /* IQUIViewController+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "IQUIViewController+Additions.swift"; path = "IQKeyboardManagerSwift/Categories/IQUIViewController+Additions.swift"; sourceTree = "<group>"; };
+		C473EE831DA2816400109E03 /* IQUIWindow+Hierarchy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "IQUIWindow+Hierarchy.swift"; path = "IQKeyboardManagerSwift/Categories/IQUIWindow+Hierarchy.swift"; sourceTree = "<group>"; };
+		C473EE8A1DA2817F00109E03 /* IQKeyboardManagerConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IQKeyboardManagerConstants.swift; path = IQKeyboardManagerSwift/Constants/IQKeyboardManagerConstants.swift; sourceTree = "<group>"; };
+		C473EE8B1DA2817F00109E03 /* IQKeyboardManagerConstantsInternal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IQKeyboardManagerConstantsInternal.swift; path = IQKeyboardManagerSwift/Constants/IQKeyboardManagerConstantsInternal.swift; sourceTree = "<group>"; };
+		C473EE8F1DA281A000109E03 /* IQKeyboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IQKeyboardManager.swift; path = IQKeyboardManagerSwift/IQKeyboardManager.swift; sourceTree = "<group>"; };
+		C473EE901DA281A000109E03 /* IQKeyboardReturnKeyHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IQKeyboardReturnKeyHandler.swift; path = IQKeyboardManagerSwift/IQKeyboardReturnKeyHandler.swift; sourceTree = "<group>"; };
+		C473EE931DA281B200109E03 /* IQTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IQTextView.swift; path = IQKeyboardManagerSwift/IQTextView/IQTextView.swift; sourceTree = "<group>"; };
+		C473EE971DA281C900109E03 /* IQBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IQBarButtonItem.swift; path = IQKeyboardManagerSwift/IQToolbar/IQBarButtonItem.swift; sourceTree = "<group>"; };
+		C473EE981DA281C900109E03 /* IQTitleBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IQTitleBarButtonItem.swift; path = IQKeyboardManagerSwift/IQToolbar/IQTitleBarButtonItem.swift; sourceTree = "<group>"; };
+		C473EE991DA281C900109E03 /* IQToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IQToolbar.swift; path = IQKeyboardManagerSwift/IQToolbar/IQToolbar.swift; sourceTree = "<group>"; };
+		C473EE9A1DA281C900109E03 /* IQUIView+IQKeyboardToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "IQUIView+IQKeyboardToolbar.swift"; path = "IQKeyboardManagerSwift/IQToolbar/IQUIView+IQKeyboardToolbar.swift"; sourceTree = "<group>"; };
+		C473EEA01DA281DA00109E03 /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = IQKeyboardManager.bundle; path = IQKeyboardManagerSwift/Resources/IQKeyboardManager.bundle; sourceTree = "<group>"; };
+		C475225C1E24E13400CACFEA /* GradientSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientSlider.swift; sourceTree = "<group>"; };
+		C475225E1E24EDBD00CACFEA /* PatientTakeESASTwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTakeESASTwoViewController.swift; sourceTree = "<group>"; };
+		C47BB9841E496893000BA6D6 /* PatientTakePHQOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTakePHQOneViewController.swift; sourceTree = "<group>"; };
+		C47BB9881E497251000BA6D6 /* PatientTakePHQTwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTakePHQTwoViewController.swift; sourceTree = "<group>"; };
+		C47BB98A1E4AF152000BA6D6 /* PatientTakePHQThreeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTakePHQThreeViewController.swift; sourceTree = "<group>"; };
+		C47BB98E1E4C2BBC000BA6D6 /* PatientTakePainDetectOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTakePainDetectOneViewController.swift; sourceTree = "<group>"; };
+		C47BB9921E4C3009000BA6D6 /* PatientTakePainDetectTwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTakePainDetectTwoViewController.swift; sourceTree = "<group>"; };
+		C47BB9941E4C358D000BA6D6 /* PatientTakePainDetectThreeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTakePainDetectThreeViewController.swift; sourceTree = "<group>"; };
+		C47BB9961E4C466B000BA6D6 /* PatientTakePainDetectTenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTakePainDetectTenViewController.swift; sourceTree = "<group>"; };
+		C47BB9991E4EB159000BA6D6 /* PHQ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHQ.swift; sourceTree = "<group>"; };
+		C48145011E71678D00EFFA64 /* PatientTakePainDetectFourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTakePainDetectFourViewController.swift; sourceTree = "<group>"; };
+		C48145051E716B4700EFFA64 /* PatientTakePainDetectFiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTakePainDetectFiveViewController.swift; sourceTree = "<group>"; };
+		C48145071E7172DC00EFFA64 /* PatientTakePainDetectSixViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTakePainDetectSixViewController.swift; sourceTree = "<group>"; };
+		C48848261E1F64BF0092F7CE /* DoctorComposeMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorComposeMessageViewController.swift; sourceTree = "<group>"; };
+		C4A29EF71E42FB6400AD6CEE /* PatientTakeESASSixViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTakeESASSixViewController.swift; sourceTree = "<group>"; };
+		C4A69B5F1E51958300A6353E /* PatientTakePHQFourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTakePHQFourViewController.swift; sourceTree = "<group>"; };
+		C4A69B631E52074300A6353E /* PainDetect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PainDetect.swift; sourceTree = "<group>"; };
+		C4A76E761E920C74003A4F45 /* PatientTakePainDetectSevenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTakePainDetectSevenViewController.swift; sourceTree = "<group>"; };
+		C4A76E781E920C90003A4F45 /* PatientTakePainDetectEightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTakePainDetectEightViewController.swift; sourceTree = "<group>"; };
+		C4A76E7A1E920CA6003A4F45 /* PatientTakePainDetectNineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTakePainDetectNineViewController.swift; sourceTree = "<group>"; };
+		C4B6D40E1E2CD5A8005FCFD8 /* PatientTakeESASFourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTakeESASFourViewController.swift; sourceTree = "<group>"; };
+		C4B6D4121E31E4B0005FCFD8 /* ESAS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESAS.swift; sourceTree = "<group>"; };
+		C4BF11711DA27671003AD11A /* iComPAsS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iComPAsS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4BF11741DA27671003AD11A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C4BF117C1DA27671003AD11A /* iComPAsS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iComPAsS.xcdatamodel; sourceTree = "<group>"; };
+		C4BF11831DA27671003AD11A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4BF11881DA27671003AD11A /* iComPAsSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iComPAsSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4BF118C1DA27671003AD11A /* iComPAsSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iComPAsSTests.swift; sourceTree = "<group>"; };
+		C4BF118E1DA27671003AD11A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4BF11971DA27740003AD11A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C4BF119B1DA278FB003AD11A /* Doctor.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Doctor.storyboard; sourceTree = "<group>"; };
+		C4BF119C1DA278FB003AD11A /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		C4BF119D1DA278FB003AD11A /* Patient.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Patient.storyboard; sourceTree = "<group>"; };
+		C4BF11A21DA2797B003AD11A /* Doctor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Doctor.swift; sourceTree = "<group>"; };
+		C4BF11A31DA2797B003AD11A /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		C4BF11A71DA279B4003AD11A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C4BF11A81DA279B4003AD11A /* MessagesListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesListTableViewController.swift; sourceTree = "<group>"; };
+		C4BF11AC1DA27A15003AD11A /* DoctorChangePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorChangePasswordViewController.swift; sourceTree = "<group>"; };
+		C4BF11AE1DA27A15003AD11A /* DoctorHelpTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorHelpTableViewController.swift; sourceTree = "<group>"; };
+		C4BF11AF1DA27A15003AD11A /* DoctorHelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorHelpViewController.swift; sourceTree = "<group>"; };
+		C4BF11B01DA27A15003AD11A /* DoctorMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorMenuTableViewController.swift; sourceTree = "<group>"; };
+		C4BF11B11DA27A15003AD11A /* DoctorPatientListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorPatientListTableViewController.swift; sourceTree = "<group>"; };
+		C4BF11B21DA27A15003AD11A /* DoctorProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorProfileViewController.swift; sourceTree = "<group>"; };
+		C4BF11D21DA27A7D003AD11A /* iComPAsS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iComPAsS-Bridging-Header.h"; sourceTree = "<group>"; };
+		C4BF11D31DA27A7E003AD11A /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		C4BF11D41DA27A7E003AD11A /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		C4BF11D71DA27AA6003AD11A /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		C4BF11DE1DA27D7E003AD11A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C4BF11E01DA27E18003AD11A /* PatientChangePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientChangePasswordViewController.swift; sourceTree = "<group>"; };
+		C4BF11E11DA27E18003AD11A /* PatientHelpTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientHelpTableViewController.swift; sourceTree = "<group>"; };
+		C4BF11E21DA27E18003AD11A /* PatientHelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientHelpViewController.swift; sourceTree = "<group>"; };
+		C4BF11E41DA27E18003AD11A /* PatientListOfDoctorsViewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientListOfDoctorsViewTableViewController.swift; sourceTree = "<group>"; };
+		C4BF11E51DA27E18003AD11A /* PatientMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientMenuTableViewController.swift; sourceTree = "<group>"; };
+		C4BF11E61DA27E18003AD11A /* PatientPrescriptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientPrescriptionsViewController.swift; sourceTree = "<group>"; };
+		C4BF11E81DA27E18003AD11A /* PatientTakeEsasOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTakeEsasOneViewController.swift; sourceTree = "<group>"; };
+		C4BF11E91DA27E18003AD11A /* PatientViewProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientViewProfileViewController.swift; sourceTree = "<group>"; };
+		C4CD07D31E0BDA6300247DEE /* IdToken+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IdToken+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C4CD07D41E0BDA6300247DEE /* IdToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdToken.swift; sourceTree = "<group>"; };
+		C4CD07D91E0D067000247DEE /* DoctorProfileOtherDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorProfileOtherDetailViewController.swift; sourceTree = "<group>"; };
+		C4CD07DC1E12CF7700247DEE /* MessagesSentListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesSentListTableViewController.swift; sourceTree = "<group>"; };
+		C4CDBE4D1E0297DA00369ACF /* DoctorMessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorMessagesViewController.swift; sourceTree = "<group>"; };
+		C4DD66D61E485EDC0035A147 /* DoctorPatientDateEsasResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorPatientDateEsasResultViewController.swift; sourceTree = "<group>"; };
+		C4DD66DA1E4864330035A147 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		C4DD66DC1E486EF70035A147 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		C4E2AA371DD7900D00D7FC18 /* MessagesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesTableViewCell.swift; sourceTree = "<group>"; };
+		C4E2AA391DD9C0E300D7FC18 /* NoAssignedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoAssignedTableViewCell.swift; sourceTree = "<group>"; };
+		C4EFE60F1E66687C0029682F /* DoctorPatientPHQTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorPatientPHQTableViewController.swift; sourceTree = "<group>"; };
+		C4EFE6111E666D2C0029682F /* DoctorPatientDatePHQResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorPatientDatePHQResultsViewController.swift; sourceTree = "<group>"; };
+		C4F78B2B1DB74F4F00D1F9C3 /* Patient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C4BF116E1DA27671003AD11A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C42A6D3D1E479AC5003E00FB /* Pods_iComPAsS.framework in Frameworks */,
+				C4A29F061E4790FD00AD6CEE /* AVFoundation.framework in Frameworks */,
+				C4A29EFE1E478FE700AD6CEE /* Charts.framework in Frameworks */,
+				C473EE7B1DA2805300109E03 /* MediaPlayer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4BF11851DA27671003AD11A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		079C6B54C35B7957E3DBBF53 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C42A6D3C1E479AC5003E00FB /* Pods_iComPAsS.framework */,
+				C473EE7C1DA2806100109E03 /* AVFoundation.framework */,
+				C473EE7A1DA2805300109E03 /* MediaPlayer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		156FD4E0E5C4A1B949AAA78C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				39063E671AA4013A4CB9FAF2 /* Pods-iComPAsS.debug.xcconfig */,
+				9DA55821EBADDD841BA2BABB /* Pods-iComPAsS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C43440F41DCCC114006D7B03 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C43440F21DCCC10E006D7B03 /* ListDoctorsTableViewCell.swift */,
+				C409E30A1DCCCBF800E976A1 /* ListPatientTableViewCell.swift */,
+				C4E2AA371DD7900D00D7FC18 /* MessagesTableViewCell.swift */,
+				C4E2AA391DD9C0E300D7FC18 /* NoAssignedTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		C44808511E386FEE00A4F38C /* BEMCheckBox */ = {
+			isa = PBXGroup;
+			children = (
+				C44808631E38795200A4F38C /* BEMAnimationManager.h */,
+				C44808641E38795200A4F38C /* BEMAnimationManager.m */,
+				C44808651E38795200A4F38C /* BEMCheckBox.h */,
+				C44808661E38795200A4F38C /* BEMCheckBox.m */,
+				C44808671E38795200A4F38C /* BEMPathManager.h */,
+				C44808681E38795200A4F38C /* BEMPathManager.m */,
+			);
+			name = BEMCheckBox;
+			sourceTree = "<group>";
+		};
+		C448087A1E39C69A00A4F38C /* DLRadioButton */ = {
+			isa = PBXGroup;
+			children = (
+				C448087B1E39C69A00A4F38C /* DLRadioButton.h */,
+				C448087C1E39C69A00A4F38C /* DLRadioButton.m */,
+			);
+			path = DLRadioButton;
+			sourceTree = "<group>";
+		};
+		C44808801E3C81CC00A4F38C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C44808861E3C81CC00A4F38C /* Charts.framework */,
+				C44808881E3C81CC00A4F38C /* Charts.framework */,
+				C448088A1E3C81CC00A4F38C /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C473EE7E1DA2814E00109E03 /* IQKeyboardManagerSwift */ = {
+			isa = PBXGroup;
+			children = (
+				C473EEA21DA281DE00109E03 /* Resources */,
+				C473EE9F1DA281CD00109E03 /* IQToolBar */,
+				C473EE961DA281BD00109E03 /* IQTextView */,
+				C473EE8F1DA281A000109E03 /* IQKeyboardManager.swift */,
+				C473EE901DA281A000109E03 /* IQKeyboardReturnKeyHandler.swift */,
+				C473EE8E1DA2818800109E03 /* Constants */,
+				C473EE891DA2817000109E03 /* Categories */,
+			);
+			name = IQKeyboardManagerSwift;
+			sourceTree = "<group>";
+		};
+		C473EE891DA2817000109E03 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				C473EE7F1DA2816400109E03 /* IQNSArray+Sort.swift */,
+				C473EE801DA2816400109E03 /* IQUITextFieldView+Additions.swift */,
+				C473EE811DA2816400109E03 /* IQUIView+Hierarchy.swift */,
+				C473EE821DA2816400109E03 /* IQUIViewController+Additions.swift */,
+				C473EE831DA2816400109E03 /* IQUIWindow+Hierarchy.swift */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		C473EE8E1DA2818800109E03 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				C473EE8A1DA2817F00109E03 /* IQKeyboardManagerConstants.swift */,
+				C473EE8B1DA2817F00109E03 /* IQKeyboardManagerConstantsInternal.swift */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
+		C473EE961DA281BD00109E03 /* IQTextView */ = {
+			isa = PBXGroup;
+			children = (
+				C473EE931DA281B200109E03 /* IQTextView.swift */,
+			);
+			name = IQTextView;
+			sourceTree = "<group>";
+		};
+		C473EE9F1DA281CD00109E03 /* IQToolBar */ = {
+			isa = PBXGroup;
+			children = (
+				C473EE971DA281C900109E03 /* IQBarButtonItem.swift */,
+				C473EE981DA281C900109E03 /* IQTitleBarButtonItem.swift */,
+				C473EE991DA281C900109E03 /* IQToolbar.swift */,
+				C473EE9A1DA281C900109E03 /* IQUIView+IQKeyboardToolbar.swift */,
+			);
+			name = IQToolBar;
+			sourceTree = "<group>";
+		};
+		C473EEA21DA281DE00109E03 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C473EEA01DA281DA00109E03 /* IQKeyboardManager.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C47522601E251ABB00CACFEA /* GradientSlider */ = {
+			isa = PBXGroup;
+			children = (
+				C475225C1E24E13400CACFEA /* GradientSlider.swift */,
+			);
+			name = GradientSlider;
+			sourceTree = "<group>";
+		};
+		C4BF11681DA27671003AD11A = {
+			isa = PBXGroup;
+			children = (
+				C448087F1E3C81CC00A4F38C /* Charts.xcodeproj */,
+				C4BF11731DA27671003AD11A /* iComPAsS */,
+				C4BF118B1DA27671003AD11A /* iComPAsSTests */,
+				C4BF11721DA27671003AD11A /* Products */,
+				156FD4E0E5C4A1B949AAA78C /* Pods */,
+				079C6B54C35B7957E3DBBF53 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C4BF11721DA27671003AD11A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C4BF11711DA27671003AD11A /* iComPAsS.app */,
+				C4BF11881DA27671003AD11A /* iComPAsSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C4BF11731DA27671003AD11A /* iComPAsS */ = {
+			isa = PBXGroup;
+			children = (
+				C460ED041E5815D600132406 /* iComPAsS.entitlements */,
+				C4CD07D71E0BDA6E00247DEE /* CoreData */,
+				C4BF11A11DA27924003AD11A /* Storyboard */,
+				C43440F41DCCC114006D7B03 /* Views */,
+				C4BF11BA1DA27A1A003AD11A /* Doctor */,
+				C4BF11AB1DA279FF003AD11A /* All User */,
+				C4BF11A61DA27995003AD11A /* Model */,
+				C4BF11D11DA27A6B003AD11A /* Patient */,
+				C4BF11DB1DA27AC3003AD11A /* Open Source */,
+				C4BF119A1DA277C1003AD11A /* Supporting Files */,
+			);
+			path = iComPAsS;
+			sourceTree = "<group>";
+		};
+		C4BF118B1DA27671003AD11A /* iComPAsSTests */ = {
+			isa = PBXGroup;
+			children = (
+				C4BF118C1DA27671003AD11A /* iComPAsSTests.swift */,
+				C4BF118E1DA27671003AD11A /* Info.plist */,
+			);
+			path = iComPAsSTests;
+			sourceTree = "<group>";
+		};
+		C4BF119A1DA277C1003AD11A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C4BF11DD1DA27D7E003AD11A /* LaunchScreen.storyboard */,
+				C4BF11971DA27740003AD11A /* Images.xcassets */,
+				C4BF11741DA27671003AD11A /* AppDelegate.swift */,
+				C4BF11831DA27671003AD11A /* Info.plist */,
+				C4BF117B1DA27671003AD11A /* iComPAsS.xcdatamodeld */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C4BF11A11DA27924003AD11A /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				C4BF119B1DA278FB003AD11A /* Doctor.storyboard */,
+				C4BF119C1DA278FB003AD11A /* Login.storyboard */,
+				C4BF119D1DA278FB003AD11A /* Patient.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		C4BF11A61DA27995003AD11A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C4BF11A21DA2797B003AD11A /* Doctor.swift */,
+				C4BF11A31DA2797B003AD11A /* Model.swift */,
+				C4F78B2B1DB74F4F00D1F9C3 /* Patient.swift */,
+				C45D5A431DD71DE300812664 /* Message.swift */,
+				C4B6D4121E31E4B0005FCFD8 /* ESAS.swift */,
+				C47BB9991E4EB159000BA6D6 /* PHQ.swift */,
+				C4A69B631E52074300A6353E /* PainDetect.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C4BF11AB1DA279FF003AD11A /* All User */ = {
+			isa = PBXGroup;
+			children = (
+				C4BF11A71DA279B4003AD11A /* LoginViewController.swift */,
+				C4BF11A81DA279B4003AD11A /* MessagesListTableViewController.swift */,
+				C43DEE551DEFBEAE002C5AB4 /* MessageViewController.swift */,
+				C4CD07DC1E12CF7700247DEE /* MessagesSentListTableViewController.swift */,
+				C4DD66DA1E4864330035A147 /* ForgotPasswordViewController.swift */,
+				C4DD66DC1E486EF70035A147 /* ResetPasswordViewController.swift */,
+			);
+			name = "All User";
+			sourceTree = "<group>";
+		};
+		C4BF11BA1DA27A1A003AD11A /* Doctor */ = {
+			isa = PBXGroup;
+			children = (
+				C48848261E1F64BF0092F7CE /* DoctorComposeMessageViewController.swift */,
+				C4BF11AC1DA27A15003AD11A /* DoctorChangePasswordViewController.swift */,
+				C4BF11AE1DA27A15003AD11A /* DoctorHelpTableViewController.swift */,
+				C4BF11AF1DA27A15003AD11A /* DoctorHelpViewController.swift */,
+				C4BF11B01DA27A15003AD11A /* DoctorMenuTableViewController.swift */,
+				C4BF11B11DA27A15003AD11A /* DoctorPatientListTableViewController.swift */,
+				C4BF11B21DA27A15003AD11A /* DoctorProfileViewController.swift */,
+				C430B85A1DC98A1300627C56 /* DoctorProfileDescriptionViewController.swift */,
+				C4CDBE4D1E0297DA00369ACF /* DoctorMessagesViewController.swift */,
+				C4CD07D91E0D067000247DEE /* DoctorProfileOtherDetailViewController.swift */,
+				C448086E1E38AFF300A4F38C /* DoctorPatientProfileViewController.swift */,
+				C44808701E38B2F700A4F38C /* DoctorPatientProfileInformationViewController.swift */,
+				C44808721E38B31A00A4F38C /* DoctorPatientPrescriptionViewController.swift */,
+				C44808741E38B38600A4F38C /* DoctorPatientESASResultsViewController.swift */,
+				C4DD66D61E485EDC0035A147 /* DoctorPatientDateEsasResultViewController.swift */,
+				C4EFE60F1E66687C0029682F /* DoctorPatientPHQTableViewController.swift */,
+				C4EFE6111E666D2C0029682F /* DoctorPatientDatePHQResultsViewController.swift */,
+				C43248791E719A6700F1CD73 /* DoctorPatientPainDetectTableViewController.swift */,
+				C432487B1E719D8000F1CD73 /* DoctorPatientDatePainDectectResultsViewController.swift */,
+			);
+			name = Doctor;
+			sourceTree = "<group>";
+		};
+		C4BF11D11DA27A6B003AD11A /* Patient */ = {
+			isa = PBXGroup;
+			children = (
+				C4BF11E01DA27E18003AD11A /* PatientChangePasswordViewController.swift */,
+				C4BF11E11DA27E18003AD11A /* PatientHelpTableViewController.swift */,
+				C4BF11E21DA27E18003AD11A /* PatientHelpViewController.swift */,
+				C4BF11E41DA27E18003AD11A /* PatientListOfDoctorsViewTableViewController.swift */,
+				C4BF11E51DA27E18003AD11A /* PatientMenuTableViewController.swift */,
+				C4BF11E61DA27E18003AD11A /* PatientPrescriptionsViewController.swift */,
+				C4BF11E91DA27E18003AD11A /* PatientViewProfileViewController.swift */,
+				C44B07921DBB1C3E00ECAD61 /* PatientDescriptionViewController.swift */,
+				C46B46981DBB56170070CC6E /* PatientDescriptionTableViewController.swift */,
+				C41A25BF1DD25B3900DB41A9 /* PatientDoctorProfileViewController.swift */,
+				C4BF11E81DA27E18003AD11A /* PatientTakeEsasOneViewController.swift */,
+				C475225E1E24EDBD00CACFEA /* PatientTakeESASTwoViewController.swift */,
+				C44808541E38713500A4F38C /* PatientTakeESASThreeViewController.swift */,
+				C4B6D40E1E2CD5A8005FCFD8 /* PatientTakeESASFourViewController.swift */,
+				C448086C1E38843600A4F38C /* PatientTakeESASFiveViewController.swift */,
+				C4A29EF71E42FB6400AD6CEE /* PatientTakeESASSixViewController.swift */,
+				C44808761E39AC7700A4F38C /* PatientAskESASViewController.swift */,
+				C47BB9841E496893000BA6D6 /* PatientTakePHQOneViewController.swift */,
+				C47BB9881E497251000BA6D6 /* PatientTakePHQTwoViewController.swift */,
+				C47BB98A1E4AF152000BA6D6 /* PatientTakePHQThreeViewController.swift */,
+				C4A69B5F1E51958300A6353E /* PatientTakePHQFourViewController.swift */,
+				C47BB98E1E4C2BBC000BA6D6 /* PatientTakePainDetectOneViewController.swift */,
+				C47BB9921E4C3009000BA6D6 /* PatientTakePainDetectTwoViewController.swift */,
+				C47BB9941E4C358D000BA6D6 /* PatientTakePainDetectThreeViewController.swift */,
+				C48145011E71678D00EFFA64 /* PatientTakePainDetectFourViewController.swift */,
+				C48145051E716B4700EFFA64 /* PatientTakePainDetectFiveViewController.swift */,
+				C48145071E7172DC00EFFA64 /* PatientTakePainDetectSixViewController.swift */,
+				C4A76E761E920C74003A4F45 /* PatientTakePainDetectSevenViewController.swift */,
+				C4A76E781E920C90003A4F45 /* PatientTakePainDetectEightViewController.swift */,
+				C4A76E7A1E920CA6003A4F45 /* PatientTakePainDetectNineViewController.swift */,
+				C47BB9961E4C466B000BA6D6 /* PatientTakePainDetectTenViewController.swift */,
+				C43248751E718F5000F1CD73 /* PatientTakePainDetectElevenViewController.swift */,
+			);
+			name = Patient;
+			sourceTree = "<group>";
+		};
+		C4BF11D61DA27A90003AD11A /* SWReavelViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C4BF11D31DA27A7E003AD11A /* SWRevealViewController.h */,
+				C4BF11D41DA27A7E003AD11A /* SWRevealViewController.m */,
+				C4BF11D21DA27A7D003AD11A /* iComPAsS-Bridging-Header.h */,
+			);
+			name = SWReavelViewController;
+			sourceTree = "<group>";
+		};
+		C4BF11DB1DA27AC3003AD11A /* Open Source */ = {
+			isa = PBXGroup;
+			children = (
+				C448087A1E39C69A00A4F38C /* DLRadioButton */,
+				C44808511E386FEE00A4F38C /* BEMCheckBox */,
+				C47522601E251ABB00CACFEA /* GradientSlider */,
+				C473EE7E1DA2814E00109E03 /* IQKeyboardManagerSwift */,
+				C4BF11DC1DA27B3A003AD11A /* SwiftyJSON */,
+				C4BF11D61DA27A90003AD11A /* SWReavelViewController */,
+			);
+			name = "Open Source";
+			sourceTree = "<group>";
+		};
+		C4BF11DC1DA27B3A003AD11A /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				C4BF11D71DA27AA6003AD11A /* SwiftyJSON.swift */,
+			);
+			name = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		C4CD07D71E0BDA6E00247DEE /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				C4CD07D31E0BDA6300247DEE /* IdToken+CoreDataProperties.swift */,
+				C4CD07D41E0BDA6300247DEE /* IdToken.swift */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C4BF11701DA27671003AD11A /* iComPAsS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4BF11911DA27671003AD11A /* Build configuration list for PBXNativeTarget "iComPAsS" */;
+			buildPhases = (
+				3E1F7E2DFACCA7CA741CD0E6 /* [CP] Check Pods Manifest.lock */,
+				C4BF116D1DA27671003AD11A /* Sources */,
+				C4BF116E1DA27671003AD11A /* Frameworks */,
+				C4BF116F1DA27671003AD11A /* Resources */,
+				EE7A9004ECC048AAC24997D6 /* [CP] Embed Pods Frameworks */,
+				486934436D8F7B1301AE3518 /* [CP] Copy Pods Resources */,
+				C4A29F021E478FE700AD6CEE /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C4A29F011E478FE700AD6CEE /* PBXTargetDependency */,
+			);
+			name = iComPAsS;
+			productName = iComPAsS;
+			productReference = C4BF11711DA27671003AD11A /* iComPAsS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C4BF11871DA27671003AD11A /* iComPAsSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4BF11941DA27671003AD11A /* Build configuration list for PBXNativeTarget "iComPAsSTests" */;
+			buildPhases = (
+				C4BF11841DA27671003AD11A /* Sources */,
+				C4BF11851DA27671003AD11A /* Frameworks */,
+				C4BF11861DA27671003AD11A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C4BF118A1DA27671003AD11A /* PBXTargetDependency */,
+			);
+			name = iComPAsSTests;
+			productName = iComPAsSTests;
+			productReference = C4BF11881DA27671003AD11A /* iComPAsSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C4BF11691DA27671003AD11A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "University of Santo Tomas";
+				TargetAttributes = {
+					C4BF11701DA27671003AD11A = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = FYH3VNU48M;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+					C4BF11871DA27671003AD11A = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = C4BF11701DA27671003AD11A;
+					};
+				};
+			};
+			buildConfigurationList = C4BF116C1DA27671003AD11A /* Build configuration list for PBXProject "iComPAsS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C4BF11681DA27671003AD11A;
+			productRefGroup = C4BF11721DA27671003AD11A /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C44808801E3C81CC00A4F38C /* Products */;
+					ProjectRef = C448087F1E3C81CC00A4F38C /* Charts.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				C4BF11701DA27671003AD11A /* iComPAsS */,
+				C4BF11871DA27671003AD11A /* iComPAsSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C44808861E3C81CC00A4F38C /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = C44808851E3C81CC00A4F38C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C44808881E3C81CC00A4F38C /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = C44808871E3C81CC00A4F38C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C448088A1E3C81CC00A4F38C /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = C44808891E3C81CC00A4F38C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C4BF116F1DA27671003AD11A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4BF119F1DA278FB003AD11A /* Login.storyboard in Resources */,
+				C4BF11A01DA278FB003AD11A /* Patient.storyboard in Resources */,
+				C473EEA11DA281DA00109E03 /* IQKeyboardManager.bundle in Resources */,
+				C4BF11981DA27740003AD11A /* Images.xcassets in Resources */,
+				C4BF11DF1DA27D7E003AD11A /* LaunchScreen.storyboard in Resources */,
+				C4BF119E1DA278FB003AD11A /* Doctor.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4BF11861DA27671003AD11A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3E1F7E2DFACCA7CA741CD0E6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		486934436D8F7B1301AE3518 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iComPAsS/Pods-iComPAsS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE7A9004ECC048AAC24997D6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iComPAsS/Pods-iComPAsS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C4BF116D1DA27671003AD11A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4BF117D1DA27671003AD11A /* iComPAsS.xcdatamodeld in Sources */,
+				C4CDBE4E1E0297DA00369ACF /* DoctorMessagesViewController.swift in Sources */,
+				C473EE841DA2816400109E03 /* IQNSArray+Sort.swift in Sources */,
+				C448086A1E38795200A4F38C /* BEMCheckBox.m in Sources */,
+				C473EE921DA281A000109E03 /* IQKeyboardReturnKeyHandler.swift in Sources */,
+				C4BF11EF1DA27E18003AD11A /* PatientMenuTableViewController.swift in Sources */,
+				C4B6D4131E31E4B0005FCFD8 /* ESAS.swift in Sources */,
+				C48145081E7172DC00EFFA64 /* PatientTakePainDetectSixViewController.swift in Sources */,
+				C43440F31DCCC10E006D7B03 /* ListDoctorsTableViewCell.swift in Sources */,
+				C4BF11EA1DA27E18003AD11A /* PatientChangePasswordViewController.swift in Sources */,
+				C4B6D40F1E2CD5A8005FCFD8 /* PatientTakeESASFourViewController.swift in Sources */,
+				C475225D1E24E13400CACFEA /* GradientSlider.swift in Sources */,
+				C448087D1E39C69A00A4F38C /* DLRadioButton.m in Sources */,
+				C475225F1E24EDBD00CACFEA /* PatientTakeESASTwoViewController.swift in Sources */,
+				C4BF11B71DA27A15003AD11A /* DoctorMenuTableViewController.swift in Sources */,
+				C448086B1E38795200A4F38C /* BEMPathManager.m in Sources */,
+				C4CD07D51E0BDA6300247DEE /* IdToken+CoreDataProperties.swift in Sources */,
+				C4BF11751DA27671003AD11A /* AppDelegate.swift in Sources */,
+				C409E30B1DCCCBF800E976A1 /* ListPatientTableViewCell.swift in Sources */,
+				C4EFE6101E66687C0029682F /* DoctorPatientPHQTableViewController.swift in Sources */,
+				C473EE9E1DA281C900109E03 /* IQUIView+IQKeyboardToolbar.swift in Sources */,
+				C44808711E38B2F700A4F38C /* DoctorPatientProfileInformationViewController.swift in Sources */,
+				C4A76E7B1E920CA6003A4F45 /* PatientTakePainDetectNineViewController.swift in Sources */,
+				C4BF11EB1DA27E18003AD11A /* PatientHelpTableViewController.swift in Sources */,
+				C4CD07DA1E0D067000247DEE /* DoctorProfileOtherDetailViewController.swift in Sources */,
+				C4F78B2C1DB74F4F00D1F9C3 /* Patient.swift in Sources */,
+				C43DEE561DEFBEAE002C5AB4 /* MessageViewController.swift in Sources */,
+				C473EE9C1DA281C900109E03 /* IQTitleBarButtonItem.swift in Sources */,
+				C473EE9D1DA281C900109E03 /* IQToolbar.swift in Sources */,
+				C44808551E38713500A4F38C /* PatientTakeESASThreeViewController.swift in Sources */,
+				C4DD66DD1E486EF70035A147 /* ResetPasswordViewController.swift in Sources */,
+				C47BB9931E4C3009000BA6D6 /* PatientTakePainDetectTwoViewController.swift in Sources */,
+				C44808751E38B38600A4F38C /* DoctorPatientESASResultsViewController.swift in Sources */,
+				C473EE9B1DA281C900109E03 /* IQBarButtonItem.swift in Sources */,
+				C4BF11EC1DA27E18003AD11A /* PatientHelpViewController.swift in Sources */,
+				C4BF11F21DA27E18003AD11A /* PatientTakeEsasOneViewController.swift in Sources */,
+				C48145061E716B4700EFFA64 /* PatientTakePainDetectFiveViewController.swift in Sources */,
+				C473EE871DA2816400109E03 /* IQUIViewController+Additions.swift in Sources */,
+				C4DD66DB1E4864330035A147 /* ForgotPasswordViewController.swift in Sources */,
+				C47BB9891E497251000BA6D6 /* PatientTakePHQTwoViewController.swift in Sources */,
+				C4CD07DD1E12CF7700247DEE /* MessagesSentListTableViewController.swift in Sources */,
+				C4BF11F01DA27E18003AD11A /* PatientPrescriptionsViewController.swift in Sources */,
+				C4BF11B61DA27A15003AD11A /* DoctorHelpViewController.swift in Sources */,
+				C4E2AA3A1DD9C0E300D7FC18 /* NoAssignedTableViewCell.swift in Sources */,
+				C473EE851DA2816400109E03 /* IQUITextFieldView+Additions.swift in Sources */,
+				C4A76E791E920C90003A4F45 /* PatientTakePainDetectEightViewController.swift in Sources */,
+				C4BF11B81DA27A15003AD11A /* DoctorPatientListTableViewController.swift in Sources */,
+				C44B07931DBB1C3E00ECAD61 /* PatientDescriptionViewController.swift in Sources */,
+				C4BF11B91DA27A15003AD11A /* DoctorProfileViewController.swift in Sources */,
+				C4BF11A41DA2797B003AD11A /* Doctor.swift in Sources */,
+				C44808691E38795200A4F38C /* BEMAnimationManager.m in Sources */,
+				C45D5A441DD71DE300812664 /* Message.swift in Sources */,
+				C47BB9951E4C358D000BA6D6 /* PatientTakePainDetectThreeViewController.swift in Sources */,
+				C4BF11D81DA27AA6003AD11A /* SwiftyJSON.swift in Sources */,
+				C48145021E71678D00EFFA64 /* PatientTakePainDetectFourViewController.swift in Sources */,
+				C473EE941DA281B200109E03 /* IQTextView.swift in Sources */,
+				C4BF11D51DA27A7E003AD11A /* SWRevealViewController.m in Sources */,
+				C4BF11A91DA279B4003AD11A /* LoginViewController.swift in Sources */,
+				C4A69B601E51958300A6353E /* PatientTakePHQFourViewController.swift in Sources */,
+				C448086F1E38AFF300A4F38C /* DoctorPatientProfileViewController.swift in Sources */,
+				C48848271E1F64BF0092F7CE /* DoctorComposeMessageViewController.swift in Sources */,
+				C44808731E38B31A00A4F38C /* DoctorPatientPrescriptionViewController.swift in Sources */,
+				C4BF11A51DA2797B003AD11A /* Model.swift in Sources */,
+				C4BF11F31DA27E18003AD11A /* PatientViewProfileViewController.swift in Sources */,
+				C47BB98F1E4C2BBC000BA6D6 /* PatientTakePainDetectOneViewController.swift in Sources */,
+				C473EE861DA2816400109E03 /* IQUIView+Hierarchy.swift in Sources */,
+				C44808771E39AC7700A4F38C /* PatientAskESASViewController.swift in Sources */,
+				C4EFE6121E666D2C0029682F /* DoctorPatientDatePHQResultsViewController.swift in Sources */,
+				C47BB9971E4C466B000BA6D6 /* PatientTakePainDetectTenViewController.swift in Sources */,
+				C47BB99A1E4EB159000BA6D6 /* PHQ.swift in Sources */,
+				C43248761E718F5000F1CD73 /* PatientTakePainDetectElevenViewController.swift in Sources */,
+				C4DD66D71E485EDC0035A147 /* DoctorPatientDateEsasResultViewController.swift in Sources */,
+				C41A25C01DD25B3900DB41A9 /* PatientDoctorProfileViewController.swift in Sources */,
+				C4E2AA381DD7900D00D7FC18 /* MessagesTableViewCell.swift in Sources */,
+				C47BB9851E496893000BA6D6 /* PatientTakePHQOneViewController.swift in Sources */,
+				C430B85B1DC98A1300627C56 /* DoctorProfileDescriptionViewController.swift in Sources */,
+				C473EE911DA281A000109E03 /* IQKeyboardManager.swift in Sources */,
+				C4BF11B31DA27A15003AD11A /* DoctorChangePasswordViewController.swift in Sources */,
+				C473EE881DA2816400109E03 /* IQUIWindow+Hierarchy.swift in Sources */,
+				C4BF11AA1DA279B4003AD11A /* MessagesListTableViewController.swift in Sources */,
+				C4BF11EE1DA27E18003AD11A /* PatientListOfDoctorsViewTableViewController.swift in Sources */,
+				C448086D1E38843600A4F38C /* PatientTakeESASFiveViewController.swift in Sources */,
+				C4A69B641E52074300A6353E /* PainDetect.swift in Sources */,
+				C47BB98B1E4AF152000BA6D6 /* PatientTakePHQThreeViewController.swift in Sources */,
+				C4CD07D61E0BDA6300247DEE /* IdToken.swift in Sources */,
+				C4A29EF81E42FB6400AD6CEE /* PatientTakeESASSixViewController.swift in Sources */,
+				C473EE8D1DA2817F00109E03 /* IQKeyboardManagerConstantsInternal.swift in Sources */,
+				C432487A1E719A6700F1CD73 /* DoctorPatientPainDetectTableViewController.swift in Sources */,
+				C473EE8C1DA2817F00109E03 /* IQKeyboardManagerConstants.swift in Sources */,
+				C4BF11B51DA27A15003AD11A /* DoctorHelpTableViewController.swift in Sources */,
+				C46B46991DBB56170070CC6E /* PatientDescriptionTableViewController.swift in Sources */,
+				C432487C1E719D8000F1CD73 /* DoctorPatientDatePainDectectResultsViewController.swift in Sources */,
+				C4A76E771E920C74003A4F45 /* PatientTakePainDetectSevenViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4BF11841DA27671003AD11A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4BF118D1DA27671003AD11A /* iComPAsSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C4A29F011E478FE700AD6CEE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Charts-iOS";
+			targetProxy = C4A29F001E478FE700AD6CEE /* PBXContainerItemProxy */;
+		};
+		C4BF118A1DA27671003AD11A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C4BF11701DA27671003AD11A /* iComPAsS */;
+			targetProxy = C4BF11891DA27671003AD11A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C4BF11DD1DA27D7E003AD11A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4BF11DE1DA27D7E003AD11A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C4BF118F1DA27671003AD11A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C4BF11901DA27671003AD11A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C4BF11921DA27671003AD11A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39063E671AA4013A4CB9FAF2 /* Pods-iComPAsS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = iComPAsS/iComPAsS.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Teresa Sy Ortin (3769ANSV72)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = FYH3VNU48M;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				INFOPLIST_FILE = iComPAsS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.usthbci.icompass;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5dd94179-13cd-4139-81ad-2550fd2d6f72";
+				PROVISIONING_PROFILE_SPECIFIER = "iComPAsS Development Profile";
+				SWIFT_OBJC_BRIDGING_HEADER = "iComPAsS/iComPAsS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		C4BF11931DA27671003AD11A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DA55821EBADDD841BA2BABB /* Pods-iComPAsS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = iComPAsS/iComPAsS.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Teresa Sy Ortin (3769ANSV72)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = FYH3VNU48M;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				INFOPLIST_FILE = iComPAsS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.usthbci.icompass;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5173d2fa-0b91-42b3-ba5e-66ae6ce1cfe5";
+				PROVISIONING_PROFILE_SPECIFIER = "iComPAsS Distribution Profile";
+				SWIFT_OBJC_BRIDGING_HEADER = "iComPAsS/iComPAsS-Bridging-Header.h";
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		C4BF11951DA27671003AD11A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = iComPAsSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ust.edu.iComPAsSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iComPAsS.app/iComPAsS";
+			};
+			name = Debug;
+		};
+		C4BF11961DA27671003AD11A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = iComPAsSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ust.edu.iComPAsSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iComPAsS.app/iComPAsS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C4BF116C1DA27671003AD11A /* Build configuration list for PBXProject "iComPAsS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4BF118F1DA27671003AD11A /* Debug */,
+				C4BF11901DA27671003AD11A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4BF11911DA27671003AD11A /* Build configuration list for PBXNativeTarget "iComPAsS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4BF11921DA27671003AD11A /* Debug */,
+				C4BF11931DA27671003AD11A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4BF11941DA27671003AD11A /* Build configuration list for PBXNativeTarget "iComPAsSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4BF11951DA27671003AD11A /* Debug */,
+				C4BF11961DA27671003AD11A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C4BF117B1DA27671003AD11A /* iComPAsS.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C4BF117C1DA27671003AD11A /* iComPAsS.xcdatamodel */,
+			);
+			currentVersion = C4BF117C1DA27671003AD11A /* iComPAsS.xcdatamodel */;
+			path = iComPAsS.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C4BF11691DA27671003AD11A /* Project object */;
+}

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "4710540F5608C5EC3667EDC3F537F0FEA65E5301",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "4710540F5608C5EC3667EDC3F537F0FEA65E5301" : 0,
+    "AFDED0BF0F7E8E1BF210B65D4D9AD1201BFB1312" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A26CBEEB-6F5A-49FD-8716-26C6A2CDE07B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "4710540F5608C5EC3667EDC3F537F0FEA65E5301" : "iComPAsS\/",
+    "AFDED0BF0F7E8E1BF210B65D4D9AD1201BFB1312" : "..\/XCode%20-%20Workspace\/iComPAsS"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "iComPAsS",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "iComPAsS.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/bcidevelopers\/bci-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4710540F5608C5EC3667EDC3F537F0FEA65E5301"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/ultimatesuperduperse\/icompass2.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AFDED0BF0F7E8E1BF210B65D4D9AD1201BFB1312"
+    }
+  ]
+}
