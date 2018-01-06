@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A02433F2000772F005B1E72 /* PatientERAS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A02433E2000772F005B1E72 /* PatientERAS.storyboard */; };
 		6A9D4DF51FFF03B300DFCB91 /* DoctorERAS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A9D4DF41FFF03B300DFCB91 /* DoctorERAS.storyboard */; };
 		C409E30B1DCCCBF800E976A1 /* ListPatientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C409E30A1DCCCBF800E976A1 /* ListPatientTableViewCell.swift */; };
 		C41A25C01DD25B3900DB41A9 /* PatientDoctorProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41A25BF1DD25B3900DB41A9 /* PatientDoctorProfileViewController.swift */; };
@@ -169,6 +170,7 @@
 
 /* Begin PBXFileReference section */
 		39063E671AA4013A4CB9FAF2 /* Pods-iComPAsS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iComPAsS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iComPAsS/Pods-iComPAsS.debug.xcconfig"; sourceTree = "<group>"; };
+		6A02433E2000772F005B1E72 /* PatientERAS.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PatientERAS.storyboard; sourceTree = "<group>"; };
 		6A9D4DF41FFF03B300DFCB91 /* DoctorERAS.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DoctorERAS.storyboard; sourceTree = "<group>"; };
 		9DA55821EBADDD841BA2BABB /* Pods-iComPAsS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iComPAsS.release.xcconfig"; path = "Pods/Target Support Files/Pods-iComPAsS/Pods-iComPAsS.release.xcconfig"; sourceTree = "<group>"; };
 		C409E30A1DCCCBF800E976A1 /* ListPatientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListPatientTableViewCell.swift; sourceTree = "<group>"; };
@@ -508,6 +510,7 @@
 				C4BF119C1DA278FB003AD11A /* Login.storyboard */,
 				C4BF119D1DA278FB003AD11A /* Patient.storyboard */,
 				6A9D4DF41FFF03B300DFCB91 /* DoctorERAS.storyboard */,
+				6A02433E2000772F005B1E72 /* PatientERAS.storyboard */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
@@ -775,6 +778,7 @@
 				C473EEA11DA281DA00109E03 /* IQKeyboardManager.bundle in Resources */,
 				C4BF11981DA27740003AD11A /* Images.xcassets in Resources */,
 				6A9D4DF51FFF03B300DFCB91 /* DoctorERAS.storyboard in Resources */,
+				6A02433F2000772F005B1E72 /* PatientERAS.storyboard in Resources */,
 				C4BF11DF1DA27D7E003AD11A /* LaunchScreen.storyboard in Resources */,
 				C4BF119E1DA278FB003AD11A /* Doctor.storyboard in Resources */,
 			);

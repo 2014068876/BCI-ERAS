@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dyv-r5-8fb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dyv-r5-8fb">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -129,6 +129,7 @@
                         <outlet property="userName" destination="uAo-F2-Ndh" id="Cks-7M-xYe"/>
                         <segue destination="wHQ-eE-wWo" kind="show" identifier="loginDoctor" id="Tfx-px-ycC"/>
                         <segue destination="fjj-Qb-qU2" kind="show" identifier="loginPatient" id="RVs-5e-gcT"/>
+                        <segue destination="Xlw-WJ-fNe" kind="show" identifier="loginPatientWithERAS" id="LaU-9j-F9K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pme-9z-OGf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -142,6 +143,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jwr-4V-51L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="987" y="-322"/>
+        </scene>
+        <!--PatientERAS-->
+        <scene sceneID="wU4-0Y-swA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PatientERAS" id="Xlw-WJ-fNe" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Jf-X7-JXk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1239" y="-155"/>
         </scene>
         <!--Doctor-->
         <scene sceneID="xF0-cg-Y1p">
