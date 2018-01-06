@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6A02433F2000772F005B1E72 /* PatientERAS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A02433E2000772F005B1E72 /* PatientERAS.storyboard */; };
+		6A0243542000AE30005B1E72 /* ViewExercisesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0243532000AE30005B1E72 /* ViewExercisesViewController.swift */; };
 		6A9D4DF51FFF03B300DFCB91 /* DoctorERAS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A9D4DF41FFF03B300DFCB91 /* DoctorERAS.storyboard */; };
 		C409E30B1DCCCBF800E976A1 /* ListPatientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C409E30A1DCCCBF800E976A1 /* ListPatientTableViewCell.swift */; };
 		C41A25C01DD25B3900DB41A9 /* PatientDoctorProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41A25BF1DD25B3900DB41A9 /* PatientDoctorProfileViewController.swift */; };
@@ -171,6 +172,7 @@
 /* Begin PBXFileReference section */
 		39063E671AA4013A4CB9FAF2 /* Pods-iComPAsS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iComPAsS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iComPAsS/Pods-iComPAsS.debug.xcconfig"; sourceTree = "<group>"; };
 		6A02433E2000772F005B1E72 /* PatientERAS.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PatientERAS.storyboard; sourceTree = "<group>"; };
+		6A0243532000AE30005B1E72 /* ViewExercisesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExercisesViewController.swift; sourceTree = "<group>"; };
 		6A9D4DF41FFF03B300DFCB91 /* DoctorERAS.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DoctorERAS.storyboard; sourceTree = "<group>"; };
 		9DA55821EBADDD841BA2BABB /* Pods-iComPAsS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iComPAsS.release.xcconfig"; path = "Pods/Target Support Files/Pods-iComPAsS/Pods-iComPAsS.release.xcconfig"; sourceTree = "<group>"; };
 		C409E30A1DCCCBF800E976A1 /* ListPatientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListPatientTableViewCell.swift; sourceTree = "<group>"; };
@@ -331,6 +333,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		6A024346200096BA005B1E72 /* PatientERAS */ = {
+			isa = PBXGroup;
+			children = (
+				6A0243532000AE30005B1E72 /* ViewExercisesViewController.swift */,
+			);
+			name = PatientERAS;
+			sourceTree = "<group>";
+		};
 		C43440F41DCCC114006D7B03 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -468,6 +478,7 @@
 		C4BF11731DA27671003AD11A /* iComPAsS */ = {
 			isa = PBXGroup;
 			children = (
+				6A024346200096BA005B1E72 /* PatientERAS */,
 				C460ED041E5815D600132406 /* iComPAsS.entitlements */,
 				C4CD07D71E0BDA6E00247DEE /* CoreData */,
 				C4BF11A11DA27924003AD11A /* Storyboard */,
@@ -702,14 +713,14 @@
 				TargetAttributes = {
 					C4BF11701DA27671003AD11A = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = FYH3VNU48M;
+						DevelopmentTeam = C44NKTY4F2;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
 							com.apple.Push = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -859,6 +870,7 @@
 				C4B6D40F1E2CD5A8005FCFD8 /* PatientTakeESASFourViewController.swift in Sources */,
 				C475225D1E24E13400CACFEA /* GradientSlider.swift in Sources */,
 				C448087D1E39C69A00A4F38C /* DLRadioButton.m in Sources */,
+				6A0243542000AE30005B1E72 /* ViewExercisesViewController.swift in Sources */,
 				C475225F1E24EDBD00CACFEA /* PatientTakeESASTwoViewController.swift in Sources */,
 				C4BF11B71DA27A15003AD11A /* DoctorMenuTableViewController.swift in Sources */,
 				C448086B1E38795200A4F38C /* BEMPathManager.m in Sources */,
@@ -1071,9 +1083,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = iComPAsS/iComPAsS.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Teresa Sy Ortin (3769ANSV72)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = C44NKTY4F2;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1082,7 +1094,7 @@
 				INFOPLIST_FILE = iComPAsS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.usthbci.icompass;
+				PRODUCT_BUNDLE_IDENTIFIER = icompass.eras;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1100,9 +1112,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = iComPAsS/iComPAsS.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Teresa Sy Ortin (3769ANSV72)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = C44NKTY4F2;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1111,7 +1123,7 @@
 				INFOPLIST_FILE = iComPAsS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.usthbci.icompass;
+				PRODUCT_BUNDLE_IDENTIFIER = icompass.eras;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

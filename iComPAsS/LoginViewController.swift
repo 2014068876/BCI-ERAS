@@ -110,11 +110,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
                         self.def.synchronize()
                         self.updateDatabase(self.model.id, userType: self.model.userType, userToken: self.model.token)
                         OneSignal.sendTags(["user_id": String(self.model.id), "user_type": String(self.model.userType)])
-                        switch(self.model.userType){
+                    /*self.performSegueWithIdentifier("loginPatientWithERAS", sender: nil)*/
+                       //self.model.userType
+                        switch(4){
                         case 1: self.presentViewController(self.adminAlert, animated: true, completion: nil)
                             self.logoutUser()
                         case 2: self.performSegueWithIdentifier("loginPatient", sender: nil)
                         case 3: self.performSegueWithIdentifier("loginDoctor", sender: nil)
+                        case 4: self.performSegueWithIdentifier("loginPatientWithERAS", sender: nil)
+                            print("in case 4")
                         default: break
                         }
                         
