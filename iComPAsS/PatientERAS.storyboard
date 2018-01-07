@@ -89,7 +89,7 @@
         <!--Exercises Item Bar-->
         <scene sceneID="9Eg-4s-SUE">
             <objects>
-                <viewController title="Exercises Item Bar" id="8B9-xL-9mN" customClass="ExercisesItemBarViewController" customModule="iComPAsS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Exercises Item Bar" automaticallyAdjustsScrollViewInsets="NO" id="8B9-xL-9mN" customClass="ExercisesItemBarViewController" customModule="iComPAsS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Edv-pz-HAB"/>
                         <viewControllerLayoutGuide type="bottom" id="x9T-0i-WBD"/>
@@ -98,23 +98,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v7Q-jF-pjW">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="61" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v7Q-jF-pjW">
                                 <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="1K9-W7-Ldi">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="exerciseCell" rowHeight="61" id="1K9-W7-Ldi" customClass="ERASExerciseTabTableViewCell" customModule="iComPAsS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="61"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1K9-W7-Ldi" id="ZjT-Jn-IDM">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XoV-Zo-dKs">
+                                                    <rect key="frame" x="8" y="8" width="359" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                            <integer key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderUIColor">
+                                                            <color key="value" red="1" green="0.65490196078431373" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="exerciseLabel" destination="XoV-Zo-dKs" id="sJC-N8-FMy"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="8B9-xL-9mN" id="5X9-PM-BJs"/>
-                                    <outlet property="delegate" destination="8B9-xL-9mN" id="abz-YD-8d6"/>
+                                    <outlet property="dataSource" destination="8B9-xL-9mN" id="rjy-nW-ScP"/>
+                                    <outlet property="delegate" destination="8B9-xL-9mN" id="yOZ-vl-u9I"/>
                                 </connections>
                             </tableView>
                         </subviews>

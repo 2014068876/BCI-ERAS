@@ -12,6 +12,9 @@ class ExercisesItemBarViewController: UIViewController, UITableViewDelegate, UIT
 
     @IBOutlet weak var hamburgerMenu : UIBarButtonItem!
     
+   
+    @IBOutlet weak var exercisesTableView: UITableView!
+    
     var exerciseList = ["exercise 1", "exercise 2", "exercise 3"]
     
 
@@ -22,17 +25,20 @@ class ExercisesItemBarViewController: UIViewController, UITableViewDelegate, UIT
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        //let exerciseCell = tableView.dequeueReusableCellWithIdentifier("exerciseCell", for: indexPath) as! ERASExerciseTabTableViewCell
-        let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "exerciseCell")
-        cell.textLabel?.text = exerciseList[indexPath.row]
+        let exerciseCell = tableView.dequeueReusableCellWithIdentifier("exerciseCell", forIndexPath: indexPath) as! ERASExerciseTabTableViewCell
+        //let exerciseCell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "exerciseCell") //as! ERASExerciseTabTableViewCell
         
-        return cell
+        //exerciseCell.textLabel?.text = exerciseList[indexPath.row]
+        exerciseCell.exerciseLabel.text = exerciseList[indexPath.row]
+        exerciseCell.exerciseLabel.layer.borderColor = UIColor(red: 1.00, green: 0.65, blue: 0.29, alpha: 1.0).CGColor
+        return exerciseCell
     }
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
+       // exercisesTableView.automaticallyAdjustsScrollViewInsets = false
         
         if self.revealViewController() != nil
         {
