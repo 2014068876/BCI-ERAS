@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GoZ-6T-UWY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="83L-OT-jeG">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,7 +12,7 @@
         <!--ERAS Nav Controller-->
         <scene sceneID="Xyp-bX-jfy">
             <objects>
-                <navigationController storyboardIdentifier="ERAS Nav Controller" title="ERAS Nav Controller" automaticallyAdjustsScrollViewInsets="NO" id="GoZ-6T-UWY" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ERAS Nav Controller" title="ERAS Nav Controller" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="GoZ-6T-UWY" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1RR-UU-7Ph">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -23,7 +23,7 @@
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="lqk-Is-mI7" kind="relationship" relationship="rootViewController" id="VfX-YY-yR0"/>
+                        <segue destination="83L-OT-jeG" kind="relationship" relationship="rootViewController" id="07U-Nj-dg3"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PqP-cZ-Q6H" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -34,16 +34,7 @@
         <scene sceneID="5sy-h5-hax">
             <objects>
                 <viewController title="View Exercises" id="lqk-Is-mI7" customClass="ViewExercisesViewController" customModule="iComPAsS" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="P0c-S4-o3X"/>
-                        <viewControllerLayoutGuide type="bottom" id="Kfp-5e-Bcy"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="IXF-Zg-K6q">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Exercises" id="kMv-i5-eep">
+                    <navigationItem key="navigationItem" title="ERAS" id="kMv-i5-eep">
                         <barButtonItem key="leftBarButtonItem" image="HamburgerMenu" id="axH-QK-xsE">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
@@ -54,7 +45,235 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vaj-g7-LNQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1487" y="-2079"/>
+            <point key="canvasLocation" x="-1916" y="-2803"/>
+        </scene>
+        <!--Reminders Item Bar-->
+        <scene sceneID="cIY-pW-YbZ">
+            <objects>
+                <viewController title="Reminders Item Bar" id="j3d-dU-20J" customClass="RemindersItemBarViewController" customModule="iComPAsS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ArC-uo-teD"/>
+                        <viewControllerLayoutGuide type="bottom" id="UCZ-Sc-M5Z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pIB-N0-gr7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="reminders" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9w-L3-rhi">
+                                <rect key="frame" x="166" y="341" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Reminders" id="uJt-bc-pDk">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-13"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" title="Reminders" id="OC0-4x-Uw0">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="H2i-Gy-4UJ"/>
+                        <barButtonItem key="leftBarButtonItem" image="HamburgerMenu" id="UPi-8w-jT4">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="hamburgerMenu" destination="UPi-8w-jT4" id="8Ni-nX-BmG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3BI-nn-aHB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="156" y="-600"/>
+        </scene>
+        <!--Exercises Item Bar-->
+        <scene sceneID="9Eg-4s-SUE">
+            <objects>
+                <viewController title="Exercises Item Bar" id="8B9-xL-9mN" customClass="ExercisesItemBarViewController" customModule="iComPAsS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Edv-pz-HAB"/>
+                        <viewControllerLayoutGuide type="bottom" id="x9T-0i-WBD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZmS-BJ-a5k">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem image="HamburgerMenu" id="GEF-Af-IlQ">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Exercises" id="GHu-ry-SKW">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="9A9-2S-Tlh"/>
+                        <barButtonItem key="leftBarButtonItem" image="HamburgerMenu" id="Y46-za-AJj">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="hamburgerMenu" destination="Y46-za-AJj" id="dAe-dg-xEM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mxA-ck-kjW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="156" y="-2040.6296851574214"/>
+        </scene>
+        <!--Feedback Item Bar-->
+        <scene sceneID="u7I-Sk-1ee">
+            <objects>
+                <viewController title="Feedback Item Bar" id="oYM-Yc-CDH" customClass="FeedbackItemBarViewController" customModule="iComPAsS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NBa-sk-su2"/>
+                        <viewControllerLayoutGuide type="bottom" id="I0f-HJ-gSf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sEU-a3-W4V">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="feedback" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Tq-ob-CSW">
+                                <rect key="frame" x="174" y="327" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Feedback" id="1wf-mg-fZS">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="pPF-D8-5wx"/>
+                        <barButtonItem key="leftBarButtonItem" image="HamburgerMenu" id="bQ0-e9-VN9">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="hamburgerMenu" destination="bQ0-e9-VN9" id="ghE-kr-lvj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f46-DG-hn4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="156" y="-1334"/>
+        </scene>
+        <!--ERAS Tab Bar Menu-->
+        <scene sceneID="czp-59-UBU">
+            <objects>
+                <tabBarController title="ERAS Tab Bar Menu" id="83L-OT-jeG" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="ERAS" id="79T-mn-whF"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="3jt-pm-JM8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.024157526754536501" green="0.025559168781725927" blue="0.025427160436576824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="barTintColor">
+                                <color key="value" red="0.96862745098039216" green="0.42745098039215684" blue="0.019607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                <color key="value" red="0.98003251903553301" green="0.98003251903553301" blue="0.98003251903553301" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Jq4-VH-AZN" kind="relationship" relationship="viewControllers" id="o1F-tt-sbK"/>
+                        <segue destination="ASc-mZ-azV" kind="relationship" relationship="viewControllers" id="2x8-xc-Wpf"/>
+                        <segue destination="9AN-cD-GZP" kind="relationship" relationship="viewControllers" id="mWp-1d-CHf"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f9V-YI-Ii3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2244" y="-1333"/>
+        </scene>
+        <!--Reminders Item Bar View Controller-->
+        <scene sceneID="AP6-z6-Bui">
+            <objects>
+                <viewController id="iq4-z2-9XL" customClass="RemindersItemBarViewController" customModule="iComPAsS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uMa-bX-f6I"/>
+                        <viewControllerLayoutGuide type="bottom" id="qhz-35-Z4B"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="C3h-cs-L71">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bhf-XL-Vfg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6cw-Z5-fFU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="156" y="-600"/>
+        </scene>
+        <!--Exercises-->
+        <scene sceneID="Ok0-QZ-L7Z">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jq4-VH-AZN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Exercises" id="Fey-pz-c0f">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-13"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="TOC-NX-SoI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.59999999999999998" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8B9-xL-9mN" kind="relationship" relationship="rootViewController" id="VqT-V3-UaS"/>
+                    </connections>
+                </navigationController>
+                <navigationItem title="ERAS" id="A4z-XJ-V0X"/>
+                <tabBarItem title="Exercises" id="4Ab-Fv-Iog">
+                    <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-13"/>
+                </tabBarItem>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0dP-CI-ORe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-783" y="-2040"/>
+        </scene>
+        <!--Reminders-->
+        <scene sceneID="IeW-Ux-LSy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9AN-cD-GZP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Reminders" id="hgh-KT-RRa">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-13"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="URd-th-2MR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.59999999999999998" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="j3d-dU-20J" kind="relationship" relationship="rootViewController" id="OQA-dg-nER"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mH7-wH-36F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-783" y="-600"/>
+        </scene>
+        <!--Feedback-->
+        <scene sceneID="GiP-Lv-SNR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ASc-mZ-azV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Feedback" id="83Q-jy-g7v">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-13"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="E3o-D1-R36">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.59999999999999998" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="oYM-Yc-CDH" kind="relationship" relationship="rootViewController" id="JtT-jx-GDf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TDM-Xd-Zlh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-783" y="-1334"/>
         </scene>
     </scenes>
     <resources>
