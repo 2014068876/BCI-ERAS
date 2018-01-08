@@ -59,6 +59,7 @@ class ExercisesItemBarViewController: UIViewController, UITableViewDelegate, UIT
         {
             let destination = segue.destinationViewController as! ERASExerciseTabSubExerciseViewController
             destination.subExerciseList = ["sub-\(exerciseList[chosenExerciseIndex]).1", "sub-\(exerciseList[chosenExerciseIndex]).2", "sub-\(exerciseList[chosenExerciseIndex]).3"]
+            destination.exerciseTitle = exerciseList[chosenExerciseIndex]
         }
     }
     

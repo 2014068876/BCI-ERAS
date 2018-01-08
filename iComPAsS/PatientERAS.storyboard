@@ -30,23 +30,6 @@
             </objects>
             <point key="canvasLocation" x="-2243" y="-2079"/>
         </scene>
-        <!--View Exercises-->
-        <scene sceneID="5sy-h5-hax">
-            <objects>
-                <viewController title="View Exercises" id="lqk-Is-mI7" customClass="ViewExercisesViewController" customModule="iComPAsS" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="ERAS" id="kMv-i5-eep">
-                        <barButtonItem key="leftBarButtonItem" image="HamburgerMenu" id="axH-QK-xsE">
-                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="hamburgerMenu" destination="axH-QK-xsE" id="ALz-UJ-eoT"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vaj-g7-LNQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1916" y="-2803"/>
-        </scene>
         <!--Reminders Item Bar-->
         <scene sceneID="cIY-pW-YbZ">
             <objects>
@@ -84,7 +67,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3BI-nn-aHB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="156" y="-600"/>
+            <point key="canvasLocation" x="156" y="72"/>
         </scene>
         <!--Exercises Item Bar-->
         <scene sceneID="9Eg-4s-SUE">
@@ -166,10 +149,10 @@
             </objects>
             <point key="canvasLocation" x="156" y="-2040.6296851574214"/>
         </scene>
-        <!--Exercise Details-->
+        <!--Specific Exercise Details View-->
         <scene sceneID="pxj-lX-pau">
             <objects>
-                <viewController storyboardIdentifier="specificExerciseDetailsView" id="NWV-5S-iLY" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="specificExerciseDetailsView" title="Specific Exercise Details View" id="NWV-5S-iLY" customClass="ERASExerciseTabSpecificExerciseDetailsViewController" customModule="iComPAsS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zXr-47-EUm"/>
                         <viewControllerLayoutGuide type="bottom" id="DAp-Xz-dAn"/>
@@ -178,10 +161,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t5S-fq-pvF">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="USTIICS" translatesAutoresizingMaskIntoConstraints="NO" id="t5S-fq-pvF">
                                 <rect key="frame" x="67" y="94" width="240" height="141"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zGC-aT-Ui1">
+                                <rect key="frame" x="67" y="308" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -194,7 +185,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IZG-cZ-MDk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1101.5999999999999" y="-1868.8155922038982"/>
+            <point key="canvasLocation" x="1104.8" y="-1766.2668665667168"/>
         </scene>
         <!--Sub Exercises View-->
         <scene sceneID="vJF-xN-XeW">
@@ -262,6 +253,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="hamburgerMenu" destination="qf0-We-lA0" id="UMT-1E-qF2"/>
+                        <segue destination="NWV-5S-iLY" kind="show" identifier="specificExerciseDetailsView" id="uek-dM-uZN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="htl-7a-jRp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -302,7 +294,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f46-DG-hn4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="156" y="-1334"/>
+            <point key="canvasLocation" x="156" y="-1037"/>
         </scene>
         <!--ERAS Tab Bar Menu-->
         <scene sceneID="czp-59-UBU">
@@ -352,7 +344,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6cw-Z5-fFU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="156" y="-600"/>
+            <point key="canvasLocation" x="156" y="72"/>
         </scene>
         <!--Exercises-->
         <scene sceneID="Ok0-QZ-L7Z">
@@ -400,7 +392,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mH7-wH-36F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-783" y="-600"/>
+            <point key="canvasLocation" x="-783" y="72"/>
         </scene>
         <!--Feedback-->
         <scene sceneID="GiP-Lv-SNR">
@@ -422,10 +414,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TDM-Xd-Zlh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-783" y="-1334"/>
+            <point key="canvasLocation" x="-783" y="-1037"/>
         </scene>
     </scenes>
     <resources>
         <image name="HamburgerMenu" width="25" height="25"/>
+        <image name="USTIICS" width="150" height="156"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="uek-dM-uZN"/>
+    </inferredMetricsTieBreakers>
 </document>

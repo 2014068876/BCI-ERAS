@@ -13,6 +13,9 @@ class ERASExerciseTabSubExerciseViewController: UIViewController, UITableViewDel
     @IBOutlet weak var hamburgerMenu: UIBarButtonItem!
     
     var subExerciseList: [String] = [""]
+    var chosenExerciseIndex = 0
+    var exerciseTitle = ""
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return subExerciseList.count
@@ -26,9 +29,27 @@ class ERASExerciseTabSubExerciseViewController: UIViewController, UITableViewDel
         return exerciseCell
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        chosenExerciseIndex = indexPath.row
+        performSegueWithIdentifier("specificExerciseDetailsView", sender: nil)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "specificExerciseDetailsView"
+        {
+            let destination = segue.destinationViewController as! ERASExerciseTabSpecificExerciseDetailsViewController
+            
+            destination.exerciseTitle = subExerciseList[chosenExerciseIndex]
+        }
+    }
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        self.title = exerciseTitle
         
         if self.revealViewController() != nil
         {
