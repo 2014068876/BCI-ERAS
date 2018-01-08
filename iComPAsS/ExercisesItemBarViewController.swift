@@ -16,7 +16,7 @@ class ExercisesItemBarViewController: UIViewController, UITableViewDelegate, UIT
     @IBOutlet weak var exercisesTableView: UITableView!
     
     var exerciseList = ["exercise 1", "exercise 2", "exercise 3"]
-    
+    var chosenExerciseIndex = 0
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
@@ -26,19 +26,23 @@ class ExercisesItemBarViewController: UIViewController, UITableViewDelegate, UIT
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let exerciseCell = tableView.dequeueReusableCellWithIdentifier("exerciseCell", forIndexPath: indexPath) as! ERASExerciseTabTableViewCell
-        //let exerciseCell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "exerciseCell") //as! ERASExerciseTabTableViewCell
-        
-        //exerciseCell.textLabel?.text = exerciseList[indexPath.row]
+
         exerciseCell.exerciseLabel.text = exerciseList[indexPath.row]
         exerciseCell.exerciseLabel.layer.borderColor = UIColor(red: 1.00, green: 0.65, blue: 0.29, alpha: 1.0).CGColor
+        
         return exerciseCell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        chosenExerciseIndex = indexPath.row
+        performSegueWithIdentifier("subExercisesView", sender: nil)
     }
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
-       // exercisesTableView.automaticallyAdjustsScrollViewInsets = false
+
         
         if self.revealViewController() != nil
         {
@@ -49,6 +53,13 @@ class ExercisesItemBarViewController: UIViewController, UITableViewDelegate, UIT
         
     }
     
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+
+        if segue.identifier == "subExercisesView"
+        {
+            let destination = segue.destinationViewController as! ERASExerciseTabSubExerciseViewController
+            destination.subExerciseList = ["sub-\(exerciseList[chosenExerciseIndex]).1", "sub-\(exerciseList[chosenExerciseIndex]).2", "sub-\(exerciseList[chosenExerciseIndex]).3"]
+        }
+    }
     
 }

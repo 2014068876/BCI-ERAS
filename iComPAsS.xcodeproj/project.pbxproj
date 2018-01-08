@@ -12,6 +12,7 @@
 		6A65A3152002B11B00FD03C9 /* ERASExerciseTabTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A65A3142002B11B00FD03C9 /* ERASExerciseTabTableViewController.swift */; };
 		6A65A3172002B17C00FD03C9 /* ERASExerciseTabTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A65A3162002B17C00FD03C9 /* ERASExerciseTabTableViewCell.swift */; };
 		6A9D4DF51FFF03B300DFCB91 /* DoctorERAS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A9D4DF41FFF03B300DFCB91 /* DoctorERAS.storyboard */; };
+		6AB7AB522003D8EF000D871C /* ERASExerciseTabSubExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB7AB512003D8EF000D871C /* ERASExerciseTabSubExerciseViewController.swift */; };
 		6ADCB1D92001A1E400A91A65 /* ExercisesItemBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADCB1D82001A1E400A91A65 /* ExercisesItemBarViewController.swift */; };
 		6ADCB1DD2001A20300A91A65 /* RemindersItemBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADCB1DC2001A20300A91A65 /* RemindersItemBarViewController.swift */; };
 		6ADCB1DF2001A21A00A91A65 /* FeedbackItemBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADCB1DE2001A21A00A91A65 /* FeedbackItemBarViewController.swift */; };
@@ -182,6 +183,7 @@
 		6A65A3142002B11B00FD03C9 /* ERASExerciseTabTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERASExerciseTabTableViewController.swift; sourceTree = "<group>"; };
 		6A65A3162002B17C00FD03C9 /* ERASExerciseTabTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERASExerciseTabTableViewCell.swift; sourceTree = "<group>"; };
 		6A9D4DF41FFF03B300DFCB91 /* DoctorERAS.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DoctorERAS.storyboard; sourceTree = "<group>"; };
+		6AB7AB512003D8EF000D871C /* ERASExerciseTabSubExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERASExerciseTabSubExerciseViewController.swift; sourceTree = "<group>"; };
 		6ADCB1D82001A1E400A91A65 /* ExercisesItemBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExercisesItemBarViewController.swift; sourceTree = "<group>"; };
 		6ADCB1DC2001A20300A91A65 /* RemindersItemBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindersItemBarViewController.swift; sourceTree = "<group>"; };
 		6ADCB1DE2001A21A00A91A65 /* FeedbackItemBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackItemBarViewController.swift; sourceTree = "<group>"; };
@@ -350,13 +352,38 @@
 			children = (
 				6A0243532000AE30005B1E72 /* ViewExercisesViewController.swift */,
 				6ADCB1E02001ACB300A91A65 /* ERASTabBarMenuViewController.swift */,
-				6ADCB1D82001A1E400A91A65 /* ExercisesItemBarViewController.swift */,
-				6ADCB1DC2001A20300A91A65 /* RemindersItemBarViewController.swift */,
-				6ADCB1DE2001A21A00A91A65 /* FeedbackItemBarViewController.swift */,
-				6A65A3142002B11B00FD03C9 /* ERASExerciseTabTableViewController.swift */,
-				6A65A3162002B17C00FD03C9 /* ERASExerciseTabTableViewCell.swift */,
+				6AB7AB4C2003D3EE000D871C /* Exercises Tab */,
+				6AB7AB4F2003D402000D871C /* Reminders Tab */,
+				6AB7AB502003D40C000D871C /* Feedback Tab */,
 			);
 			name = PatientERAS;
+			sourceTree = "<group>";
+		};
+		6AB7AB4C2003D3EE000D871C /* Exercises Tab */ = {
+			isa = PBXGroup;
+			children = (
+				6ADCB1D82001A1E400A91A65 /* ExercisesItemBarViewController.swift */,
+				6A65A3142002B11B00FD03C9 /* ERASExerciseTabTableViewController.swift */,
+				6A65A3162002B17C00FD03C9 /* ERASExerciseTabTableViewCell.swift */,
+				6AB7AB512003D8EF000D871C /* ERASExerciseTabSubExerciseViewController.swift */,
+			);
+			name = "Exercises Tab";
+			sourceTree = "<group>";
+		};
+		6AB7AB4F2003D402000D871C /* Reminders Tab */ = {
+			isa = PBXGroup;
+			children = (
+				6ADCB1DC2001A20300A91A65 /* RemindersItemBarViewController.swift */,
+			);
+			name = "Reminders Tab";
+			sourceTree = "<group>";
+		};
+		6AB7AB502003D40C000D871C /* Feedback Tab */ = {
+			isa = PBXGroup;
+			children = (
+				6ADCB1DE2001A21A00A91A65 /* FeedbackItemBarViewController.swift */,
+			);
+			name = "Feedback Tab";
 			sourceTree = "<group>";
 		};
 		C43440F41DCCC114006D7B03 /* Views */ = {
@@ -899,6 +926,7 @@
 				C4EFE6101E66687C0029682F /* DoctorPatientPHQTableViewController.swift in Sources */,
 				C473EE9E1DA281C900109E03 /* IQUIView+IQKeyboardToolbar.swift in Sources */,
 				C44808711E38B2F700A4F38C /* DoctorPatientProfileInformationViewController.swift in Sources */,
+				6AB7AB522003D8EF000D871C /* ERASExerciseTabSubExerciseViewController.swift in Sources */,
 				C4A76E7B1E920CA6003A4F45 /* PatientTakePainDetectNineViewController.swift in Sources */,
 				C4BF11EB1DA27E18003AD11A /* PatientHelpTableViewController.swift in Sources */,
 				C4CD07DA1E0D067000247DEE /* DoctorProfileOtherDetailViewController.swift in Sources */,

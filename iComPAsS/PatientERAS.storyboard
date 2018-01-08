@@ -158,11 +158,115 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="hamburgerMenu" destination="Y46-za-AJj" id="dAe-dg-xEM"/>
+                        <segue destination="WKS-CU-QUY" kind="show" identifier="subExercisesView" id="mhc-wy-yaL"/>
+                        <segue destination="NWV-5S-iLY" kind="show" id="ZCi-PH-44i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mxA-ck-kjW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="156" y="-2040.6296851574214"/>
+        </scene>
+        <!--Exercise Details-->
+        <scene sceneID="pxj-lX-pau">
+            <objects>
+                <viewController storyboardIdentifier="specificExerciseDetailsView" id="NWV-5S-iLY" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zXr-47-EUm"/>
+                        <viewControllerLayoutGuide type="bottom" id="DAp-Xz-dAn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rfw-0d-pyu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t5S-fq-pvF">
+                                <rect key="frame" x="67" y="94" width="240" height="141"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Exercise Details" id="y8L-xx-hE4">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="IgO-Tt-UMU"/>
+                        <barButtonItem key="leftBarButtonItem" image="HamburgerMenu" id="FAe-l6-wIp">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IZG-cZ-MDk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1101.5999999999999" y="-1868.8155922038982"/>
+        </scene>
+        <!--Sub Exercises View-->
+        <scene sceneID="vJF-xN-XeW">
+            <objects>
+                <viewController storyboardIdentifier="subExercisesView" title="Sub Exercises View" automaticallyAdjustsScrollViewInsets="NO" id="WKS-CU-QUY" customClass="ERASExerciseTabSubExerciseViewController" customModule="iComPAsS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="awf-Kx-Lar"/>
+                        <viewControllerLayoutGuide type="bottom" id="uRx-nP-Mch"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fxt-CH-CLy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="61" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="I6r-pt-lS4">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="subExerciseCell" rowHeight="61" id="BO9-zD-JRY" customClass="ERASExerciseTabTableViewCell" customModule="iComPAsS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="61"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BO9-zD-JRY" id="wDt-2c-yoz">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lA5-67-rPa">
+                                                    <rect key="frame" x="8" y="8" width="359" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                            <integer key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderUIColor">
+                                                            <color key="value" red="1" green="0.65490196079999996" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="exerciseLabel" destination="lA5-67-rPa" id="Vgp-g6-nzO"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="WKS-CU-QUY" id="fDN-Uh-vAx"/>
+                                    <outlet property="delegate" destination="WKS-CU-QUY" id="xmn-wb-UoT"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sub-Exercises" id="ccx-us-vxS">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="pnq-hN-dcY"/>
+                        <barButtonItem key="leftBarButtonItem" image="HamburgerMenu" id="qf0-We-lA0">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="hamburgerMenu" destination="qf0-We-lA0" id="UMT-1E-qF2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="htl-7a-jRp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1105" y="-2559"/>
         </scene>
         <!--Feedback Item Bar-->
         <scene sceneID="u7I-Sk-1ee">
