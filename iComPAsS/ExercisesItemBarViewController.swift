@@ -13,11 +13,13 @@ class ExercisesItemBarViewController: UIViewController, UITableViewDelegate, UIT
     @IBOutlet weak var hamburgerMenu : UIBarButtonItem!
     
    
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var exercisesTableView: UITableView!
     
-    var exerciseList = ["exercise 1", "exercise 2", "exercise 3"]
+    var patient = Patient()
+    var exerciseList = [""]
     var chosenExerciseIndex = 0
-
+    var subExerciseList = [""]
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return exerciseList.count
@@ -43,7 +45,8 @@ class ExercisesItemBarViewController: UIViewController, UITableViewDelegate, UIT
     {
         super.viewDidLoad()
 
-        
+        //UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+  
         if self.revealViewController() != nil
         {
             hamburgerMenu.target = self.revealViewController()
@@ -53,12 +56,39 @@ class ExercisesItemBarViewController: UIViewController, UITableViewDelegate, UIT
         
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let def = NSUserDefaults.standardUserDefaults()
+        let token = def.objectForKey("userToken") as! String
+        let id = def.objectForKey("userID") as! Int
+        
+        //UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        patient.getAssignedExercises(id, token: token, completion: {(success) -> Void in
+        self.exerciseList = self.patient.patientAssignedExercisesCategory
+            
+        
+            
+        self.tableView.reloadData()
+            //   UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+        })
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-
+        
+        var assignedExercises = patient.patientAssignedExercises
+        subExerciseList.removeAll()
+        for exercise in assignedExercises
+        {
+            if exercise.category == exerciseList[chosenExerciseIndex]
+            {
+                subExerciseList.append(exercise.name)
+            }
+        }
         if segue.identifier == "subExercisesView"
         {
             let destination = segue.destinationViewController as! ERASExerciseTabSubExerciseViewController
-            destination.subExerciseList = ["sub-\(exerciseList[chosenExerciseIndex]).1", "sub-\(exerciseList[chosenExerciseIndex]).2", "sub-\(exerciseList[chosenExerciseIndex]).3"]
+            destination.subExerciseList = self.subExerciseList
             destination.exerciseTitle = exerciseList[chosenExerciseIndex]
         }
     }

@@ -12,6 +12,7 @@ class ERASExerciseTabSubExerciseViewController: UIViewController, UITableViewDel
 
     @IBOutlet weak var hamburgerMenu: UIBarButtonItem!
     
+
     var subExerciseList: [String] = [""]
     var chosenExerciseIndex = 0
     var exerciseTitle = ""

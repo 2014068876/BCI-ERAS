@@ -8,10 +8,12 @@
 
 import UIKit
 
-class FeedbackItemBarViewController: UIViewController {
+class FeedbackItemBarViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    @IBOutlet weak var hamburgerMenu : UIBarButtonItem!
+    var feedbacks = [""]
     
+    @IBOutlet weak var hamburgerMenu : UIBarButtonItem!
+ 
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -25,5 +27,18 @@ class FeedbackItemBarViewController: UIViewController {
         }
 
     }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return feedbacks.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
+        let feedbackCell = tableView.dequeueReusableCellWithIdentifier("feedbackCell", forIndexPath: indexPath) as! ERASExerciseTabTableViewCell
+
+        return feedbackCell
+    }
+
 
 }

@@ -80,14 +80,84 @@ class Patient: Model {
     var patientPainDetectQuestionSix: [Int] = []
     var patientPainDetectQuestionSeven: [Int] = []
     
+    //ERAS attributes
+    var patientAssignedExercises: [Exercise] = []
+    var patientAssignedExercisesCategory: [String] = []
+    /*
+        @author Gian Paul Flores
+    */
+   func getAssignedExercises(id: Int, token: String, completion: ((success: Bool) -> Void))
+    {
+        let baseURL = mainURL + "/patients/\(id)/assigned_exercises"
+        let url = NSURL(string: baseURL)!
+        let request = NSMutableURLRequest(URL: url)
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { data, response, error in
+            
+            var successVal = true
+            if error == nil
+            {
+                //encode the data that came in, from String to SwiftyJSON
+                let swiftyJSON = JSON(data: data!)
+                //print(swiftyJSON)
+                
+                for item in swiftyJSON.arrayValue
+                {
+                    let exercise = Exercise()
+                    
+                    exercise.id = item["id"].intValue
+                    exercise.name = item["exercise"].stringValue
+                    exercise.category = item["category"].stringValue
+                    
+                    self.patientAssignedExercises.append(exercise)
+                    
+                    if self.patientAssignedExercisesCategory.contains(item["category"].stringValue) == false
+                    {
+                        self.patientAssignedExercisesCategory.append(item["category"].stringValue)
+                    }
+                }
+                
+                for exercise in self.patientAssignedExercises
+                {
+                    print("\(exercise.id)/\(exercise.name)/\(exercise.category)")
+                }
+                
+                print("////////////Assigned Exercises Category:")
+                for category in self.patientAssignedExercisesCategory
+                {
+                    print(category)
+                }
+                print("////////////////////////////////////")
+              //  var assignedExercises = [""]
+                
+            } else {
+                print("There was an error")
+                successVal = false
+            }
+            
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                completion(success: successVal)
+            })
+        }
+        task.resume()
+
+    }
     
 
     func getPatientProfile(id: Int, token: String, completion: ((success: Bool) -> Void)){
+        
+        print("************************* token: Patient ***********************************")
+        print(token)
+        print("****************************************************************************")
         let baseURL = mainURL + "/patients/profile/\(id)"
         let url = NSURL(string: baseURL)!
         let request = NSMutableURLRequest(URL: url)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        
+        print("-----------------\(request)")
         let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { data, response, error in
             
             var successVal = true
@@ -140,7 +210,8 @@ class Patient: Model {
                 self.profilePicture = swiftyJSON["meta"]["profile_pic"].stringValue
                 
             } else {
-                print("There was an error")
+                //print("There was an error")
+                
                 successVal = false
             }
             
@@ -185,6 +256,7 @@ class Patient: Model {
                 
             } else {
                 print("There was an error")
+                print("/////////******************There was NO error****************//////////")
                 successVal = false
             }
             

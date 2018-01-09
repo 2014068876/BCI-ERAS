@@ -112,7 +112,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
                         OneSignal.sendTags(["user_id": String(self.model.id), "user_type": String(self.model.userType)])
                     /*self.performSegueWithIdentifier("loginPatientWithERAS", sender: nil)*/
                        //self.model.userType
-                        switch(4){
+                        switch(self.model.userType){
                         case 1: self.presentViewController(self.adminAlert, animated: true, completion: nil)
                             self.logoutUser()
                         case 2: self.performSegueWithIdentifier("loginPatient", sender: nil)

@@ -66,6 +66,10 @@ class PatientViewProfileViewController: UIViewController {
         let def = NSUserDefaults.standardUserDefaults()
         let token = def.objectForKey("userToken") as! String
         let id = def.objectForKey("userID") as! Int
+        print("***************viewDidAppear")
+        print("***************token: \(token)")
+        print("***************end")
+        print("***************end")
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         patient.getPatientProfile(id, token: token, completion: {(success) -> Void in
             self.updateUI()

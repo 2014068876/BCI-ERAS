@@ -17,8 +17,11 @@ class Model {
     var changePassSuccess = false
     var requestKeySuccess = false
     var resetPassSuccess = false
-    var mainURL = "https://api.usthbci-icompass.com/v2"
+    //var mainURL = "https://api.usthbci-icompass.com/v2"
+    var mainURL = "http://dev.usthbci-icompass.com/api"
+    //var mainURL = "http://192.168.0.15/flores_ws/final-optimized-api-master"
   
+    
     func getAuthentication(username: String, password: String, completion: ((success: Bool) -> Void)){
         let baseURL = mainURL + "/auth"
         let url = NSURL(string: baseURL)!
@@ -26,22 +29,32 @@ class Model {
         request.HTTPMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.HTTPBody = "{\n  \"username\": \"\(username)\",\n  \"password\": \"\(password)\"\n}".dataUsingEncoding(NSUTF8StringEncoding);
-       
-
+       print("----URL: \(url)")
+        print(request)
         let session = NSURLSession.sharedSession()
         let task = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
            
             var successVal = true
             
-            if error == nil{
+            if error == nil
+            {
                 let swiftyJSON = JSON(data: data!)
                 print(swiftyJSON)
                 self.id = swiftyJSON["id"].intValue
                 self.token = swiftyJSON["meta"]["token"].stringValue
                 self.userType = swiftyJSON["data"]["user_type"].intValue
                 self.status = swiftyJSON["data"]["status"].stringValue
-            } else {
-                print("There was an error")
+                
+                print("******************no error: getAuthentication in Model.swift****************")
+                print(self.token)
+                print("****************************************************************************")
+            }
+            else
+            {
+                let swiftyJSON = JSON(data: data!)
+                print("******************There was an error****************")
+                print(swiftyJSON["meta"]["token"].stringValue)
+                print("******************There was an error****************")
                 successVal = false
             }
             
