@@ -10,6 +10,7 @@
 		6A02433F2000772F005B1E72 /* PatientERAS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A02433E2000772F005B1E72 /* PatientERAS.storyboard */; };
 		6A0243542000AE30005B1E72 /* ViewExercisesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0243532000AE30005B1E72 /* ViewExercisesViewController.swift */; };
 		6A4C97FF200549AE0053B1A9 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4C97FE200549AE0053B1A9 /* Exercise.swift */; };
+		6A4C9803200560A70053B1A9 /* ERASFeedbackTabTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4C9802200560A70053B1A9 /* ERASFeedbackTabTableViewCell.swift */; };
 		6A65A3152002B11B00FD03C9 /* ERASExerciseTabTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A65A3142002B11B00FD03C9 /* ERASExerciseTabTableViewController.swift */; };
 		6A65A3172002B17C00FD03C9 /* ERASExerciseTabTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A65A3162002B17C00FD03C9 /* ERASExerciseTabTableViewCell.swift */; };
 		6A9D4DF51FFF03B300DFCB91 /* DoctorERAS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A9D4DF41FFF03B300DFCB91 /* DoctorERAS.storyboard */; };
@@ -183,6 +184,7 @@
 		6A02433E2000772F005B1E72 /* PatientERAS.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PatientERAS.storyboard; sourceTree = "<group>"; };
 		6A0243532000AE30005B1E72 /* ViewExercisesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExercisesViewController.swift; sourceTree = "<group>"; };
 		6A4C97FE200549AE0053B1A9 /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		6A4C9802200560A70053B1A9 /* ERASFeedbackTabTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERASFeedbackTabTableViewCell.swift; sourceTree = "<group>"; };
 		6A65A3142002B11B00FD03C9 /* ERASExerciseTabTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERASExerciseTabTableViewController.swift; sourceTree = "<group>"; };
 		6A65A3162002B17C00FD03C9 /* ERASExerciseTabTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERASExerciseTabTableViewCell.swift; sourceTree = "<group>"; };
 		6A9D4DF41FFF03B300DFCB91 /* DoctorERAS.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DoctorERAS.storyboard; sourceTree = "<group>"; };
@@ -387,6 +389,7 @@
 			isa = PBXGroup;
 			children = (
 				6ADCB1DE2001A21A00A91A65 /* FeedbackItemBarViewController.swift */,
+				6A4C9802200560A70053B1A9 /* ERASFeedbackTabTableViewCell.swift */,
 			);
 			name = "Feedback Tab";
 			sourceTree = "<group>";
@@ -983,6 +986,7 @@
 				C4BF11F31DA27E18003AD11A /* PatientViewProfileViewController.swift in Sources */,
 				C47BB98F1E4C2BBC000BA6D6 /* PatientTakePainDetectOneViewController.swift in Sources */,
 				C473EE861DA2816400109E03 /* IQUIView+Hierarchy.swift in Sources */,
+				6A4C9803200560A70053B1A9 /* ERASFeedbackTabTableViewCell.swift in Sources */,
 				C44808771E39AC7700A4F38C /* PatientAskESASViewController.swift in Sources */,
 				C4EFE6121E666D2C0029682F /* DoctorPatientDatePHQResultsViewController.swift in Sources */,
 				C47BB9971E4C466B000BA6D6 /* PatientTakePainDetectTenViewController.swift in Sources */,

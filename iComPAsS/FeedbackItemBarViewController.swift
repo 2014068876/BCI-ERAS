@@ -10,14 +10,23 @@ import UIKit
 
 class FeedbackItemBarViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    var patient = Patient()
     var feedbacks = [""]
-    
     @IBOutlet weak var hamburgerMenu : UIBarButtonItem!
  
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
+        let def = NSUserDefaults.standardUserDefaults()
+        let token = def.objectForKey("userToken") as! String
+        let id = def.objectForKey("userID") as! Int
+
+        
+        patient.getExercisesFeedback(id, token: token, completion: {(success) -> Void in
+
+        })
+
         
         if self.revealViewController() != nil
         {
@@ -35,7 +44,8 @@ class FeedbackItemBarViewController: UIViewController, UITableViewDelegate, UITa
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let feedbackCell = tableView.dequeueReusableCellWithIdentifier("feedbackCell", forIndexPath: indexPath) as! ERASExerciseTabTableViewCell
+        let feedbackCell = tableView.dequeueReusableCellWithIdentifier("feedbackCell", forIndexPath: indexPath) as! ERASFeedbackTabTableViewCell
+        
 
         return feedbackCell
     }
