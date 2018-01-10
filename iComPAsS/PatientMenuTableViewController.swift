@@ -55,6 +55,8 @@ class PatientMenuTableViewController: UITableViewController {
                 self.notificationNumber.hidden = true
             }
         })
+        
+        
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -73,5 +75,7 @@ class PatientMenuTableViewController: UITableViewController {
             presentViewController(alert, animated: true, completion: nil)
         }
     }
+    
+
     
 }

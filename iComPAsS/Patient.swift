@@ -84,42 +84,8 @@ class Patient: Model {
     var patientAssignedExercises: [Exercise] = []
     var patientAssignedExercisesCategory: [String] = []
     var feedback: [String] = [""]
-    /*
-        @author Gian Paul Flores
-    */
+    var erasEnabled = 0
     
-    func getExercisesFeedback(id: Int, token: String, completion: ((success: Bool) -> Void))
-    {
-        let baseURL = mainURL + "/patients/\(id)/assigned_exercises"
-        let url = NSURL(string: baseURL)!
-        let request = NSMutableURLRequest(URL: url)
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
-        
-        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { data, response, error in
-            
-            var successVal = true
-            if error == nil
-            {
-                //encode the data that came in, from String to SwiftyJSON
-                let swiftyJSON = JSON(data: data!)
-                print("swiftyJSON of getExerciseFeedback contains: ")
-                print(swiftyJSON)
-                
-                
-            } else {
-                print("There was an error")
-                successVal = false
-            }
-            
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                completion(success: successVal)
-            })
-        }
-        task.resume()
-        
-    }
-
     
    func getAssignedExercises(id: Int, token: String, completion: ((success: Bool) -> Void))
     {
@@ -137,7 +103,7 @@ class Patient: Model {
                 //encode the data that came in, from String to SwiftyJSON
                 let swiftyJSON = JSON(data: data!)
                 //print(swiftyJSON)
-                
+                self.patientAssignedExercises.removeAll()
                 for item in swiftyJSON.arrayValue
                 {
                     let exercise = Exercise()

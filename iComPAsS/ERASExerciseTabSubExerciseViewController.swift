@@ -51,13 +51,13 @@ class ERASExerciseTabSubExerciseViewController: UIViewController, UITableViewDel
         super.viewDidLoad()
         
         self.title = exerciseTitle
-        
+        /*
         if self.revealViewController() != nil
         {
             hamburgerMenu.target = self.revealViewController()
             hamburgerMenu.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        }
+        }*/
         
     }
 

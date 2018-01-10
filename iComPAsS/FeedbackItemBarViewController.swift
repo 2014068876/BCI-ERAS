@@ -23,10 +23,7 @@ class FeedbackItemBarViewController: UIViewController, UITableViewDelegate, UITa
         let id = def.objectForKey("userID") as! Int
 
         
-        patient.getExercisesFeedback(id, token: token, completion: {(success) -> Void in
-
-        })
-
+       
         
         if self.revealViewController() != nil
         {

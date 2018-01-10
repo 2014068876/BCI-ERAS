@@ -143,7 +143,7 @@
                         <outlet property="hamburgerMenu" destination="Y46-za-AJj" id="dAe-dg-xEM"/>
                         <outlet property="tableView" destination="v7Q-jF-pjW" id="9zi-5g-gqF"/>
                         <segue destination="WKS-CU-QUY" kind="show" identifier="subExercisesView" id="mhc-wy-yaL"/>
-                        <segue destination="NWV-5S-iLY" kind="show" id="ZCi-PH-44i"/>
+                        <segue destination="NWV-5S-iLY" kind="show" identifier="specificExerciseDetailsView" id="ZCi-PH-44i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mxA-ck-kjW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -178,9 +178,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Exercise Details" id="y8L-xx-hE4">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="IgO-Tt-UMU"/>
-                        <barButtonItem key="leftBarButtonItem" image="HamburgerMenu" id="FAe-l6-wIp">
-                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <barButtonItem key="backBarButtonItem" title="Back" id="IgO-Tt-UMU">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
@@ -247,13 +246,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Sub-Exercises" id="ccx-us-vxS">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="pnq-hN-dcY"/>
-                        <barButtonItem key="leftBarButtonItem" image="HamburgerMenu" id="qf0-We-lA0">
-                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <barButtonItem key="backBarButtonItem" title="Back" id="pnq-hN-dcY">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="hamburgerMenu" destination="qf0-We-lA0" id="UMT-1E-qF2"/>
                         <segue destination="NWV-5S-iLY" kind="show" identifier="specificExerciseDetailsView" id="uek-dM-uZN"/>
                     </connections>
                 </viewController>
@@ -460,6 +457,6 @@
         <image name="USTIICS" width="150" height="156"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ZCi-PH-44i"/>
+        <segue reference="uek-dM-uZN"/>
     </inferredMetricsTieBreakers>
 </document>

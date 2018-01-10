@@ -38,7 +38,25 @@ class ExercisesItemBarViewController: UIViewController, UITableViewDelegate, UIT
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
         chosenExerciseIndex = indexPath.row
-        performSegueWithIdentifier("subExercisesView", sender: nil)
+        
+        let assignedExercises = patient.patientAssignedExercises
+        subExerciseList.removeAll()
+        for exercise in assignedExercises
+        {
+            if exercise.category == exerciseList[chosenExerciseIndex]
+            {
+                subExerciseList.append(exercise.name)
+            }
+        }
+        if subExerciseList.count == 1
+        {
+            performSegueWithIdentifier("specificExerciseDetailsView", sender: nil)
+        }
+        else
+        {
+            performSegueWithIdentifier("subExercisesView", sender: nil)
+        }
+        
     }
     
     override func viewDidLoad()
@@ -76,20 +94,17 @@ class ExercisesItemBarViewController: UIViewController, UITableViewDelegate, UIT
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        var assignedExercises = patient.patientAssignedExercises
-        subExerciseList.removeAll()
-        for exercise in assignedExercises
-        {
-            if exercise.category == exerciseList[chosenExerciseIndex]
-            {
-                subExerciseList.append(exercise.name)
-            }
-        }
         if segue.identifier == "subExercisesView"
         {
             let destination = segue.destinationViewController as! ERASExerciseTabSubExerciseViewController
             destination.subExerciseList = self.subExerciseList
             destination.exerciseTitle = exerciseList[chosenExerciseIndex]
+        }
+        if segue.identifier == "specificExerciseDetailsView"
+        {
+            let destination = segue.destinationViewController as! ERASExerciseTabSpecificExerciseDetailsViewController
+            
+            destination.exerciseTitle = subExerciseList[chosenExerciseIndex]
         }
     }
     
