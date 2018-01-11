@@ -84,7 +84,7 @@ class Patient: Model {
     var patientAssignedExercises: [Exercise] = []
     var patientAssignedExercisesCategory: [String] = []
     var feedback: [String] = [""]
-    var erasEnabled = 0
+    var erasEnabled = 1
     
     
    func getAssignedExercises(id: Int, token: String, completion: ((success: Bool) -> Void))
@@ -194,6 +194,9 @@ class Patient: Model {
                 }
                 
                 self.profilePicture = swiftyJSON["meta"]["profile_pic"].stringValue
+                
+                //ERAS attributes
+                self.erasEnabled = swiftyJSON["profile"]["eras_enabled"].intValue
                 
             } else {
                 //print("There was an error")
