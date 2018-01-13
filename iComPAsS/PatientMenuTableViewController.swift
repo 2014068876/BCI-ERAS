@@ -18,13 +18,14 @@ class PatientMenuTableViewController: UITableViewController {
     @IBOutlet weak var notificationNumber: UILabel!
     var alert = UIAlertController(title: "", message: PMText.logoutBody, preferredStyle: UIAlertControllerStyle.Alert)
     
+    
     var message = Message()
     var patient = Patient()
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
+        self.loadPatientProfile()
         alert.addAction(UIAlertAction(
             title: "No",
             style: UIAlertActionStyle.Cancel)
@@ -53,6 +54,8 @@ class PatientMenuTableViewController: UITableViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        self.loadPatientProfile()
+
         let def = NSUserDefaults.standardUserDefaults()
         let token = def.objectForKey("userToken") as! String
         message.getNumberOfMessage(token, completion: {(success) -> Void in
@@ -81,6 +84,10 @@ class PatientMenuTableViewController: UITableViewController {
             
         }
         
+        if (indexPath.row == 3)
+        {
+            //performSegueWithIdentifier("toERASTabs")
+        }
         if (indexPath.row == 10) {
             presentViewController(alert, animated: true, completion: nil)
         }
@@ -99,7 +106,7 @@ class PatientMenuTableViewController: UITableViewController {
         let esasEnabled = self.patient.esasEnabled
         let erasEnabled = self.patient.erasEnabled
         let featuresEnablement = "\(esasEnabled)\(erasEnabled)"
-        
+        print(featuresEnablement)
         
         
         switch (featuresEnablement)
@@ -117,6 +124,7 @@ class PatientMenuTableViewController: UITableViewController {
         let esasEnabled = self.patient.esasEnabled
         let erasEnabled = self.patient.erasEnabled
         let featuresEnablement = "\(esasEnabled)\(erasEnabled)"
+          print(featuresEnablement)
         
         if (featuresEnablement == "01")
         {
@@ -167,6 +175,7 @@ class PatientMenuTableViewController: UITableViewController {
         let esasEnabled = self.patient.esasEnabled
         let erasEnabled = self.patient.erasEnabled
         let featuresEnablement = "\(esasEnabled)\(erasEnabled)"
+          print(featuresEnablement)
         
         if (featuresEnablement == "01")
         {

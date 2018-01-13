@@ -496,6 +496,14 @@
             </objects>
             <point key="canvasLocation" x="-2167" y="-64"/>
         </scene>
+        <!--ERAS Questionnaire Controller-->
+        <scene sceneID="1ms-Jx-3tI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PatientERAS" referencedIdentifier="ERAS Questionnaire Controller" id="izI-ZE-IO1" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F9x-uQ-Clr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2890" y="-2694"/>
+        </scene>
         <!--ERAS Nav Controller-->
         <scene sceneID="g23-H8-199">
             <objects>
@@ -670,7 +678,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="HAl-oC-WKI" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="K6h-z4-VwL"/>
+                                            <segue destination="HAl-oC-WKI" kind="custom" identifier="toERASTabs" customClass="SWRevealViewControllerSeguePushController" id="K6h-z4-VwL"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="take PHQ" id="oee-Qc-xxn">
