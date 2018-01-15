@@ -12,6 +12,7 @@ class ExercisesItemBarViewController: UIViewController, UITableViewDelegate, UIT
 
     @IBOutlet weak var hamburgerMenu : UIBarButtonItem!
     
+    @IBOutlet weak var activityInidicator: UIActivityIndicatorView!
    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var exercisesTableView: UITableView!
@@ -77,18 +78,19 @@ class ExercisesItemBarViewController: UIViewController, UITableViewDelegate, UIT
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
+        self.tableView.hidden = true
+        activityInidicator.startAnimating()
+        
         let def = NSUserDefaults.standardUserDefaults()
         let token = def.objectForKey("userToken") as! String
         let id = def.objectForKey("userID") as! Int
         
-        //UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         patient.getAssignedExercises(id, token: token, completion: {(success) -> Void in
         self.exerciseList = self.patient.patientAssignedExercisesCategory
             
-        
-            
         self.tableView.reloadData()
-            //   UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+        self.activityInidicator.stopAnimating()
+        self.tableView.hidden = false
         })
     }
     
