@@ -13,6 +13,8 @@ class ERASQuestionnaireTextTableViewCell: UITableViewCell {
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var questionTextView: UITextView!
     
+    var question = Question()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

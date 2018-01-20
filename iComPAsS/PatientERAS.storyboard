@@ -359,6 +359,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="submitQuestionnaire:" destination="F3Q-sd-pEm" eventType="touchUpInside" id="AdK-cc-qMx"/>
                                     <segue destination="83L-OT-jeG" kind="custom" identifier="toERASTabs" customClass="SWRevealViewControllerSeguePushController" id="qkX-mI-PsU"/>
                                 </connections>
                             </button>
@@ -406,6 +407,9 @@
                                                             <color key="value" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outletCollection property="otherButtons" destination="jcK-yh-vEa" id="Xvm-FZ-HLr"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X8I-XL-YW7">
                                                     <rect key="frame" x="211" y="42" width="42" height="21"/>
@@ -496,6 +500,9 @@
                                                             <color key="value" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outletCollection property="otherButtons" destination="CcN-7n-PL8" id="U4P-ow-BuV"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAQ-At-xro">
                                                     <rect key="frame" x="211" y="42" width="42" height="21"/>
@@ -515,9 +522,13 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="ht2-2F-RZF">
-                                                    <rect key="frame" x="41" y="72" width="94" height="29"/>
-                                                </stepper>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="drz-QV-s74">
+                                                    <rect key="frame" x="31" y="70" width="97" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                </textField>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="CUW-HU-H8e" firstAttribute="top" secondItem="zBR-kJ-dko" secondAttribute="topMargin" constant="2" id="0oI-bV-eBO"/>
@@ -532,14 +543,12 @@
                                                 <constraint firstItem="HuF-XQ-sMh" firstAttribute="leading" secondItem="6Zz-ld-Rke" secondAttribute="trailing" constant="8" id="ZaM-tE-ozd"/>
                                                 <constraint firstItem="HuF-XQ-sMh" firstAttribute="leading" secondItem="6Zz-ld-Rke" secondAttribute="trailing" constant="8" symbolic="YES" id="aMv-6Q-ynX"/>
                                                 <constraint firstItem="wAQ-At-xro" firstAttribute="leading" secondItem="HuF-XQ-sMh" secondAttribute="trailing" constant="74" id="bnI-lB-VRs"/>
-                                                <constraint firstItem="ht2-2F-RZF" firstAttribute="leading" secondItem="zBR-kJ-dko" secondAttribute="leadingMargin" constant="33" id="bov-6t-OBd"/>
                                                 <constraint firstItem="6Zz-ld-Rke" firstAttribute="leading" secondItem="zBR-kJ-dko" secondAttribute="leadingMargin" constant="33" id="cGa-qR-1oE"/>
                                                 <constraint firstItem="wAQ-At-xro" firstAttribute="baseline" secondItem="CcN-7n-PL8" secondAttribute="firstBaseline" id="ckv-6I-CDN"/>
                                                 <constraint firstItem="wAQ-At-xro" firstAttribute="baseline" secondItem="CcN-7n-PL8" secondAttribute="baseline" id="h5M-ib-bVg"/>
                                                 <constraint firstItem="HuF-XQ-sMh" firstAttribute="baseline" secondItem="wAQ-At-xro" secondAttribute="baseline" id="hT4-lc-2uf"/>
                                                 <constraint firstItem="HuF-XQ-sMh" firstAttribute="firstBaseline" secondItem="wAQ-At-xro" secondAttribute="baseline" id="lhJ-s3-Z2y"/>
                                                 <constraint firstItem="wAQ-At-xro" firstAttribute="top" secondItem="CUW-HU-H8e" secondAttribute="bottom" constant="14" id="mbA-4s-Thi"/>
-                                                <constraint firstItem="ht2-2F-RZF" firstAttribute="bottom" secondItem="zBR-kJ-dko" secondAttribute="bottomMargin" id="n1B-Fl-R7h"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="HuF-XQ-sMh" secondAttribute="bottom" constant="32" id="r7F-mg-53O"/>
                                                 <constraint firstItem="HuF-XQ-sMh" firstAttribute="top" secondItem="CUW-HU-H8e" secondAttribute="bottom" constant="9" id="rL2-J8-0Na"/>
                                                 <constraint firstItem="HuF-XQ-sMh" firstAttribute="top" secondItem="CcN-7n-PL8" secondAttribute="top" id="ts6-Kv-Uk0"/>
@@ -547,7 +556,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="numericalInput" destination="drz-QV-s74" id="kFE-sT-tC0"/>
                                             <outlet property="questionLabel" destination="CUW-HU-H8e" id="L24-Yr-BFR"/>
+                                            <outlet property="questionNoRadioButton" destination="CcN-7n-PL8" id="gtO-k8-pC0"/>
+                                            <outlet property="questionYesRadioButton" destination="HuF-XQ-sMh" id="rr3-xB-oIA"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="textCell" rowHeight="204" id="LVj-qY-ZuK" customClass="ERASQuestionnaireTextTableViewCell" customModule="iComPAsS" customModuleProvider="target">

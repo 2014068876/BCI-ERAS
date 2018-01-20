@@ -44,6 +44,11 @@ class PatientPrescriptionsViewController: UIViewController {
             self.updateUI()
             UIApplication.sharedApplication().networkActivityIndicatorVisible = false
         })
+        
+        patient.resetERASQuestionnaire(id, token: token, completion: {(success) -> Void in
+
+        })
+
     }
     
     private func updateUI(){

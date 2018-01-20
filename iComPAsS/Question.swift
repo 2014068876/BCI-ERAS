@@ -10,8 +10,12 @@ import Foundation
 
 class Question
 {
+    var responseID = 0
     var id = 0
-    var description = ""
+    var question = ""
     var typeID = 0
-    var typeName = ""
+    var type = ""
+    var timeAssigned = ""
+    var timeAnswered = ""
+    var response = ""
 }

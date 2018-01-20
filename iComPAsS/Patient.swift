@@ -86,11 +86,83 @@ class Patient: Model {
     var feedback: [String] = [""]
     var erasEnabled = 1
     var assignedQuestions : [Question] = []
+    var erasQuestionnaireIsDone = false
     
+    
+    func setQuestionResponse(id: Int, token: String, response: String, questionID: Int, completion: ((success: Bool) -> Void))
+    {
+        let baseURL = mainURL + "/patients/\(id)/questionnaire"
+        let url = NSURL(string: baseURL)!
+        let request = NSMutableURLRequest(URL: url)
+        request.HTTPMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        
+        let qresponse = ["question_id" : questionID, "response" : response]
+        guard let thttpbody = try? NSJSONSerialization.dataWithJSONObject(qresponse, options: []) else { return }
+        request.HTTPBody = thttpbody
+     /*   request.HTTPBody = "{\n \"question_id\": \(questionID),\n\"response\": \"\(response)\"\n}".dataUsingEncoding(NSUTF8StringEncoding)
+        
+        print("{\n \"question_id\": \(questionID),\n\"response\": \"\(response)\"\n}")*/
+        print(request)
+          let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { data, response, error in
+            
+            var successVal = true
+            if error == nil{
+                
+                if let httpResponse = response as? NSHTTPURLResponse{
+                    print("status Code: \(httpResponse.statusCode)")
+                    print(JSON(data: data!))
+                    if httpResponse.statusCode == 201 {
+                        //self.messageSent = true
+                    } else {
+                        //self.messageSent = false
+                    }
+                }
+                
+            } else {
+                print("There was an error")
+                successVal = false
+            }
+            
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                completion(success: successVal)
+            })
+        }
+        task.resume()
+    }
+    
+    func resetERASQuestionnaire(id: Int, token: String, completion: ((success: Bool) -> Void))
+    {
+        let baseURL = mainURL + "/patients/\(id)/reset_questionnaire/2018-01-17"
+        let url = NSURL(string: baseURL)!
+        let request = NSMutableURLRequest(URL: url)
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { data, response, error in
+            
+            var successVal = true
+            if error == nil
+            {
+                print("ERAS Questionnaire successfully reset.")
+            } else
+            {
+                print("There was an error")
+                successVal = false
+            }
+            
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                completion(success: successVal)
+            })
+        }
+        task.resume()
+        
+    }
     
     func getAssignedQuestions(id: Int, token: String, completion: ((success: Bool) -> Void))
     {
-        let baseURL = mainURL + "/patients/\(id)/eras_questions"
+        let baseURL = mainURL + "/patients/\(id)/questionnaire"
         let url = NSURL(string: baseURL)!
         let request = NSMutableURLRequest(URL: url)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -105,23 +177,28 @@ class Patient: Model {
                 let swiftyJSON = JSON(data: data!)
                 print(swiftyJSON)
                 
+                self.erasQuestionnaireIsDone = swiftyJSON["flags"]["today_done"].boolValue
+                print("cccccccccccccccccccccccccc\(self.erasQuestionnaireIsDone)")
+                
                 self.assignedQuestions.removeAll()
-                for questions in swiftyJSON.arrayValue
+                for questions in swiftyJSON["questions"].arrayValue
                 {
                     let question = Question()
                     
-                    question.id = questions["id"].intValue
-                    question.description = questions["description"].stringValue
+                    question.responseID = questions["question_response_id"].intValue
+                    question.id = questions["question_id"].intValue
+                    question.question = questions["question"].stringValue
                     question.typeID = questions["type_id"].intValue
-                    question.typeName = questions["type_name"].stringValue
-                    print("added question: \(question.typeName)")
+                    question.type = questions["type"].stringValue
+                    question.timeAssigned = questions["time_assigned"].stringValue
+                    question.timeAnswered = questions["time_answered"].stringValue
+                    
                     self.assignedQuestions.append(question)
                 }
                 
-                print("%%%%%%%%%%%%%%%%\(self.assignedQuestions)")
-                
-            } else {
-                print("There was an errorThere was an errorThere was an errorThere was an errorThere was an errorThere was an errorThere was an errorThere was an errorThere was an errorThere was an errorThere was an errorThere was an errorThere was an errorThere was an errorThere was an errorThere was an error")
+            } else
+            {
+                print("There was an error")
                 successVal = false
             }
             

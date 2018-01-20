@@ -10,7 +10,14 @@ import UIKit
 
 class ERASQuestionnaireBooleanNumericalTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var numericalInput: UITextField!
     @IBOutlet weak var questionLabel: UILabel!
+    
+    @IBOutlet weak var questionNoRadioButton: DLRadioButton!
+    @IBOutlet weak var questionYesRadioButton: DLRadioButton!
+    
+    var question = Question()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

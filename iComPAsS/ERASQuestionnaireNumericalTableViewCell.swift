@@ -13,6 +13,8 @@ class ERASQuestionnaireNumericalTableViewCell: UITableViewCell {
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var questionUISlider: UISlider!
     
+    var question = Question()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

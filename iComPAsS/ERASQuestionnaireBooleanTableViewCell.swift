@@ -15,6 +15,8 @@ class ERASQuestionnaireBooleanTableViewCell: UITableViewCell {
     @IBOutlet weak var questionNoRadioButton: DLRadioButton!
     @IBOutlet weak var questionYesRadioButton: DLRadioButton!
     
+    var question = Question()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
