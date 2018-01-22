@@ -17,13 +17,18 @@ class ERASQuestionnaireTableViewController: UIViewController, UITableViewDelegat
     
     var questions : [Question] = []
     var patient = Patient()
+    
+    var unansweredQuestionAlert = UIAlertController(title: "Remaining Questions", message: "Please answer all the questions.", preferredStyle: UIAlertControllerStyle.Alert)
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
     
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 44
-
+        
+        unansweredQuestionAlert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default) { (action: UIAlertAction) -> Void in })
+        
         if self.revealViewController() != nil
         {
             hamburgerMenu.target = self.revealViewController()
@@ -106,55 +111,116 @@ class ERASQuestionnaireTableViewController: UIViewController, UITableViewDelegat
         
         self.patient.getAssignedQuestions(id, token: token, completion: {(success) -> Void in
             print(self.patient.erasQuestionnaireIsDone)
-        }) //load the assigned questions for this patient
+        })
         
-        for row in 1...tableView.numberOfRowsInSection(0) //loop though each cell and get the answer to every question
+        var unanswered = 0
+        
+        for row in 1...tableView.numberOfRowsInSection(0)
         {
-            let cell = tableView.viewWithTag(row) //access table view cell through the tag assigned earlier
+            let cell = tableView.viewWithTag(row)
             
-            if (cell is ERASQuestionnaireTextTableViewCell) //check on what kind of cell
+            if (cell is ERASQuestionnaireTextTableViewCell)
             {
                 let questionCell = cell as! ERASQuestionnaireTextTableViewCell
                 let response = questionCell.questionTextView.text
-                let questionID = questionCell.question.id
                 
-                setQuestionResponse(id, token: token, response: response, questionID: questionID) //call API and update DB of patient's response to the question
+                if (response == "")
+                {
+                    unanswered += 1
+                }
             }
             else if (cell is ERASQuestionnaireBooleanTableViewCell)
             {
                 let questionCell = cell as! ERASQuestionnaireBooleanTableViewCell
-                var response = "No"
-                let questionID = questionCell.question.id
                 
-                if questionCell.questionYesRadioButton.selected
+                if (questionCell.questionNoRadioButton.selected == false && questionCell.questionYesRadioButton.selected == false)
                 {
-                    response = "Yes"
+                    unanswered += 1
                 }
-                
-                setQuestionResponse(id, token: token, response: response, questionID: questionID)
-            }
-            else if (cell is ERASQuestionnaireNumericalTableViewCell)
-            {
-                let questionCell = cell as! ERASQuestionnaireNumericalTableViewCell
-                let response = "\(questionCell.questionUISlider.value)"
-                let questionID = questionCell.question.id
-                
-                setQuestionResponse(id, token: token, response: response, questionID: questionID)
             }
             else if (cell is ERASQuestionnaireBooleanNumericalTableViewCell)
             {
                 let questionCell = cell as! ERASQuestionnaireBooleanNumericalTableViewCell
-                var response = "No"
-                let questionID = questionCell.question.id
+                
+                if (questionCell.questionNoRadioButton.selected == false && questionCell.questionYesRadioButton.selected == false)
+                {
+                    unanswered += 1
+                }
                 
                 if questionCell.questionYesRadioButton.selected
                 {
-                    response = "Yes. \(questionCell.numericalInput.text)"
+                    if questionCell.numericalInput.text == ""
+                    {
+                        unanswered += 1
+                    }
                 }
-                
-                setQuestionResponse(id, token: token, response: response, questionID: questionID)
             }
-            else { }
+        }
+        
+        if (unanswered == 0)
+        {
+            for row in 1...tableView.numberOfRowsInSection(0)
+            {
+                let cell = tableView.viewWithTag(row)
+            
+                if (cell is ERASQuestionnaireTextTableViewCell)
+                {
+                    let questionCell = cell as! ERASQuestionnaireTextTableViewCell
+                    let response = questionCell.questionTextView.text
+                    let questionID = questionCell.question.id
+                
+                    setQuestionResponse(id, token: token, response: response, questionID: questionID)
+                }
+                else if (cell is ERASQuestionnaireBooleanTableViewCell)
+                {
+                    let questionCell = cell as! ERASQuestionnaireBooleanTableViewCell
+                    var response = ""
+                    let questionID = questionCell.question.id
+                
+                    if questionCell.questionYesRadioButton.selected
+                    {
+                        response = "Yes"
+                    }
+                    else if questionCell.questionNoRadioButton.selected
+                    {
+                        response = "No"
+                    }
+                
+                    setQuestionResponse(id, token: token, response: response, questionID: questionID)
+                }
+                else if (cell is ERASQuestionnaireNumericalTableViewCell)
+                {
+                    let questionCell = cell as! ERASQuestionnaireNumericalTableViewCell
+                    let response = "\(questionCell.questionUISlider.value)"
+                    let questionID = questionCell.question.id
+                
+                    setQuestionResponse(id, token: token, response: response, questionID: questionID)
+                }
+                else if (cell is ERASQuestionnaireBooleanNumericalTableViewCell)
+                {
+                    let questionCell = cell as! ERASQuestionnaireBooleanNumericalTableViewCell
+                    var response = ""
+                    let questionID = questionCell.question.id
+                
+                    if questionCell.questionYesRadioButton.selected
+                    {
+                        response = "Yes. \(questionCell.numericalInput.text!)"
+                    }
+                    else if questionCell.questionNoRadioButton.selected
+                    {
+                        response = "No"
+                    }
+                
+                    setQuestionResponse(id, token: token, response: response, questionID: questionID)
+                }
+                else { }
+            }
+            
+            performSegueWithIdentifier("toERASTabs", sender: nil)
+        }
+        else
+        {
+            presentViewController(unansweredQuestionAlert, animated: true, completion: nil)
         }
     }
     

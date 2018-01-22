@@ -15,8 +15,18 @@ class ERASQuestionnaireBooleanNumericalTableViewCell: UITableViewCell {
     
     @IBOutlet weak var questionNoRadioButton: DLRadioButton!
     @IBOutlet weak var questionYesRadioButton: DLRadioButton!
+
+    @IBAction func disableNumericalInputField(sender: DLRadioButton) {
+        numericalInput.enabled = true
+    }
+    
+    @IBAction func enableNumericalInputField(sender: DLRadioButton) {
+        numericalInput.enabled = false
+    }
     
     var question = Question()
+    
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
