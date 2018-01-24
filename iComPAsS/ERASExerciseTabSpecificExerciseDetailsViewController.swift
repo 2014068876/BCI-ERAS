@@ -20,7 +20,8 @@ class ERASExerciseTabSpecificExerciseDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       // exerciseGIF.gifWithName("sample_exercise")
+       
+        exerciseGIF.image = UIImage.gifWithName("sample_exercise")
 
         self.title = exerciseTitle;
     }

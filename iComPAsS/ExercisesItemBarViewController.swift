@@ -16,6 +16,7 @@ class ExercisesItemBarViewController: UIViewController, UITableViewDelegate, UIT
    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var exercisesTableView: UITableView!
+    @IBOutlet weak var accomplisedExercisesIndicatorLabel: UILabel!
     
     var patient = Patient()
     var exerciseList = [""]
@@ -51,7 +52,7 @@ class ExercisesItemBarViewController: UIViewController, UITableViewDelegate, UIT
             if exercise.categoryDescription == exerciseList[chosenExerciseIndex]
             {
                 subExercisesList.append(exercise)
-                specificExerciseID = exercise.responseID
+                specificExerciseID = exercise.exerciseID
                 //print(exercise.description)
             }
         }
@@ -85,18 +86,27 @@ class ExercisesItemBarViewController: UIViewController, UITableViewDelegate, UIT
         super.viewDidAppear(animated)
         
         self.tableView.hidden = true
+        accomplisedExercisesIndicatorLabel.hidden = true
         activityInidicator.startAnimating()
         
         let def = NSUserDefaults.standardUserDefaults()
         let token = def.objectForKey("userToken") as! String
         let id = def.objectForKey("userID") as! Int
         
+        
         patient.getAssignedExercises(id, token: token, completion: {(success) -> Void in
         self.exerciseList = self.patient.patientAssignedExercisesCategory
             
         self.tableView.reloadData()
         self.activityInidicator.stopAnimating()
-        self.tableView.hidden = false
+            print("kkkkkkkkkkkkkkkkkkkkkkk\(self.patient.erasQuestionnaireIsDone)")
+            if self.patient.erasExercisesTodayIsDone
+            {
+                self.accomplisedExercisesIndicatorLabel.hidden = false
+            }
+            else
+            {
+                self.tableView.hidden = false }
         })
     }
     

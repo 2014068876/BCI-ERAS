@@ -17,8 +17,8 @@ class ERASExerciseTabSubExerciseViewController: UIViewController, UITableViewDel
     var subExercisesList: [Exercise] = [Exercise()]
     var chosenExerciseIndex = 0
     var exerciseTitle = ""
-    
     var specificExerciseID = 0
+    var loaded = false
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
@@ -29,9 +29,11 @@ class ERASExerciseTabSubExerciseViewController: UIViewController, UITableViewDel
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let exerciseCell = tableView.dequeueReusableCellWithIdentifier("subExerciseCell", forIndexPath: indexPath) as! ERASExerciseTabTableViewCell
-        //exerciseCell.exerciseLabel.text = subExerciseList[indexPath.row]
+        
         exerciseCell.exerciseLabel.text = subExercisesList[indexPath.row].description
         exerciseCell.exerciseLabel.layer.borderColor = UIColor(red: 1.00, green: 0.65, blue: 0.29, alpha: 1.0).CGColor
+        
+        
         return exerciseCell
     }
     
@@ -68,6 +70,9 @@ class ERASExerciseTabSubExerciseViewController: UIViewController, UITableViewDel
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }*/
         
+    }
+    
+    override func viewDidAppear(animated: Bool) {
     }
 
 }
