@@ -13,19 +13,24 @@ class ERASExerciseTabSubExerciseViewController: UIViewController, UITableViewDel
     @IBOutlet weak var hamburgerMenu: UIBarButtonItem!
     
 
-    var subExerciseList: [String] = [""]
+   // var subExerciseList: [String] = [""]
+    var subExercisesList: [Exercise] = [Exercise()]
     var chosenExerciseIndex = 0
     var exerciseTitle = ""
     
+    var specificExerciseID = 0
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return subExerciseList.count
+        //return subExerciseList.count
+        return subExercisesList.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let exerciseCell = tableView.dequeueReusableCellWithIdentifier("subExerciseCell", forIndexPath: indexPath) as! ERASExerciseTabTableViewCell
-        exerciseCell.exerciseLabel.text = subExerciseList[indexPath.row]
+        //exerciseCell.exerciseLabel.text = subExerciseList[indexPath.row]
+        exerciseCell.exerciseLabel.text = subExercisesList[indexPath.row].description
         exerciseCell.exerciseLabel.layer.borderColor = UIColor(red: 1.00, green: 0.65, blue: 0.29, alpha: 1.0).CGColor
         return exerciseCell
     }
@@ -33,6 +38,8 @@ class ERASExerciseTabSubExerciseViewController: UIViewController, UITableViewDel
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
         chosenExerciseIndex = indexPath.row
+        specificExerciseID = subExercisesList[chosenExerciseIndex].exerciseID
+        
         performSegueWithIdentifier("specificExerciseDetailsView", sender: nil)
     }
     
@@ -42,7 +49,9 @@ class ERASExerciseTabSubExerciseViewController: UIViewController, UITableViewDel
         {
             let destination = segue.destinationViewController as! ERASExerciseTabSpecificExerciseDetailsViewController
             
-            destination.exerciseTitle = subExerciseList[chosenExerciseIndex]
+            destination.chosenSubexerciseID = specificExerciseID
+            //destination.exerciseTitle = subExerciseList[chosenExerciseIndex]
+            destination.exerciseTitle = subExercisesList[chosenExerciseIndex].description
         }
     }
     

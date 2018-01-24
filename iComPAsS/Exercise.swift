@@ -10,9 +10,22 @@ import Foundation
 
 class Exercise
 {
-    var id: Int = 0
-    var name = ""
-    var category = ""
+    var responseID = 0
+    var description = ""
+    
+    var timeAssigned = ""
+    var timeStarted = ""
+    var timeCompleted = ""
+    
+    var exerciseFeedback = ""
+    var exerciseID = 0
+    
+    var categoryID = 0
+    var categoryDescription = ""
+    
+    var statusID = 0
+    var statusDescription = ""
+    var statusTimestamp = ""
     
     
 }

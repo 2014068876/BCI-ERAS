@@ -16,6 +16,8 @@
 		6A65A3172002B17C00FD03C9 /* ERASExerciseTabTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A65A3162002B17C00FD03C9 /* ERASExerciseTabTableViewCell.swift */; };
 		6A6BE2332009CD480087B7A4 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6BE2322009CD480087B7A4 /* Question.swift */; };
 		6A6BE2352009CEED0087B7A4 /* ERASQuestionnaireTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6BE2342009CEED0087B7A4 /* ERASQuestionnaireTableViewController.swift */; };
+		6A8A32922017D4E200098B03 /* SwiftGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8A32912017D4E200098B03 /* SwiftGif.swift */; };
+		6A8A32962017D77100098B03 /* sample_exercise.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6A8A32952017D77100098B03 /* sample_exercise.gif */; };
 		6A9D4DF51FFF03B300DFCB91 /* DoctorERAS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A9D4DF41FFF03B300DFCB91 /* DoctorERAS.storyboard */; };
 		6AAADBC0200406DB00F0ABE5 /* ERASExerciseTabSpecificExerciseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAADBBF200406DB00F0ABE5 /* ERASExerciseTabSpecificExerciseDetailsViewController.swift */; };
 		6AB7AB522003D8EF000D871C /* ERASExerciseTabSubExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB7AB512003D8EF000D871C /* ERASExerciseTabSubExerciseViewController.swift */; };
@@ -196,6 +198,8 @@
 		6A65A3162002B17C00FD03C9 /* ERASExerciseTabTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERASExerciseTabTableViewCell.swift; sourceTree = "<group>"; };
 		6A6BE2322009CD480087B7A4 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		6A6BE2342009CEED0087B7A4 /* ERASQuestionnaireTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERASQuestionnaireTableViewController.swift; sourceTree = "<group>"; };
+		6A8A32912017D4E200098B03 /* SwiftGif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftGif.swift; sourceTree = "<group>"; };
+		6A8A32952017D77100098B03 /* sample_exercise.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = sample_exercise.gif; path = ../../../Downloads/sample_exercise.gif; sourceTree = "<group>"; };
 		6A9D4DF41FFF03B300DFCB91 /* DoctorERAS.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DoctorERAS.storyboard; sourceTree = "<group>"; };
 		6AAADBBF200406DB00F0ABE5 /* ERASExerciseTabSpecificExerciseDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERASExerciseTabSpecificExerciseDetailsViewController.swift; sourceTree = "<group>"; };
 		6AB7AB512003D8EF000D871C /* ERASExerciseTabSubExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERASExerciseTabSubExerciseViewController.swift; sourceTree = "<group>"; };
@@ -565,6 +569,7 @@
 				C4BF11A61DA27995003AD11A /* Model */,
 				6A024346200096BA005B1E72 /* PatientERAS */,
 				C4BF11D11DA27A6B003AD11A /* Patient */,
+				6A8A32912017D4E200098B03 /* SwiftGif.swift */,
 				C4BF11DB1DA27AC3003AD11A /* Open Source */,
 				C4BF119A1DA277C1003AD11A /* Supporting Files */,
 			);
@@ -583,6 +588,7 @@
 		C4BF119A1DA277C1003AD11A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6A8A32952017D77100098B03 /* sample_exercise.gif */,
 				C4BF11DD1DA27D7E003AD11A /* LaunchScreen.storyboard */,
 				C4BF11971DA27740003AD11A /* Images.xcassets */,
 				C4BF11741DA27671003AD11A /* AppDelegate.swift */,
@@ -866,6 +872,7 @@
 			files = (
 				C4BF119F1DA278FB003AD11A /* Login.storyboard in Resources */,
 				C4BF11A01DA278FB003AD11A /* Patient.storyboard in Resources */,
+				6A8A32962017D77100098B03 /* sample_exercise.gif in Resources */,
 				C473EEA11DA281DA00109E03 /* IQKeyboardManager.bundle in Resources */,
 				C4BF11981DA27740003AD11A /* Images.xcassets in Resources */,
 				6A9D4DF51FFF03B300DFCB91 /* DoctorERAS.storyboard in Resources */,
@@ -1015,6 +1022,7 @@
 				C44808731E38B31A00A4F38C /* DoctorPatientPrescriptionViewController.swift in Sources */,
 				C4BF11A51DA2797B003AD11A /* Model.swift in Sources */,
 				C4BF11F31DA27E18003AD11A /* PatientViewProfileViewController.swift in Sources */,
+				6A8A32922017D4E200098B03 /* SwiftGif.swift in Sources */,
 				C47BB98F1E4C2BBC000BA6D6 /* PatientTakePainDetectOneViewController.swift in Sources */,
 				C473EE861DA2816400109E03 /* IQUIView+Hierarchy.swift in Sources */,
 				6A4C9803200560A70053B1A9 /* ERASFeedbackTabTableViewCell.swift in Sources */,

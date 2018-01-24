@@ -20,7 +20,10 @@ class ExercisesItemBarViewController: UIViewController, UITableViewDelegate, UIT
     var patient = Patient()
     var exerciseList = [""]
     var chosenExerciseIndex = 0
-    var subExerciseList = [""]
+    var subExercisesList = [Exercise()]
+    
+    var specificExerciseID = 0
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return exerciseList.count
@@ -41,15 +44,18 @@ class ExercisesItemBarViewController: UIViewController, UITableViewDelegate, UIT
         chosenExerciseIndex = indexPath.row
         
         let assignedExercises = patient.patientAssignedExercises
-        subExerciseList.removeAll()
+
+        subExercisesList.removeAll()
         for exercise in assignedExercises
         {
-            if exercise.category == exerciseList[chosenExerciseIndex]
+            if exercise.categoryDescription == exerciseList[chosenExerciseIndex]
             {
-                subExerciseList.append(exercise.name)
+                subExercisesList.append(exercise)
+                specificExerciseID = exercise.responseID
+                //print(exercise.description)
             }
         }
-        if subExerciseList.count == 1
+        if subExercisesList.count == 1
         {
             performSegueWithIdentifier("specificExerciseDetailsView", sender: nil)
         }
@@ -99,14 +105,15 @@ class ExercisesItemBarViewController: UIViewController, UITableViewDelegate, UIT
         if segue.identifier == "subExercisesView"
         {
             let destination = segue.destinationViewController as! ERASExerciseTabSubExerciseViewController
-            destination.subExerciseList = self.subExerciseList
+            destination.subExercisesList = self.subExercisesList
             destination.exerciseTitle = exerciseList[chosenExerciseIndex]
         }
         if segue.identifier == "specificExerciseDetailsView"
         {
             let destination = segue.destinationViewController as! ERASExerciseTabSpecificExerciseDetailsViewController
             
-            destination.exerciseTitle = subExerciseList[chosenExerciseIndex]
+            destination.exerciseTitle = subExercisesList[chosenExerciseIndex].description
+            destination.chosenSubexerciseID = self.specificExerciseID
         }
     }
     
