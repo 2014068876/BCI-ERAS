@@ -12,10 +12,13 @@ class ERASExerciseTabTableViewCell: UITableViewCell {
 
     
     @IBOutlet weak var exerciseLabel: UILabel!
+    @IBOutlet weak var exerciseAccomplishedCheckMark: UIImageView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        //exerciseAccomplishedCheckMark.hidden = true
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

@@ -17,6 +17,7 @@ class ExercisesItemBarViewController: UIViewController, UITableViewDelegate, UIT
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var exercisesTableView: UITableView!
     @IBOutlet weak var accomplisedExercisesIndicatorLabel: UILabel!
+    @IBOutlet weak var exerciseAccomplishedCheckMark: UIImageView!
     
     var patient = Patient()
     var exerciseList = [""]
@@ -24,6 +25,8 @@ class ExercisesItemBarViewController: UIViewController, UITableViewDelegate, UIT
     var subExercisesList = [Exercise()]
     
     var specificExerciseID = 0
+    
+    var categorySubExercisesCounter: [String : Int] = [:]
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
@@ -33,9 +36,21 @@ class ExercisesItemBarViewController: UIViewController, UITableViewDelegate, UIT
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let exerciseCell = tableView.dequeueReusableCellWithIdentifier("exerciseCell", forIndexPath: indexPath) as! ERASExerciseTabTableViewCell
-
-        exerciseCell.exerciseLabel.text = exerciseList[indexPath.row]
+        
+        exerciseCell.exerciseLabel.layer.borderWidth = 2
+        exerciseCell.exerciseLabel.layer.cornerRadius = 10
         exerciseCell.exerciseLabel.layer.borderColor = UIColor(red: 1.00, green: 0.65, blue: 0.29, alpha: 1.0).CGColor
+        exerciseCell.exerciseLabel.text = exerciseList[indexPath.row]
+        exerciseCell.selectionStyle = UITableViewCellSelectionStyle.None
+        exerciseCell.exerciseAccomplishedCheckMark.hidden = true
+        
+        if categorySubExercisesCounter[exerciseList[indexPath.row]] != nil
+        {
+            if categorySubExercisesCounter[exerciseList[indexPath.row]]! == 0
+            {
+                exerciseCell.exerciseAccomplishedCheckMark.hidden = false
+            }
+        }
         
         return exerciseCell
     }
@@ -62,7 +77,10 @@ class ExercisesItemBarViewController: UIViewController, UITableViewDelegate, UIT
         }
         else
         {
-            performSegueWithIdentifier("subExercisesView", sender: nil)
+            if categorySubExercisesCounter[exerciseList[indexPath.row]]! > 0
+            {
+                performSegueWithIdentifier("subExercisesView", sender: nil)
+            }
         }
         
     }
@@ -70,9 +88,8 @@ class ExercisesItemBarViewController: UIViewController, UITableViewDelegate, UIT
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
-        //UIApplication.sharedApplication().networkActivityIndicatorVisible = true
-  
+    
+        
         if self.revealViewController() != nil
         {
             hamburgerMenu.target = self.revealViewController()
@@ -82,12 +99,14 @@ class ExercisesItemBarViewController: UIViewController, UITableViewDelegate, UIT
         
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         
         self.tableView.hidden = true
         accomplisedExercisesIndicatorLabel.hidden = true
         activityInidicator.startAnimating()
+        
+        
         
         let def = NSUserDefaults.standardUserDefaults()
         let token = def.objectForKey("userToken") as! String
@@ -96,6 +115,8 @@ class ExercisesItemBarViewController: UIViewController, UITableViewDelegate, UIT
         
         patient.getAssignedExercises(id, token: token, completion: {(success) -> Void in
         self.exerciseList = self.patient.patientAssignedExercisesCategory
+        self.initializeCategorySubExercisesCounter()
+        self.updateProgressOfExercisesUnderEachCategory(self.patient.patientAssignedExercises)
             
         self.tableView.reloadData()
         self.activityInidicator.stopAnimating()
@@ -106,7 +127,8 @@ class ExercisesItemBarViewController: UIViewController, UITableViewDelegate, UIT
             }
             else
             {
-                self.tableView.hidden = false }
+                self.tableView.hidden = false
+            }
         })
     }
     
@@ -127,4 +149,27 @@ class ExercisesItemBarViewController: UIViewController, UITableViewDelegate, UIT
         }
     }
     
+    func updateProgressOfExercisesUnderEachCategory(assignedExercises: [Exercise])
+    {
+        for exercise in assignedExercises
+        {
+            var currentCount = categorySubExercisesCounter[exercise.categoryDescription]
+            
+            if (exercise.statusDescription == "not yet started")
+            {
+                currentCount! += 1
+            }
+            
+            categorySubExercisesCounter.updateValue(currentCount!, forKey: exercise.categoryDescription)
+        }
+    }
+    
+    func initializeCategorySubExercisesCounter()
+    {
+        for index in 0..<exerciseList.count
+        {
+            print(exerciseList[index])
+            categorySubExercisesCounter[exerciseList[index]] = 0
+        }
+    }
 }

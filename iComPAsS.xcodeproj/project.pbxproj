@@ -569,7 +569,6 @@
 				C4BF11A61DA27995003AD11A /* Model */,
 				6A024346200096BA005B1E72 /* PatientERAS */,
 				C4BF11D11DA27A6B003AD11A /* Patient */,
-				6A8A32912017D4E200098B03 /* SwiftGif.swift */,
 				C4BF11DB1DA27AC3003AD11A /* Open Source */,
 				C4BF119A1DA277C1003AD11A /* Supporting Files */,
 			);
@@ -717,6 +716,7 @@
 		C4BF11DB1DA27AC3003AD11A /* Open Source */ = {
 			isa = PBXGroup;
 			children = (
+				6A8A32912017D4E200098B03 /* SwiftGif.swift */,
 				C448087A1E39C69A00A4F38C /* DLRadioButton */,
 				C44808511E386FEE00A4F38C /* BEMCheckBox */,
 				C47522601E251ABB00CACFEA /* GradientSlider */,

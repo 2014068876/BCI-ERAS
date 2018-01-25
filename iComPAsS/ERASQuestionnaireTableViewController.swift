@@ -124,6 +124,8 @@ class ERASQuestionnaireTableViewController: UIViewController, UITableViewDelegat
                 let questionCell = cell as! ERASQuestionnaireTextTableViewCell
                 let response = questionCell.questionTextView.text
                 
+                cell?.backgroundColor = UIColor(red:0.95, green:0.66, blue:0.63, alpha:1.0)
+                
                 if (response == "")
                 {
                     unanswered += 1
