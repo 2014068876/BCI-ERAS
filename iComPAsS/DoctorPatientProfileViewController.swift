@@ -16,9 +16,12 @@ class DoctorPatientProfileViewController: UIViewController {
         static let showPrescription = "showPrescription"
         static let showPHQResult = "showPHQResult"
         static let showPainDetectResult = "showPainDetectResult"
+        static let showERASResults = "showERASResults"
     }
     var selectedPatient = 0
     var patient = Patient()
+  //  lazy var report : ERASReport
+    
     @IBOutlet var patientPersonalInfo: UIView!
     @IBOutlet var patientPrescriptionInfo: UIView!
     @IBOutlet var patientESASResultsInfo: UIView!
@@ -29,6 +32,9 @@ class DoctorPatientProfileViewController: UIViewController {
     @IBOutlet weak var updatingUI: UIActivityIndicatorView!
     @IBOutlet weak var summaryResults: UILabel!
     @IBOutlet weak var resultsSegmentedControl: UISegmentedControl!
+    
+    //ERAS attributes
+    @IBOutlet weak var patientERASResultsInfo: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,11 +49,14 @@ class DoctorPatientProfileViewController: UIViewController {
         profilePicture.clipsToBounds = true
         let def = NSUserDefaults.standardUserDefaults()
         let token = def.objectForKey("userToken") as! String
+
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         patient.getPatientProfile(selectedPatient, token: token, completion: {(success) -> Void in
             self.updateUI()
             UIApplication.sharedApplication().networkActivityIndicatorVisible = false
         })
+        
+        
     }
     
     private func updateUI(){
@@ -72,8 +81,11 @@ class DoctorPatientProfileViewController: UIViewController {
 
 
 
-    @IBAction func showComponent(sender: UISegmentedControl) {
-        if sender.selectedSegmentIndex == 0 {
+    @IBAction func showComponent(sender: UISegmentedControl)
+    {
+        print (sender.selectedSegmentIndex)
+        if sender.selectedSegmentIndex == 0
+        {
             self.patientPersonalInfo.hidden = false
             self.patientPrescriptionInfo.hidden = true
             self.patientESASResultsInfo.hidden = true
@@ -81,7 +93,9 @@ class DoctorPatientProfileViewController: UIViewController {
             self.patientPainDetectresultsInfo.hidden = true
             self.summaryResults.hidden = true
             self.resultsSegmentedControl.hidden = true
-        } else if sender.selectedSegmentIndex == 1{
+        }
+        else if sender.selectedSegmentIndex == 1
+        {
             self.patientPersonalInfo.hidden = true
             self.patientPrescriptionInfo.hidden = false
             self.patientESASResultsInfo.hidden = true
@@ -89,15 +103,20 @@ class DoctorPatientProfileViewController: UIViewController {
             self.summaryResults.hidden = true
             self.patientPHQResultsInfo.hidden = true
             self.resultsSegmentedControl.hidden = true
-        }else if sender.selectedSegmentIndex == 2{
+        }
+        else if sender.selectedSegmentIndex == 2
+        {
             self.patientPersonalInfo.hidden = true
             self.patientPrescriptionInfo.hidden = true
             self.patientPHQResultsInfo.hidden = true
             self.patientPainDetectresultsInfo.hidden = true
+            self.patientERASResultsInfo.hidden = true
             self.patientESASResultsInfo.hidden = false
             self.summaryResults.hidden = false
             self.resultsSegmentedControl.hidden = false
-        }else {
+        }
+        else
+        {
             self.patientPersonalInfo.hidden = false
             self.patientPHQResultsInfo.hidden = true
             self.patientPrescriptionInfo.hidden = true
@@ -109,23 +128,43 @@ class DoctorPatientProfileViewController: UIViewController {
 
     }
     
-    @IBAction func showResults(sender: UISegmentedControl) {
-        if sender.selectedSegmentIndex == 0{
+    @IBAction func showResults(sender: UISegmentedControl)
+    {
+        print(sender.selectedSegmentIndex)
+        if sender.selectedSegmentIndex == 0
+        {
             self.patientESASResultsInfo.hidden = false
             self.patientPHQResultsInfo.hidden = true
             self.patientPainDetectresultsInfo.hidden = true
-        } else if sender.selectedSegmentIndex == 1{
+            self.patientERASResultsInfo.hidden = true
+        }
+        else if sender.selectedSegmentIndex == 1
+        {
             self.patientESASResultsInfo.hidden = true
             self.patientPHQResultsInfo.hidden = false
             self.patientPainDetectresultsInfo.hidden = true
-        }else if sender.selectedSegmentIndex == 2{
+            self.patientERASResultsInfo.hidden = true
+        }
+        else if sender.selectedSegmentIndex == 2
+        {
             self.patientESASResultsInfo.hidden = true
             self.patientPHQResultsInfo.hidden = true
             self.patientPainDetectresultsInfo.hidden = false
-        }else{
+            self.patientERASResultsInfo.hidden = true
+        }
+        else if sender.selectedSegmentIndex == 3
+        {
+            self.patientESASResultsInfo.hidden = true
+            self.patientPHQResultsInfo.hidden = true
+            self.patientPainDetectresultsInfo.hidden = true
+            self.patientERASResultsInfo.hidden = false
+        }
+        else
+        {
             self.patientESASResultsInfo.hidden = false
             self.patientPHQResultsInfo.hidden = true
             self.patientPainDetectresultsInfo.hidden = true
+            self.patientERASResultsInfo.hidden = true
         }
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -149,6 +188,9 @@ class DoctorPatientProfileViewController: UIViewController {
                 vc?.selectedPatient = selectedPatient
             case PatientProfile.showPainDetectResult:
                 let vc = destination as? DoctorPatientPainDetectTableViewController
+                vc?.selectedPatient = selectedPatient
+            case PatientProfile.showERASResults:
+                let vc = destination as? ERASResultsTableViewController
                 vc?.selectedPatient = selectedPatient
             default: break
             }

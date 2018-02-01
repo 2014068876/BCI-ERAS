@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AfV-6l-27B">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,23 +9,141 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="KxQ-ke-tvS">
+        <!--Reminders-->
+        <scene sceneID="6Wt-PB-ky9">
             <objects>
-                <viewController id="zrK-OC-UGA" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uAW-gR-qCD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Reminders" id="OEb-8Z-PcU">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-13"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="gRJ-RN-7T5"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hvy-KZ-Dll">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.59999999999999998" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="AfV-6l-27B" kind="show" id="YLw-I2-o2M"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dF0-JP-qn3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3897" y="-1334"/>
+        </scene>
+        <!--Exercises Status-->
+        <scene sceneID="vm3-1c-LJV">
+            <objects>
+                <viewController id="qbI-Tc-AKW" customClass="ERASResultsExercisesStatusViewController" customModule="iComPAsS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="W7l-5Q-JzR"/>
-                        <viewControllerLayoutGuide type="bottom" id="cqL-Lh-Xyd"/>
+                        <viewControllerLayoutGuide type="top" id="Cnh-cU-CyA"/>
+                        <viewControllerLayoutGuide type="bottom" id="Y3i-wI-nTI"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ixv-Tn-4Gi">
+                    <view key="view" contentMode="scaleToFill" id="mZv-XR-dNe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oaV-9v-fZ1">
+                                <rect key="frame" x="0.0" y="72" width="414" height="607"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="exerciseCell" id="j0x-AC-vrf">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="j0x-AC-vrf" id="UUC-p0-jsL">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="qbI-Tc-AKW" id="lG3-GP-ZEV"/>
+                                    <outlet property="delegate" destination="qbI-Tc-AKW" id="7En-sx-thZ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Exercises Status" image="ic_directions_run_white" id="O8w-aT-HGx"/>
+                    <connections>
+                        <outlet property="tableView" destination="oaV-9v-fZ1" id="5u1-n3-V7i"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="btL-Ay-3iX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y7l-Kl-J38" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-761" y="-546"/>
+            <point key="canvasLocation" x="-2186.9565217391305" y="-1009.2391304347827"/>
+        </scene>
+        <!--Questionnaire Results-->
+        <scene sceneID="wb6-xz-Iho">
+            <objects>
+                <viewController storyboardIdentifier="questionnaireResponsesViewController" id="RlQ-Ct-4Ec" customClass="ERASResultsQuestionnaireResponsesViewController" customModule="iComPAsS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jkc-M2-sa2"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lfa-ZW-dbr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FEt-Yh-6Zw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aFF-cM-7zn">
+                                <rect key="frame" x="0.0" y="64" width="414" height="615"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="questionCell" id="Z8H-4A-jc6">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z8H-4A-jc6" id="id2-76-5C9">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="RlQ-Ct-4Ec" id="k4N-Is-xmo"/>
+                                    <outlet property="delegate" destination="RlQ-Ct-4Ec" id="JLi-IV-5gS"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Questionnaire Results" image="ic_assignment_white" id="u7z-Fy-HvP"/>
+                    <connections>
+                        <outlet property="tableView" destination="aFF-cM-7zn" id="RRL-qF-7BG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qT4-Bs-2i8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2186.9565217391305" y="-1660.5978260869567"/>
+        </scene>
+        <!--Results Options Tab Bar Controller-->
+        <scene sceneID="DHR-bj-8D4">
+            <objects>
+                <tabBarController storyboardIdentifier="ERASResultsOptions" id="AfV-6l-27B" customClass="ERASResultsOptionsTabBarController" customModule="iComPAsS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Ero-Ft-HoQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.96862745098039216" green="0.42745098039215684" blue="0.019607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBar>
+                    <connections>
+                        <segue destination="RlQ-Ct-4Ec" kind="relationship" relationship="viewControllers" id="EkG-b6-r9M"/>
+                        <segue destination="qbI-Tc-AKW" kind="relationship" relationship="viewControllers" id="YuB-Fx-skQ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z6R-Q2-H7T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3106" y="-1335"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_assignment_white" width="24" height="24"/>
+        <image name="ic_directions_run_white" width="24" height="24"/>
+    </resources>
 </document>

@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import iComPAsS
+//@testable import iComPAsS
 
 class iComPAsSTests: XCTestCase {
     

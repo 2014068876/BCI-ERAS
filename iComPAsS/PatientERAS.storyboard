@@ -423,7 +423,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="102"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="asH-jg-gE6" id="WFi-az-LIw">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="101"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="102"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="TNe-vd-Ddi">
@@ -507,7 +507,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yOI-KZ-L1z" id="El4-lj-wbJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="87"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcK-yh-vEa" customClass="DLRadioButton">
@@ -590,7 +590,7 @@
                                         <rect key="frame" x="0.0" y="116" width="375" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SUS-Mg-vO5" id="zBR-kJ-dko">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="109"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CUW-HU-H8e">
@@ -690,7 +690,7 @@
                                         <rect key="frame" x="0.0" y="226" width="375" height="204"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LVj-qY-ZuK" id="3dT-xx-STh">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="203"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="204"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="i79-La-w6a">
@@ -737,7 +737,7 @@
                                         <rect key="frame" x="0.0" y="430" width="375" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XF7-17-p5K" id="l9u-ao-VIt">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="109"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="EkT-2p-rrx">
@@ -833,15 +833,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.96862745100000003" green="0.42745098040000001" blue="0.019607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                <color key="value" red="0.024157526754536501" green="0.025559168781725927" blue="0.025427160436576824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="color" keyPath="barTintColor">
                                 <color key="value" red="0.96862745098039216" green="0.42745098039215684" blue="0.019607843137254902" alpha="1" colorSpace="calibratedRGB"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
-                                <color key="value" red="0.98003251903553301" green="0.98003251903553301" blue="0.98003251903553301" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBar>
@@ -883,9 +878,7 @@
         <scene sceneID="Ok0-QZ-L7Z">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jq4-VH-AZN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Exercises" id="Fey-pz-c0f">
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-13"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Exercises" image="ic_directions_run_white" selectedImage="ic_directions_run_white" id="Fey-pz-c0f"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="TOC-NX-SoI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -909,8 +902,8 @@
         <scene sceneID="IeW-Ux-LSy">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9AN-cD-GZP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Reminders" id="hgh-KT-RRa">
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-13"/>
+                    <tabBarItem key="tabBarItem" title="Reminders" image="ic_notifications_white" id="hgh-KT-RRa">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="URd-th-2MR">
@@ -931,8 +924,8 @@
         <scene sceneID="GiP-Lv-SNR">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ASc-mZ-azV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Feedback" id="83Q-jy-g7v">
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-13"/>
+                    <tabBarItem key="tabBarItem" title="Feedback" image="ic_assignment_white" id="83Q-jy-g7v">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="E3o-D1-R36">
@@ -976,6 +969,10 @@
         <scene sceneID="LEQ-UV-tXC">
             <objects>
                 <viewController id="0qG-JF-b5n" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="D0H-N5-0Ul"/>
+                        <viewControllerLayoutGuide type="bottom" id="HbP-ib-Uef"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xak-xB-Vik">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -989,10 +986,13 @@
     <resources>
         <image name="HamburgerMenu" width="25" height="25"/>
         <image name="Image" width="72" height="72"/>
+        <image name="ic_assignment_white" width="24" height="24"/>
         <image name="ic_check_circle_48pt" width="48" height="48"/>
+        <image name="ic_directions_run_white" width="24" height="24"/>
+        <image name="ic_notifications_white" width="24" height="24"/>
         <image name="ic_question_answer_48pt" width="48" height="48"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="uek-dM-uZN"/>
+        <segue reference="ZCi-PH-44i"/>
     </inferredMetricsTieBreakers>
 </document>
