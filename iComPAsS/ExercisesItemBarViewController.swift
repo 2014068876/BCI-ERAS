@@ -77,10 +77,10 @@ class ExercisesItemBarViewController: UIViewController, UITableViewDelegate, UIT
         }
         else
         {
-            if categorySubExercisesCounter[exerciseList[indexPath.row]]! > 0
-            {
+            /*if categorySubExercisesCounter[exerciseList[indexPath.row]]! > 0
+            {*/
                 performSegueWithIdentifier("subExercisesView", sender: nil)
-            }
+            //}
         }
         
     }
@@ -89,6 +89,7 @@ class ExercisesItemBarViewController: UIViewController, UITableViewDelegate, UIT
     {
         super.viewDidLoad()
     
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         
         if self.revealViewController() != nil
         {

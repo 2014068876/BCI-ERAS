@@ -76,7 +76,7 @@ class ERASReport: Model
                 //encode the data that came in, from String to SwiftyJSON
                 let swiftyJSON = JSON(data: data!)
                 
-                print(swiftyJSON["question_response"].arrayValue)
+                print(swiftyJSON)
                 
                 self.reportQuestionnaire.removeAll()
                 self.reportExercises.removeAll()
@@ -111,7 +111,7 @@ class ERASReport: Model
                     let exercise = Exercise()
                     
                     exercise.responseID = exercises["exer_response_id"].intValue
-                    exercise.description = exercises["exercise_description"].stringValue
+                    exercise.description = exercises["exercise"].stringValue
                     exercise.timeAssigned = exercises["time_assigned"].stringValue
                     exercise.timeStarted = exercises["time_started"].stringValue
                     exercise.timeCompleted = exercises["time_completed"].stringValue

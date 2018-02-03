@@ -16,9 +16,12 @@ class ERASResultsQuestionnaireResponsesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
+        
         let tabbarController = tabBarController as! ERASResultsOptionsTabBarController
         questionnaireReport = tabbarController.reportQuestionnaire
+        self.navigationController!.title = questionnaireReport[0].timeAssigned
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -32,9 +35,11 @@ class ERASResultsQuestionnaireResponsesViewController: UIViewController {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let questionCell = tableView.dequeueReusableCellWithIdentifier("questionCell", forIndexPath: indexPath)
-        print(self.questionnaireReport[indexPath.row].question)
-        questionCell.textLabel?.text = "\(self.questionnaireReport[indexPath.row].question), \(self.questionnaireReport[indexPath.row].response)"
+        let questionCell = tableView.dequeueReusableCellWithIdentifier("questionCell", forIndexPath: indexPath) as! ERASResultsQuestionnaireResponsesTableViewCell
+        
+        questionCell.questionLabel.text = "\(indexPath.row + 1). \(self.questionnaireReport[indexPath.row].question)"
+        questionCell.questionResponseLabel.text = self.questionnaireReport[indexPath.row].response
+        
         return questionCell
     }
 

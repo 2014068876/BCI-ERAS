@@ -50,10 +50,10 @@ class ERASExerciseTabSubExerciseViewController: UIViewController, UITableViewDel
         chosenExerciseIndex = indexPath.row
         specificExerciseID = subExercisesList[chosenExerciseIndex].exerciseID
         
-        if subExercisesList[indexPath.row].statusDescription == "not yet started"
-        {
+        /*if subExercisesList[indexPath.row].statusDescription == "not yet started"
+        {*/
             performSegueWithIdentifier("specificExerciseDetailsView", sender: nil)
-        }
+        //}
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

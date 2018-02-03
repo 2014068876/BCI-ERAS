@@ -33,9 +33,12 @@ class ERASResultsExercisesStatusViewController: UIViewController, UITableViewDel
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let exerciseCell = tableView.dequeueReusableCellWithIdentifier("exerciseCell", forIndexPath: indexPath)
-        print(self.exercisesReport[indexPath.row].timeAssigned)
-        exerciseCell.textLabel?.text = "\(self.exercisesReport[indexPath.row].description), \(self.exercisesReport[indexPath.row].statusDescription)"
+        let exerciseCell = tableView.dequeueReusableCellWithIdentifier("exerciseCell", forIndexPath: indexPath) as! ERASResultsExercisesStatusTableViewCell
+        exerciseCell.exerciseTitleLabel.text = self.exercisesReport[indexPath.row].description
+        exerciseCell.exerciseStatusLabel.text = self.exercisesReport[indexPath.row].statusDescription
+        exerciseCell.exerciseTimeAccomplishedLabel.text = self.exercisesReport[indexPath.row].timeCompleted
+        exerciseCell.exerciseTimeElapsedLabel.text = "n/a"
+        
         return exerciseCell
     }
 

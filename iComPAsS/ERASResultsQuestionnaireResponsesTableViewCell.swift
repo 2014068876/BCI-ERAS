@@ -1,21 +1,17 @@
 //
-//  ERASQuestionnaireNumericalTableViewCell.swift
+//  ERASResultsQuestionnaireResponsesTableViewCell.swift
 //  iComPAsS
 //
-//  Created by Gian Paul Flores on 13/01/2018.
+//  Created by Gian Paul Flores on 01/02/2018.
 //  Copyright © 2018 University of Santo Tomas. All rights reserved.
 //
 
 import UIKit
 
-class ERASQuestionnaireNumericalTableViewCell: UITableViewCell {
+class ERASResultsQuestionnaireResponsesTableViewCell: UITableViewCell {
 
     @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet weak var questionUISlider: UISlider!
-    
-    @IBOutlet weak var uiSliderCounterLabel: UILabel!
-    var question = Question()
-    
+    @IBOutlet weak var questionResponseLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -27,7 +23,4 @@ class ERASQuestionnaireNumericalTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    @IBAction func sliderValueChanged(sender: UISlider) {
-        uiSliderCounterLabel.text = String(Int(sender.value))
-    }
 }

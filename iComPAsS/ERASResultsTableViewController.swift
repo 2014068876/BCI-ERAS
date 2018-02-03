@@ -53,15 +53,18 @@ class ERASResultsTableViewController: UITableViewController {
         dateFormatter.dateFormat = "MMMM dd, yyyy - eeee"
         let formattedDate = dateFormatter.stringFromDate(date!)
         erasDateCell.resultsDateLabel.text = report.reportDates[indexPath.row]
+        
+        erasDateCell.tag = indexPath.row + 1
         return erasDateCell
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
-        let erasDateCell = tableView.dequeueReusableCellWithIdentifier("erasDateCell", forIndexPath: indexPath) as! ERASResultsTableViewCell;
+        //let erasDateCell = tableView.dequeueReusableCellWithIdentifier("erasDateCell", forIndexPath: indexPath) as! ERASResultsTableViewCell;
+        let erasDateCell = tableView.viewWithTag(indexPath.row + 1) as! ERASResultsTableViewCell
         
         chosenReportDate = erasDateCell.resultsDateLabel.text!
-        
+        print("chosen report date: \(chosenReportDate)")
         performSegueWithIdentifier("toERASResultsOptions", sender: nil)
         
     }
@@ -72,6 +75,7 @@ class ERASResultsTableViewController: UITableViewController {
         {
             let resultsTabBar = segue.destinationViewController as! ERASResultsOptionsTabBarController
             
+            resultsTabBar.navigationController?.title = chosenReportDate
             resultsTabBar.reportQuestionnaire = report.reportQuestionnaireResponses[chosenReportDate]!
             resultsTabBar.reportExercises = report.reportExercisesResponses[chosenReportDate]!
         }

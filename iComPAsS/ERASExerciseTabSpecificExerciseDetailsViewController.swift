@@ -45,32 +45,11 @@ class ERASExerciseTabSpecificExerciseDetailsViewController: UIViewController {
         let id = def.objectForKey("userID") as! Int
         
         patient.startExercise(id, token: token, startTime: timestamp, exerciseID: chosenSubexerciseID, completion: {(success) -> Void in
+            self.performSegueWithIdentifier("toStartedExerciseView", sender: nil)
             
         })
-        
-        sender.enabled = false
-        stopButton.enabled = true
     }
     
-    @IBAction func stopExercise(sender: UIButton)
-    {
-        let patient = Patient()
-        
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        
-        let timestamp = dateFormatter.stringFromDate(NSDate())
-        
-        let def = NSUserDefaults.standardUserDefaults()
-        let token = def.objectForKey("userToken") as! String
-        let id = def.objectForKey("userID") as! Int
-        
-        patient.stopExercise(id, token: token, completionTime: timestamp, exerciseID: chosenSubexerciseID, completion: {(success) -> Void in
-            
-        })
-        
-        _ = navigationController?.popViewControllerAnimated(true)
-    }
     
     func updateUI() -> Void
     {
@@ -78,4 +57,15 @@ class ERASExerciseTabSpecificExerciseDetailsViewController: UIViewController {
         startButton.enabled = true
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "toStartedExerciseView"
+        {
+            let destination = segue.destinationViewController as! ERASExerciseStartedViewController
+            
+            destination.nextView = self
+            destination.exerciseID = chosenSubexerciseID
+            
+        }
+    }
 }

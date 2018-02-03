@@ -79,22 +79,23 @@ class ERASQuestionnaireTableViewController: UIViewController, UITableViewDelegat
      
        switch (questions[indexPath.row].type) {
             case "numerical": let questionCell = tableView.dequeueReusableCellWithIdentifier("numericalCell", forIndexPath: indexPath) as! ERASQuestionnaireNumericalTableViewCell;
-                questionCell.questionLabel.text = questions[indexPath.row].question; //set the question label for this cell
+                questionCell.questionLabel.text = "\(indexPath.row + 1). \(questions[indexPath.row].question)"; //set the question label for this cell
                 questionCell.tag = indexPath.row + 1 //assign a tag so this cell can be accessed later
                 questionCell.question = questions[indexPath.row] //assign the question for this cell
                 return questionCell; //place the cell in the table view
             case "booleanNumerical": let questionCell = tableView.dequeueReusableCellWithIdentifier("booleanNumericalCell", forIndexPath: indexPath) as! ERASQuestionnaireBooleanNumericalTableViewCell;
-                questionCell.questionLabel.text = questions[indexPath.row].question;
+                questionCell.questionLabel.text = "\(indexPath.row + 1). \(questions[indexPath.row].question)";
                 questionCell.tag = indexPath.row + 1
                 questionCell.question = questions[indexPath.row]
+                questionCell.numericalInput.enabled = false
                 return questionCell;
             case "boolean": let questionCell = tableView.dequeueReusableCellWithIdentifier("booleanCell", forIndexPath: indexPath) as! ERASQuestionnaireBooleanTableViewCell;
-                questionCell.questionLabel.text = questions[indexPath.row].question;
+                questionCell.questionLabel.text = "\(indexPath.row + 1). \(questions[indexPath.row].question)";
                 questionCell.tag = indexPath.row + 1
                 questionCell.question = questions[indexPath.row]
                 return questionCell
             case "text": let questionCell = tableView.dequeueReusableCellWithIdentifier("textCell", forIndexPath: indexPath) as! ERASQuestionnaireTextTableViewCell;
-                questionCell.questionLabel.text = questions[indexPath.row].question;
+                questionCell.questionLabel.text = "\(indexPath.row + 1). \(questions[indexPath.row].question)";
                 questionCell.tag = indexPath.row + 1
                 questionCell.question = questions[indexPath.row]
                 return questionCell;
@@ -157,6 +158,15 @@ class ERASQuestionnaireTableViewController: UIViewController, UITableViewDelegat
                     }
                 }
             }
+            else if (cell is ERASQuestionnaireNumericalTableViewCell)
+            {
+                let questionCell = cell as! ERASQuestionnaireNumericalTableViewCell
+                let response = "\(questionCell.questionUISlider.value)"
+                let questionID = questionCell.question.id
+                setQuestionResponse(id, token: token, response: response, questionID: questionID)
+            }
+            else { }
+            print("------------------->\(cell), \(cell!.tag)")
         }
         
         if (unanswered == 0)
@@ -171,6 +181,8 @@ class ERASQuestionnaireTableViewController: UIViewController, UITableViewDelegat
                     let response = questionCell.questionTextView.text
                     let questionID = questionCell.question.id
                 
+                    print(questionCell)
+                    print(response)
                     setQuestionResponse(id, token: token, response: response, questionID: questionID)
                 }
                 else if (cell is ERASQuestionnaireBooleanTableViewCell)
@@ -187,7 +199,8 @@ class ERASQuestionnaireTableViewController: UIViewController, UITableViewDelegat
                     {
                         response = "No"
                     }
-                
+                    print(questionCell)
+                    print(response)
                     setQuestionResponse(id, token: token, response: response, questionID: questionID)
                 }
                 else if (cell is ERASQuestionnaireNumericalTableViewCell)
@@ -195,7 +208,10 @@ class ERASQuestionnaireTableViewController: UIViewController, UITableViewDelegat
                     let questionCell = cell as! ERASQuestionnaireNumericalTableViewCell
                     let response = "\(questionCell.questionUISlider.value)"
                     let questionID = questionCell.question.id
-                
+                    
+                    print(questionCell)
+                    print(response)
+                    
                     setQuestionResponse(id, token: token, response: response, questionID: questionID)
                 }
                 else if (cell is ERASQuestionnaireBooleanNumericalTableViewCell)
@@ -206,16 +222,18 @@ class ERASQuestionnaireTableViewController: UIViewController, UITableViewDelegat
                 
                     if questionCell.questionYesRadioButton.selected
                     {
-                        response = "Yes. \(questionCell.numericalInput.text!)"
+                        let roundedOffNumericalInput = Int(questionCell.numericalInput.text!)
+                        response = "Yes. \(String(roundedOffNumericalInput))"
                     }
                     else if questionCell.questionNoRadioButton.selected
                     {
                         response = "No"
                     }
-                
+                    print(questionCell)
+                    print(response)
                     setQuestionResponse(id, token: token, response: response, questionID: questionID)
                 }
-                else { }
+                else { print("mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm")}
             }
             
             performSegueWithIdentifier("toERASTabs", sender: nil)
