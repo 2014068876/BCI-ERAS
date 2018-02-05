@@ -14,6 +14,7 @@ class ERASExerciseTabTableViewCell: UITableViewCell {
     @IBOutlet weak var exerciseLabel: UILabel!
     @IBOutlet weak var exerciseAccomplishedCheckMark: UIImageView!
     
+    @IBOutlet weak var exerciseTimesPerformedCounter: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

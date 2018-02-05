@@ -42,15 +42,22 @@ class ExercisesItemBarViewController: UIViewController, UITableViewDelegate, UIT
         exerciseCell.exerciseLabel.layer.borderColor = UIColor(red: 1.00, green: 0.65, blue: 0.29, alpha: 1.0).CGColor
         exerciseCell.exerciseLabel.text = exerciseList[indexPath.row]
         exerciseCell.selectionStyle = UITableViewCellSelectionStyle.None
-        exerciseCell.exerciseAccomplishedCheckMark.hidden = true
+        /*exerciseCell.exerciseTimesPerformedCounter.hidden = true
+        
+        //exerciseCell.exerciseTimesPerformedCounter.layer.borderWidth = 2
+        
+        //exerciseCell.exerciseAccomplishedCheckMark.hidden = true
         
         if categorySubExercisesCounter[exerciseList[indexPath.row]] != nil
         {
-            if categorySubExercisesCounter[exerciseList[indexPath.row]]! == 0
+            if categorySubExercisesCounter[exerciseList[indexPath.row]]! == 1
             {
-                exerciseCell.exerciseAccomplishedCheckMark.hidden = false
+                exerciseCell.exerciseTimesPerformedCounter.text = String(subExercisesList[indexPath.row].count)
+                exerciseCell.exerciseTimesPerformedCounter.layer.cornerRadius = (exerciseCell.exerciseTimesPerformedCounter.frame.width / 2)
+                exerciseCell.exerciseTimesPerformedCounter.layer.backgroundColor = UIColor(red: 1.00, green: 0.65, blue: 0.29, alpha: 1.0).CGColor
+                exerciseCell.exerciseTimesPerformedCounter.layer.masksToBounds = true
             }
-        }
+        }*/
         
         return exerciseCell
     }

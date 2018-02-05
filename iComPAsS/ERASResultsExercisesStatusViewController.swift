@@ -18,6 +18,9 @@ class ERASResultsExercisesStatusViewController: UIViewController, UITableViewDel
 
         let tabbarController = tabBarController as! ERASResultsOptionsTabBarController
         exercisesReport = tabbarController.reportExercises
+        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 138
         //tableView.reloadData()
     }
 
@@ -36,8 +39,16 @@ class ERASResultsExercisesStatusViewController: UIViewController, UITableViewDel
         let exerciseCell = tableView.dequeueReusableCellWithIdentifier("exerciseCell", forIndexPath: indexPath) as! ERASResultsExercisesStatusTableViewCell
         exerciseCell.exerciseTitleLabel.text = self.exercisesReport[indexPath.row].description
         exerciseCell.exerciseStatusLabel.text = self.exercisesReport[indexPath.row].statusDescription
-        exerciseCell.exerciseTimeAccomplishedLabel.text = self.exercisesReport[indexPath.row].timeCompleted
-        exerciseCell.exerciseTimeElapsedLabel.text = "n/a"
+        
+        exerciseCell.timesPerformedLabel.text = ""
+        for time in self.exercisesReport[indexPath.row].timeCompleted
+        {
+            exerciseCell.timesPerformedLabel.text = (exerciseCell.timesPerformedLabel.text! + "\(time)\n")
+        }
+        if exerciseCell.timesPerformedLabel.text == ""
+        {
+            exerciseCell.timesPerformedLabel.text = "No time found."
+        }
         
         return exerciseCell
     }

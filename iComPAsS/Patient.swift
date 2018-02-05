@@ -344,8 +344,9 @@ class Patient: Model {
                     exercise.responseID = receivedExercise["exer_response_id"].intValue
                     exercise.description = receivedExercise["exercise_description"].stringValue
                     exercise.timeAssigned = receivedExercise["time_assigned"].stringValue
-                    exercise.timeStarted = receivedExercise["time_started"].stringValue
-                    exercise.timeCompleted = receivedExercise["time_completed"].stringValue
+                    exercise.timeStarted = receivedExercise["time_started"].stringValue.componentsSeparatedByString(",")
+                    exercise.timeCompleted = receivedExercise["time_completed"].stringValue.componentsSeparatedByString(",")
+                    exercise.timeElapsed = receivedExercise["time_elapsed"].stringValue.componentsSeparatedByString(",")
                     exercise.exerciseFeedback = receivedExercise["exer_feedback"].stringValue
                     exercise.exerciseID = receivedExercise["exercise_id"].intValue
                     exercise.categoryID = receivedExercise["category_id"].intValue
@@ -353,6 +354,7 @@ class Patient: Model {
                     exercise.statusID = receivedExercise["status"]["id"].intValue
                     exercise.statusDescription = receivedExercise["status"]["description"].stringValue
                     exercise.statusTimestamp = receivedExercise["status"]["timestamp"].stringValue
+                    exercise.count = receivedExercise["count"].intValue
                     
                     self.patientAssignedExercises.append(exercise)
                     

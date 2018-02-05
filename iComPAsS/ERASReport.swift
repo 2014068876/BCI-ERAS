@@ -113,8 +113,9 @@ class ERASReport: Model
                     exercise.responseID = exercises["exer_response_id"].intValue
                     exercise.description = exercises["exercise"].stringValue
                     exercise.timeAssigned = exercises["time_assigned"].stringValue
-                    exercise.timeStarted = exercises["time_started"].stringValue
-                    exercise.timeCompleted = exercises["time_completed"].stringValue
+                    exercise.timeStarted = exercises["time_started"].stringValue.componentsSeparatedByString(",")
+                    exercise.timeCompleted = exercises["time_completed"].stringValue.componentsSeparatedByString(",")
+                    exercise.timeElapsed = exercises["time_elapsed"].stringValue.componentsSeparatedByString(",")
                     exercise.exerciseFeedback = exercises["exer_feedback"].stringValue
                     exercise.exerciseID = exercises["exercise_id"].intValue
                     exercise.categoryID = exercises["category_id"].intValue
@@ -122,6 +123,11 @@ class ERASReport: Model
                     exercise.statusID = exercises["status"]["id"].intValue
                     exercise.statusDescription = exercises["status"]["description"].stringValue
                     exercise.statusTimestamp = exercises["status"]["timestamp"].stringValue
+                    
+                    print(exercise.timeAssigned)
+                    print(exercise.timeStarted)
+                    print(exercise.timeCompleted)
+                    print(exercise.timeElapsed)
                     
                     self.reportExercises.append(exercise)
                     
@@ -193,5 +199,10 @@ class ERASReport: Model
         loadDictionaryWithReportDates()
         loadDictionaryWithResponses()
          */
+    }
+    
+    func convertExerciseTimeToArray(times: String) -> [String]
+    {
+        return (times.componentsSeparatedByString(","))
     }
 }

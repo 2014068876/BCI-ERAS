@@ -14,8 +14,8 @@ class ERASResultsExercisesStatusTableViewCell: UITableViewCell {
     
     @IBOutlet weak var exerciseStatusLabel: UILabel!
     
-    @IBOutlet weak var exerciseTimeElapsedLabel: UILabel!
-    @IBOutlet weak var exerciseTimeAccomplishedLabel: UILabel!
+    @IBOutlet weak var timesPerformedLabel: UILabel!
+ 
     
     override func awakeFromNib() {
         super.awakeFromNib()

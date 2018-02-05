@@ -35,12 +35,23 @@ class ERASExerciseTabSubExerciseViewController: UIViewController, UITableViewDel
         exerciseCell.exerciseLabel.text = subExercisesList[indexPath.row].description
         exerciseCell.exerciseLabel.layer.borderColor = UIColor(red: 1.00, green: 0.65, blue: 0.29, alpha: 1.0).CGColor
         exerciseCell.selectionStyle = UITableViewCellSelectionStyle.None
-        exerciseCell.exerciseAccomplishedCheckMark.hidden = true
+        //exerciseCell.exerciseAccomplishedCheckMark.hidden = true
         
-        if subExercisesList[indexPath.row].statusDescription == "accomplished"
+        exerciseCell.exerciseTimesPerformedCounter.text = String(subExercisesList[indexPath.row].count)
+        exerciseCell.exerciseTimesPerformedCounter.layer.cornerRadius = (exerciseCell.exerciseTimesPerformedCounter.frame.width / 2)
+        exerciseCell.exerciseTimesPerformedCounter.layer.backgroundColor = UIColor(red: 1.00, green: 0.65, blue: 0.29, alpha: 1.0).CGColor
+        exerciseCell.exerciseTimesPerformedCounter.layer.masksToBounds = true
+        
+        exerciseCell.exerciseTimesPerformedCounter.hidden = true
+        
+        if subExercisesList[indexPath.row].count != 0
+        {
+            exerciseCell.exerciseTimesPerformedCounter.hidden = false
+        }
+        /*if subExercisesList[indexPath.row].statusDescription == "accomplished"
         {
             exerciseCell.exerciseAccomplishedCheckMark.hidden = false
-        }
+        }*/
         
         return exerciseCell
     }

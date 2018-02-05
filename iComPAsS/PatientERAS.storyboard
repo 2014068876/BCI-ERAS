@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -94,27 +95,15 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_check_circle_48pt" translatesAutoresizingMaskIntoConstraints="NO" id="lUD-dP-pwt">
-                                                    <rect key="frame" x="332" y="18" width="25" height="25"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="25" id="4Mg-s6-l07"/>
-                                                        <constraint firstAttribute="width" constant="25" id="qbO-xG-lTh"/>
-                                                    </constraints>
-                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="XoV-Zo-dKs" firstAttribute="bottom" secondItem="ZjT-Jn-IDM" secondAttribute="bottomMargin" id="GPd-Qx-0m9"/>
                                                 <constraint firstItem="XoV-Zo-dKs" firstAttribute="leading" secondItem="ZjT-Jn-IDM" secondAttribute="leadingMargin" id="Rbr-4K-Z45"/>
                                                 <constraint firstItem="XoV-Zo-dKs" firstAttribute="top" secondItem="ZjT-Jn-IDM" secondAttribute="topMargin" id="URb-Fl-5gi"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="lUD-dP-pwt" secondAttribute="bottom" constant="10" id="gKL-bl-OIU"/>
-                                                <constraint firstItem="lUD-dP-pwt" firstAttribute="leading" secondItem="ZjT-Jn-IDM" secondAttribute="leadingMargin" constant="324" id="jYG-jO-dy7"/>
                                                 <constraint firstItem="XoV-Zo-dKs" firstAttribute="trailing" secondItem="ZjT-Jn-IDM" secondAttribute="trailingMargin" id="mZv-en-zya"/>
-                                                <constraint firstItem="lUD-dP-pwt" firstAttribute="top" secondItem="ZjT-Jn-IDM" secondAttribute="topMargin" constant="10" id="pDC-HP-hNc"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="lUD-dP-pwt" secondAttribute="trailing" constant="10" id="pqE-2v-KRR"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="exerciseAccomplishedCheckMark" destination="lUD-dP-pwt" id="aav-kL-H4a"/>
                                             <outlet property="exerciseLabel" destination="XoV-Zo-dKs" id="sJC-N8-FMy"/>
                                         </connections>
                                     </tableViewCell>
@@ -332,28 +321,33 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_check_circle_48pt" translatesAutoresizingMaskIntoConstraints="NO" id="Qpz-Cg-9A5">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0R5-Q9-zpJ">
                                                     <rect key="frame" x="332" y="18" width="25" height="25"/>
+                                                    <color key="backgroundColor" red="0.96862745100000003" green="0.42745098040000001" blue="0.019607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="25" id="AJ4-I1-ELg"/>
-                                                        <constraint firstAttribute="height" constant="25" id="NO8-qk-hSf"/>
+                                                        <constraint firstAttribute="height" constant="25" id="GcN-TZ-iYO"/>
+                                                        <constraint firstAttribute="width" constant="25" id="Gnf-D7-OVL"/>
+                                                        <constraint firstAttribute="width" secondItem="0R5-Q9-zpJ" secondAttribute="height" multiplier="1:1" id="yEo-Cc-mZM"/>
                                                     </constraints>
-                                                </imageView>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="lA5-67-rPa" firstAttribute="bottom" secondItem="wDt-2c-yoz" secondAttribute="bottomMargin" id="1cN-uU-ZET"/>
                                                 <constraint firstItem="lA5-67-rPa" firstAttribute="top" secondItem="wDt-2c-yoz" secondAttribute="topMargin" id="89X-2W-7ZV"/>
                                                 <constraint firstItem="lA5-67-rPa" firstAttribute="leading" secondItem="wDt-2c-yoz" secondAttribute="leadingMargin" id="MC3-jg-UbY"/>
-                                                <constraint firstItem="Qpz-Cg-9A5" firstAttribute="top" secondItem="wDt-2c-yoz" secondAttribute="topMargin" constant="10" id="Ujf-XU-f2A"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Qpz-Cg-9A5" secondAttribute="trailing" constant="10" id="WqI-Qv-YsY"/>
-                                                <constraint firstItem="Qpz-Cg-9A5" firstAttribute="leading" secondItem="wDt-2c-yoz" secondAttribute="leadingMargin" constant="324" id="dQa-06-ZZX"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Qpz-Cg-9A5" secondAttribute="bottom" constant="10" id="iUa-DH-Vf9"/>
+                                                <constraint firstItem="0R5-Q9-zpJ" firstAttribute="leading" secondItem="wDt-2c-yoz" secondAttribute="leadingMargin" constant="324" id="Rd5-1D-D4u"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="0R5-Q9-zpJ" secondAttribute="trailing" constant="10" id="UZV-7c-THk"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="0R5-Q9-zpJ" secondAttribute="bottom" constant="10" id="eQU-d5-F7f"/>
+                                                <constraint firstItem="0R5-Q9-zpJ" firstAttribute="top" secondItem="wDt-2c-yoz" secondAttribute="topMargin" constant="10" id="oxA-kD-ycz"/>
                                                 <constraint firstItem="lA5-67-rPa" firstAttribute="trailing" secondItem="wDt-2c-yoz" secondAttribute="trailingMargin" id="qPo-FH-gu1"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="exerciseAccomplishedCheckMark" destination="Qpz-Cg-9A5" id="fTS-EJ-f48"/>
                                             <outlet property="exerciseLabel" destination="lA5-67-rPa" id="Vgp-g6-nzO"/>
+                                            <outlet property="exerciseTimesPerformedCounter" destination="0R5-Q9-zpJ" id="RC5-J5-AYa"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -860,7 +854,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jq4-VH-AZN" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Exercises" image="ic_directions_run_white" selectedImage="ic_directions_run_white" id="Fey-pz-c0f"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="TOC-NX-SoI">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TOC-NX-SoI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -890,7 +884,7 @@
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="URd-th-2MR">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="URd-th-2MR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -916,7 +910,7 @@
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="E3o-D1-R36">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="E3o-D1-R36">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -943,7 +937,7 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="fVX-A2-XvO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="xA3-eZ-rUL">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xA3-eZ-rUL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -983,7 +977,6 @@
         <image name="HamburgerMenu" width="25" height="25"/>
         <image name="Image" width="72" height="72"/>
         <image name="ic_assignment_white" width="24" height="24"/>
-        <image name="ic_check_circle_48pt" width="48" height="48"/>
         <image name="ic_directions_run_white" width="24" height="24"/>
         <image name="ic_notifications_white" width="24" height="24"/>
         <image name="ic_play_arrow_white_36pt" width="36" height="36"/>

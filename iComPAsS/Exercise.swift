@@ -11,11 +11,13 @@ import Foundation
 class Exercise
 {
     var responseID = 0
+    
     var description = ""
     
     var timeAssigned = ""
-    var timeStarted = ""
-    var timeCompleted = ""
+    var timeStarted: [String] = []
+    var timeCompleted: [String] = []
+    var timeElapsed: [String] = []
     
     var exerciseFeedback = ""
     var exerciseID = 0
@@ -27,5 +29,6 @@ class Exercise
     var statusDescription = ""
     var statusTimestamp = ""
     
+    var count = 0
     
 }
