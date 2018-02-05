@@ -46,16 +46,29 @@ class ERASResultsTableViewController: UITableViewController {
         let erasDateCell = tableView.dequeueReusableCellWithIdentifier("erasDateCell", forIndexPath: indexPath) as! ERASResultsTableViewCell;
         
         let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "yyyy-dd-mm hh:mm:ss"
-        dateFormatter.timeZone = NSTimeZone(name: "Asia/Manila")
-        let date = dateFormatter.dateFromString(report.reportDates[indexPath.row])
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        //dateFormatter.timeZone = NSTimeZone(name: "Asia/Manila")
         
+        erasDateCell.cellIdentifier = report.reportDates[indexPath.row]
+        print("\nto be converted: \(report.reportDates[indexPath.row])\n")
+        let date = dateFormatter.dateFromString(report.reportDates[indexPath.row])
+        print("\ndate: \(date)\n")
         dateFormatter.dateFormat = "MMMM dd, yyyy - eeee"
         let formattedDate = dateFormatter.stringFromDate(date!)
-        erasDateCell.resultsDateLabel.text = report.reportDates[indexPath.row]
+        print("\nformattedDate: \(formattedDate)\n")
+        erasDateCell.resultsDateLabel.text = formattedDate//report.reportDates[indexPath.row]
         
         erasDateCell.tag = indexPath.row + 1
         return erasDateCell
+        /*
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-dd-MM HH:mm:ss"
+        //dateFormatter.timeZone = NSTimeZone(name: "Asia/Manila") as TimeZone!
+        let date = dateFormatter.date(from: "2018-01-01 13:01:01")
+        
+        print(date)
+        dateFormatter.dateFormat = "MMMM dd, yyyy - eeee"
+        let formattedDate = dateFormatter.string(from: date!)*/
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
@@ -63,7 +76,7 @@ class ERASResultsTableViewController: UITableViewController {
         //let erasDateCell = tableView.dequeueReusableCellWithIdentifier("erasDateCell", forIndexPath: indexPath) as! ERASResultsTableViewCell;
         let erasDateCell = tableView.viewWithTag(indexPath.row + 1) as! ERASResultsTableViewCell
         
-        chosenReportDate = erasDateCell.resultsDateLabel.text!
+        chosenReportDate = erasDateCell.cellIdentifier
         print("chosen report date: \(chosenReportDate)")
         performSegueWithIdentifier("toERASResultsOptions", sender: nil)
         

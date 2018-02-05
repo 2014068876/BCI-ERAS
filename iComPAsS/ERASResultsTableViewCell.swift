@@ -11,6 +11,8 @@ import UIKit
 class ERASResultsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var resultsDateLabel: UILabel!
+    var cellIdentifier = ""
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

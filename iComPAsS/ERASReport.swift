@@ -113,9 +113,9 @@ class ERASReport: Model
                     exercise.responseID = exercises["exer_response_id"].intValue
                     exercise.description = exercises["exercise"].stringValue
                     exercise.timeAssigned = exercises["time_assigned"].stringValue
-                    exercise.timeStarted = exercises["time_started"].stringValue.componentsSeparatedByString(",")
-                    exercise.timeCompleted = exercises["time_completed"].stringValue.componentsSeparatedByString(",")
-                    exercise.timeElapsed = exercises["time_elapsed"].stringValue.componentsSeparatedByString(",")
+                    exercise.timeStarted = self.convertExerciseTimeToArray(exercises["time_started"].stringValue, type: 0)
+                    exercise.timeCompleted = self.convertExerciseTimeToArray(exercises["time_completed"].stringValue, type: 0)
+                    exercise.timeElapsed = self.convertExerciseTimeToArray(exercises["time_elapsed"].stringValue, type: 1)
                     exercise.exerciseFeedback = exercises["exer_feedback"].stringValue
                     exercise.exerciseID = exercises["exercise_id"].intValue
                     exercise.categoryID = exercises["category_id"].intValue
@@ -201,8 +201,46 @@ class ERASReport: Model
          */
     }
     
-    func convertExerciseTimeToArray(times: String) -> [String]
+    func convertExerciseTimeToArray(times: String, type: Int) -> [String]
     {
-        return (times.componentsSeparatedByString(","))
+        let tempTimeArray = times.componentsSeparatedByString(",")
+        print(tempTimeArray)
+        var timeArray: [String] = []
+        
+        let dateFormatter = NSDateFormatter()
+        
+        
+        if (tempTimeArray != [""])
+        {
+            for time in tempTimeArray
+            {
+                switch(type)
+                {
+                case 0:
+                    dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+                    let unconvertedTime = dateFormatter.dateFromString(time)
+                    dateFormatter.dateFormat = "hh:mm:ss a"
+                    let convertedTime = dateFormatter.stringFromDate(unconvertedTime!)
+                    
+                    print("\n\(unconvertedTime)\n")
+                    print("\n\(convertedTime)\n")
+                    timeArray.append(convertedTime)
+                    break;
+                case 1:
+                    dateFormatter.dateFormat = "HH:mm:ss"
+                    let unconvertedTime = dateFormatter.dateFromString(time)
+                    dateFormatter.dateFormat = "HH 'min' ss 'sec'"
+                    let convertedTime = dateFormatter.stringFromDate(unconvertedTime!)
+                    
+                    print("\n\(unconvertedTime)\n")
+                    print("\n\(convertedTime)\n")
+                    timeArray.append(convertedTime)
+                    break;
+                default: break;
+                }
+            }
+        }
+        
+        return timeArray
     }
 }

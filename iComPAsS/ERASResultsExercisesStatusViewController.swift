@@ -40,11 +40,31 @@ class ERASResultsExercisesStatusViewController: UIViewController, UITableViewDel
         exerciseCell.exerciseTitleLabel.text = self.exercisesReport[indexPath.row].description
         exerciseCell.exerciseStatusLabel.text = self.exercisesReport[indexPath.row].statusDescription
         
+      
+        
         exerciseCell.timesPerformedLabel.text = ""
-        for time in self.exercisesReport[indexPath.row].timeCompleted
+        for index in 0..<self.exercisesReport[indexPath.row].timeStarted.count
         {
-            exerciseCell.timesPerformedLabel.text = (exerciseCell.timesPerformedLabel.text! + "\(time)\n")
-        }
+            let tempTimeStarted = self.exercisesReport[indexPath.row].timeStarted[index] ?? ""
+            var tempTimeCompleted = ""
+            var tempTimeElapsed = ""
+            
+            if ((index >= self.exercisesReport[indexPath.row].timeCompleted.count) == false)
+            {
+                print("\ntime completed count: \(self.exercisesReport[indexPath.row].timeCompleted.count)")
+                print("index: \(index)\n")
+                tempTimeCompleted = " to \(self.exercisesReport[indexPath.row].timeCompleted[index])" ?? ""
+            }
+            if ((index >= self.exercisesReport[indexPath.row].timeElapsed.count) == false)
+            {
+                print("\ntime elapsed count: \(self.exercisesReport[indexPath.row].timeCompleted.count)")
+                print("\nindexPath: \(index)\n")
+                tempTimeElapsed = " (\(self.exercisesReport[indexPath.row].timeElapsed[index]))" ?? ""
+            }
+            
+            let time = tempTimeStarted + tempTimeCompleted + tempTimeElapsed
+            exerciseCell.timesPerformedLabel.text = exerciseCell.timesPerformedLabel.text! + time + "\n"
+       }
         if exerciseCell.timesPerformedLabel.text == ""
         {
             exerciseCell.timesPerformedLabel.text = "No time found."
@@ -52,5 +72,12 @@ class ERASResultsExercisesStatusViewController: UIViewController, UITableViewDel
         
         return exerciseCell
     }
-
 }
+/*
+extension Array
+{
+    subscript (safe index: Int) -> Element?
+    {
+        return indices ~= index ? self[index] : nil
+    }
+}*/

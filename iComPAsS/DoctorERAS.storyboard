@@ -75,7 +75,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8Q-V3-Tdi">
-                                                    <rect key="frame" x="85" y="60" width="299" height="21"/>
+                                                    <rect key="frame" x="85" y="59" width="299" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -89,28 +89,28 @@
                                                     <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:02 AM to 9:10 AM (7 minutes 4 seconds)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSN-BS-yxp">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:02 AM to 9:10 AM (7 minutes 4 seconds)XXXX" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSN-BS-yxp">
                                                     <rect key="frame" x="56" y="99" width="328" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="wSN-BS-yxp" firstAttribute="leading" secondItem="UUC-p0-jsL" secondAttribute="leadingMargin" constant="48" id="65l-3h-ULa"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="wSN-BS-yxp" secondAttribute="bottom" constant="10" id="8d8-S9-HXx"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="wSN-BS-yxp" secondAttribute="bottom" constant="10" id="1Pc-9G-xQQ"/>
                                                 <constraint firstItem="BDF-gF-tMc" firstAttribute="top" secondItem="p7I-mj-ciu" secondAttribute="bottom" constant="24" id="Hyn-YD-DWa"/>
-                                                <constraint firstItem="wSN-BS-yxp" firstAttribute="top" secondItem="BDF-gF-tMc" secondAttribute="bottom" constant="2" id="PiI-LI-PeX"/>
-                                                <constraint firstItem="p8Q-V3-Tdi" firstAttribute="top" secondItem="p7I-mj-ciu" secondAttribute="bottom" constant="8" symbolic="YES" id="RzK-H4-4T8"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="wSN-BS-yxp" secondAttribute="trailing" constant="22" id="SQc-xL-ikJ"/>
+                                                <constraint firstItem="p8Q-V3-Tdi" firstAttribute="top" secondItem="p7I-mj-ciu" secondAttribute="bottom" constant="7" id="RzK-H4-4T8"/>
                                                 <constraint firstItem="p8Q-V3-Tdi" firstAttribute="leading" secondItem="vjc-yw-Qxq" secondAttribute="trailing" constant="8" symbolic="YES" id="T1G-0D-t03"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="p8Q-V3-Tdi" secondAttribute="trailing" constant="22" id="Y3Y-as-5yD"/>
                                                 <constraint firstItem="vjc-yw-Qxq" firstAttribute="leading" secondItem="BDF-gF-tMc" secondAttribute="leading" id="awK-uF-ABT"/>
                                                 <constraint firstItem="p7I-mj-ciu" firstAttribute="top" secondItem="UUC-p0-jsL" secondAttribute="topMargin" id="ele-L0-pou"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="p7I-mj-ciu" secondAttribute="trailing" constant="10" id="gJN-FF-6WY"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="wSN-BS-yxp" secondAttribute="trailing" constant="22" id="kvw-03-AfI"/>
+                                                <constraint firstItem="wSN-BS-yxp" firstAttribute="top" secondItem="p7I-mj-ciu" secondAttribute="bottom" constant="47" id="s2U-AM-lN8"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="BDF-gF-tMc" secondAttribute="trailing" constant="143" id="sQX-S7-voX"/>
                                                 <constraint firstItem="vjc-yw-Qxq" firstAttribute="top" secondItem="p7I-mj-ciu" secondAttribute="bottom" constant="7" id="wxS-ji-H4T"/>
                                                 <constraint firstItem="vjc-yw-Qxq" firstAttribute="leading" secondItem="p7I-mj-ciu" secondAttribute="leading" id="xF1-iK-CRE"/>
+                                                <constraint firstItem="wSN-BS-yxp" firstAttribute="leading" secondItem="UUC-p0-jsL" secondAttribute="leadingMargin" constant="48" id="zTx-nL-kLg"/>
                                                 <constraint firstItem="p7I-mj-ciu" firstAttribute="leading" secondItem="UUC-p0-jsL" secondAttribute="leadingMargin" constant="10" id="zyt-BL-U9P"/>
                                             </constraints>
                                         </tableViewCellContentView>
