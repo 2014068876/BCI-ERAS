@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AfV-6l-27B">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qqd-36-Lf5">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -144,6 +144,152 @@
             </objects>
             <point key="canvasLocation" x="-2186.9565217391305" y="-1009.2391304347827"/>
         </scene>
+        <!--Exercises Statistics-->
+        <scene sceneID="XVN-qD-zjM">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BWn-ut-bB6" customClass="ERASStatisticsExercisesViewController" customModule="iComPAsS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e9B-tQ-aMQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="6tj-QJ-o3R"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WVx-7i-sve">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JwN-aX-SJp">
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BWn-ut-bB6" id="xGA-qO-Iab"/>
+                                    <outlet property="delegate" destination="BWn-ut-bB6" id="5J9-hx-3hl"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JwN-aX-SJp" firstAttribute="leading" secondItem="WVx-7i-sve" secondAttribute="leading" id="DUV-kY-c0X"/>
+                            <constraint firstItem="6tj-QJ-o3R" firstAttribute="top" secondItem="JwN-aX-SJp" secondAttribute="bottom" id="Oid-n9-wTq"/>
+                            <constraint firstAttribute="trailing" secondItem="JwN-aX-SJp" secondAttribute="trailing" id="f4R-Zf-dwN"/>
+                            <constraint firstItem="JwN-aX-SJp" firstAttribute="top" secondItem="e9B-tQ-aMQ" secondAttribute="bottom" id="tUV-Rb-4Gu"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Exercises Statistics" image="ic_directions_run_white" selectedImage="ic_directions_run_white" id="Ifv-8E-gbq"/>
+                    <connections>
+                        <outlet property="tableView" destination="JwN-aX-SJp" id="gnM-M2-dFK"/>
+                        <segue destination="Yej-n8-PfP" kind="show" identifier="toSpecificExerciseStatistics" id="lsG-VI-H7I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zy7-ff-QuJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2188.4057971014495" y="342.39130434782612"/>
+        </scene>
+        <!--Statistics Specific Exercise View Controller-->
+        <scene sceneID="dKA-qh-Gex">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Yej-n8-PfP" customClass="ERASStatisticsSpecificExerciseViewController" customModule="iComPAsS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6mH-rY-nFn"/>
+                        <viewControllerLayoutGuide type="bottom" id="GeB-vj-4vn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nTH-kS-lNh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8d2-H2-X45" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="64" width="414" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="185" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qe4-KF-XJl">
+                                <rect key="frame" x="0.0" y="272" width="414" height="415"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="415" id="b7f-nu-GpT"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="185" id="K5Q-7q-p1z">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="185"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="K5Q-7q-p1z" id="kGn-Ou-RXf">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="185"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    February 01, 2018" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQD-Kf-4rS">
+                                                    <rect key="frame" x="0.0" y="8" width="414" height="44"/>
+                                                    <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <color key="textColor" red="0.96862745100000003" green="0.42745098040000001" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="eQD-Kf-4rS" secondAttribute="trailing" id="OP9-aZ-fg7"/>
+                                                <constraint firstItem="eQD-Kf-4rS" firstAttribute="leading" secondItem="kGn-Ou-RXf" secondAttribute="leading" id="ceR-WX-961"/>
+                                                <constraint firstAttribute="bottom" secondItem="eQD-Kf-4rS" secondAttribute="bottom" constant="133" id="eeB-Wx-urm"/>
+                                                <constraint firstItem="eQD-Kf-4rS" firstAttribute="top" secondItem="kGn-Ou-RXf" secondAttribute="top" constant="8" id="nRJ-ye-wM0"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qe4-KF-XJl" firstAttribute="leading" secondItem="8d2-H2-X45" secondAttribute="leading" id="0Ut-MX-t8u"/>
+                            <constraint firstItem="8d2-H2-X45" firstAttribute="top" secondItem="6mH-rY-nFn" secondAttribute="bottom" id="8ta-ga-Nts"/>
+                            <constraint firstItem="qe4-KF-XJl" firstAttribute="top" secondItem="8d2-H2-X45" secondAttribute="bottom" constant="8" symbolic="YES" id="9OJ-6e-ZDe"/>
+                            <constraint firstItem="qe4-KF-XJl" firstAttribute="trailing" secondItem="8d2-H2-X45" secondAttribute="trailing" id="AR7-rX-DUo"/>
+                            <constraint firstItem="8d2-H2-X45" firstAttribute="leading" secondItem="nTH-kS-lNh" secondAttribute="leading" id="Ku6-Tl-nSc"/>
+                            <constraint firstItem="qe4-KF-XJl" firstAttribute="bottom" secondItem="GeB-vj-4vn" secondAttribute="top" id="bgW-Jp-CKC"/>
+                            <constraint firstAttribute="trailing" secondItem="8d2-H2-X45" secondAttribute="trailing" id="zFS-e1-pxL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lineChart" destination="8d2-H2-X45" id="d3i-ZQ-8u9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="na2-xx-eSp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1352.1739130434785" y="341.57608695652175"/>
+        </scene>
+        <!--Questionnaire Statistics-->
+        <scene sceneID="hO9-WA-0ef">
+            <objects>
+                <viewController id="qs7-d7-O9h" customClass="ERASStatisticsQuestionnaireViewController" customModule="iComPAsS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2ud-Sa-pCo"/>
+                        <viewControllerLayoutGuide type="bottom" id="Q1O-ZX-MhE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HEr-Sr-JCe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Questionnaire Statistics" image="ic_assignment_white" selectedImage="ic_assignment_white" id="Aa8-PA-gfz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2vH-w5-b5A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2187" y="-307"/>
+        </scene>
+        <!--Statistics Tab Bar View Controller-->
+        <scene sceneID="C7Y-0a-33t">
+            <objects>
+                <tabBarController storyboardIdentifier="ERASStatisticsResultsTabBar" id="mPk-fD-Z6D" customClass="ERASStatisticsTabBarViewController" customModule="iComPAsS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="JHx-eg-07T">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.96862745100000003" green="0.42745098040000001" blue="0.019607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="qs7-d7-O9h" kind="relationship" relationship="viewControllers" id="Dh9-Na-c2o"/>
+                        <segue destination="BWn-ut-bB6" kind="relationship" relationship="viewControllers" id="juy-oj-OcG"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AQZ-Jy-7rc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3104" y="20"/>
+        </scene>
         <!--Questionnaire Results-->
         <scene sceneID="wb6-xz-Iho">
             <objects>
@@ -250,6 +396,29 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z6R-Q2-H7T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3106" y="-1335"/>
+        </scene>
+        <!--Reminders-->
+        <scene sceneID="oJM-cc-4cq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qqd-36-Lf5" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Reminders" id="FeA-qA-3Dh">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-13"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="2Zn-jo-bV3"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="k5M-vu-eL8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.59999999999999998" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mPk-fD-Z6D" kind="show" id="N03-FX-hhL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IK2-UF-gi1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3897" y="20"/>
         </scene>
     </scenes>
     <resources>

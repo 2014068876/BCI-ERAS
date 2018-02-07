@@ -22,6 +22,7 @@ class ERASReport: Model
     var reportDates : [String] = []
     var reportQuestionnaire : [Question] = []
     var reportExercises : [Exercise] = []
+    var reportExercisesList : [String] = []
     var reportExercisesResponses : [String : [Exercise]] = [:]
     var reportQuestionnaireResponses : [String : [Question]] = [:]
     
@@ -135,6 +136,11 @@ class ERASReport: Model
                     {
                         self.reportDates.append(exercise.timeAssigned)
                         //reportDates.append(question.timeAssigned)
+                    }
+                    
+                    if self.reportExercisesList.contains(exercise.description) == false
+                    {
+                        self.reportExercisesList.append(exercise.description)
                     }
 
                 }

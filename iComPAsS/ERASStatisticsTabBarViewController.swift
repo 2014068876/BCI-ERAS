@@ -1,24 +1,20 @@
 //
-//  ERASResultsOptionsTabBarController.swift
+//  ERASStatisticsTabBarViewController.swift
 //  iComPAsS
 //
-//  Created by Gian Paul Flores on 30/01/2018.
+//  Created by Gian Paul Flores on 06/02/2018.
 //  Copyright © 2018 University of Santo Tomas. All rights reserved.
 //
 
 import UIKit
 
-class ERASResultsOptionsTabBarController: UITabBarController {
+class ERASStatisticsTabBarViewController: UITabBarController {
     
-    var reportQuestionnaire : [Question] = []
-    var reportExercises : [Exercise] = []
+    var report = ERASReport()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       // let questionnaireResponsesView = self.tabBarController?.viewControllers![0] as! ERASResultsQuestionnaireResponsesViewController
-        print(reportQuestionnaire)
-        //questionnaireResponsesView.questionnaireReport = reportQuestionnaire
     }
 
     override func didReceiveMemoryWarning() {

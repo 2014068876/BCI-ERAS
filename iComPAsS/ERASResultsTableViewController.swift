@@ -14,6 +14,8 @@ class ERASResultsTableViewController: UITableViewController {
     var selectedPatient = 0
     var chosenReportDate = ""
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    @IBOutlet weak var viewERASStatisticsButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -92,6 +94,17 @@ class ERASResultsTableViewController: UITableViewController {
             resultsTabBar.reportQuestionnaire = report.reportQuestionnaireResponses[chosenReportDate]!
             resultsTabBar.reportExercises = report.reportExercisesResponses[chosenReportDate]!
         }
+        if segue.identifier == "toERASStatistics"
+        {
+            let statisticsTabBar = segue.destinationViewController as! ERASStatisticsTabBarViewController
+            
+            print(report.reportExercises)
+            statisticsTabBar.report = report
+        }
+    }
+    @IBAction func viewERASStatistics(sender: AnyObject)
+    {
+        performSegueWithIdentifier("toERASStatistics", sender: nil)
     }
 
 }
