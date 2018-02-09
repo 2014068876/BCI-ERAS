@@ -347,6 +347,7 @@ class Patient: Model {
                     exercise.timeStarted = receivedExercise["time_started"].stringValue.componentsSeparatedByString(",")
                     exercise.timeCompleted = receivedExercise["time_completed"].stringValue.componentsSeparatedByString(",")
                     exercise.timeElapsed = receivedExercise["time_elapsed"].stringValue.componentsSeparatedByString(",")
+                    exercise.timeElapsedAverage = receivedExercise["avg_time_elapsed"].stringValue
                     exercise.exerciseFeedback = receivedExercise["exer_feedback"].stringValue
                     exercise.exerciseID = receivedExercise["exercise_id"].intValue
                     exercise.categoryID = receivedExercise["category_id"].intValue

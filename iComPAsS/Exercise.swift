@@ -18,6 +18,7 @@ class Exercise
     var timeStarted: [String] = []
     var timeCompleted: [String] = []
     var timeElapsed: [String] = []
+    var timeElapsedAverage = ""
     
     var exerciseFeedback = ""
     var exerciseID = 0

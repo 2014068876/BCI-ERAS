@@ -88,7 +88,7 @@ class PatientMenuTableViewController: UITableViewController {
         {
             //performSegueWithIdentifier("toERASTabs")
         }
-        if (indexPath.row == 10) {
+        if (indexPath.row == 11) {
             presentViewController(alert, animated: true, completion: nil)
         }
     }
@@ -210,7 +210,7 @@ class PatientMenuTableViewController: UITableViewController {
         
         //load
         self.patient.getPatientProfile(id, token: token, completion: {(success) -> Void in
-            
+            super.tableView.reloadData()
         })
     }
     

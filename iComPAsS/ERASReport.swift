@@ -22,7 +22,10 @@ class ERASReport: Model
     var reportDates : [String] = []
     var reportQuestionnaire : [Question] = []
     var reportExercises : [Exercise] = []
+    
     var reportExercisesList : [String] = []
+    var reportExerciseIDList : [Int] = []
+    
     var reportExercisesResponses : [String : [Exercise]] = [:]
     var reportQuestionnaireResponses : [String : [Question]] = [:]
     
@@ -82,6 +85,8 @@ class ERASReport: Model
                 self.reportQuestionnaire.removeAll()
                 self.reportExercises.removeAll()
                 self.reportDates.removeAll()
+                self.reportExercisesList.removeAll()
+                self.reportExerciseIDList.removeAll()
                 
                 for questions in swiftyJSON["question_response"].arrayValue
                 {
@@ -98,14 +103,16 @@ class ERASReport: Model
  
                     self.reportQuestionnaire.append(question)
                     print("-----------\(question.response)")
-                    if self.reportDates.contains(question.timeAssigned) == false
+                    if self.reportDates.contains(question.timeAssigned) == false && question.response != ""
                     {
                         self.reportDates.append(question.timeAssigned)
                         //reportDates.append(question.timeAssigned)
+                        print("added to reportDates: \(question.timeAssigned)")
                     }
                 }
                 
                 print(self.reportQuestionnaire)
+                print(swiftyJSON["exercise_response"].arrayValue)
                 
                 for exercises in swiftyJSON["exercise_response"].arrayValue
                 {
@@ -117,6 +124,7 @@ class ERASReport: Model
                     exercise.timeStarted = self.convertExerciseTimeToArray(exercises["time_started"].stringValue, type: 0)
                     exercise.timeCompleted = self.convertExerciseTimeToArray(exercises["time_completed"].stringValue, type: 0)
                     exercise.timeElapsed = self.convertExerciseTimeToArray(exercises["time_elapsed"].stringValue, type: 1)
+                    exercise.timeElapsedAverage = exercises["avg_time_elapsed"].stringValue
                     exercise.exerciseFeedback = exercises["exer_feedback"].stringValue
                     exercise.exerciseID = exercises["exercise_id"].intValue
                     exercise.categoryID = exercises["category_id"].intValue
@@ -124,7 +132,7 @@ class ERASReport: Model
                     exercise.statusID = exercises["status"]["id"].intValue
                     exercise.statusDescription = exercises["status"]["description"].stringValue
                     exercise.statusTimestamp = exercises["status"]["timestamp"].stringValue
-                    
+                    exercise.count = exercises["count"].intValue
                     print(exercise.timeAssigned)
                     print(exercise.timeStarted)
                     print(exercise.timeCompleted)
@@ -132,15 +140,18 @@ class ERASReport: Model
                     
                     self.reportExercises.append(exercise)
                     
+                    /*
                     if self.reportDates.contains(exercise.timeAssigned) == false
                     {
                         self.reportDates.append(exercise.timeAssigned)
+                        print("added to reportDates: \(exercise.timeAssigned)")
                         //reportDates.append(question.timeAssigned)
-                    }
+                    }*/
                     
                     if self.reportExercisesList.contains(exercise.description) == false
                     {
                         self.reportExercisesList.append(exercise.description)
+                        self.reportExerciseIDList.append(exercise.exerciseID)
                     }
 
                 }
@@ -170,15 +181,30 @@ class ERASReport: Model
         var reportQuestionnaireResponses: [String : [Question]] = [:]
         var reportExercisesResponses: [String : [Exercise]] = [:]
         */
-        
+        print("reportDates: \(self.reportDates)")
         for question in self.reportQuestionnaire
         {
-            self.reportQuestionnaireResponses[question.timeAssigned]!.append(question)
+            
+            //print("question time assigned: \(question.timeAssigned)")
+            if self.reportDates.contains(question.timeAssigned)
+            {
+                self.reportQuestionnaireResponses[question.timeAssigned]!.append(question)
+                print("+++++ appended: \(question.timeAssigned), | \(question.response)")
+            }
+            else { print("----- not appended: \(question.timeAssigned), | \(question.response)") }
+            
         }
+        
+        print("--------------------------------------------------------------------")
         
         for exercise in reportExercises
         {
-            self.reportExercisesResponses[exercise.timeAssigned]!.append(exercise)
+            if self.reportDates.contains(exercise.timeAssigned)
+            {
+                self.reportExercisesResponses[exercise.timeAssigned]!.append(exercise)
+                print("+++++ appended: \(exercise.timeAssigned), | \(exercise.statusDescription)")
+            }
+            else { print("----- not appended: \(exercise.timeAssigned), | \(exercise.statusDescription)") }
         }
         
         //return (reportQuestionnaireResponses, reportExercisesResponses)
@@ -235,7 +261,7 @@ class ERASReport: Model
                 case 1:
                     dateFormatter.dateFormat = "HH:mm:ss"
                     let unconvertedTime = dateFormatter.dateFromString(time)
-                    dateFormatter.dateFormat = "HH 'min' ss 'sec'"
+                    dateFormatter.dateFormat = "mm 'min' ss 'sec'"
                     let convertedTime = dateFormatter.stringFromDate(unconvertedTime!)
                     
                     print("\n\(unconvertedTime)\n")
@@ -248,5 +274,38 @@ class ERASReport: Model
         }
         
         return timeArray
+    }
+    
+    func getTimeElapsedAverages(exerciseID: Int) -> [Double]
+    {
+        var timeElapsedAverages : [Double] = []
+        
+        for index in 0..<self.reportExercises.count
+        {
+            if self.reportExercises[index].exerciseID == exerciseID && self.reportDates.contains(self.reportExercises[index].timeAssigned)
+            {
+                print("---> \(self.reportExercises[index].timeAssigned)")
+                print("+++> \(self.reportDates.count)")
+                let dateFormatter = NSDateFormatter()
+                dateFormatter.dateFormat = "HH:mm:ss"
+                let unconvertedTime = dateFormatter.dateFromString(self.reportExercises[index].timeElapsedAverage) ?? dateFormatter.dateFromString("00:00:00")
+                print(unconvertedTime)
+            
+                dateFormatter.dateFormat = "HH"
+                let hoursInSeconds = Double(dateFormatter.stringFromDate(unconvertedTime!))! * 3600
+                
+                dateFormatter.dateFormat = "mm"
+                let minutesInSeconds = Double(dateFormatter.stringFromDate(unconvertedTime!))!  * 60
+                
+                dateFormatter.dateFormat = "ss"
+                let seconds = Double(dateFormatter.stringFromDate(unconvertedTime!))!
+                
+                let timeElapsedAverageInSeconds = hoursInSeconds + minutesInSeconds + seconds
+                
+                timeElapsedAverages.append(timeElapsedAverageInSeconds)
+            }
+        }
+        
+        return timeElapsedAverages
     }
 }

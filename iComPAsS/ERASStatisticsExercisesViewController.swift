@@ -12,6 +12,8 @@ class ERASStatisticsExercisesViewController: UIViewController {
     
     var report = ERASReport()
     var exerciseList : [String] = []
+    var exerciseIDList : [Int] = []
+    var chosenExerciseIndex = 0
     
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
@@ -20,6 +22,7 @@ class ERASStatisticsExercisesViewController: UIViewController {
         let tabbarController = tabBarController as! ERASStatisticsTabBarViewController
         report = tabbarController.report
         exerciseList = report.reportExercisesList
+        exerciseIDList = report.reportExerciseIDList
         print(report.patientID)
         print(exerciseList)
         tableView.reloadData()
@@ -39,6 +42,12 @@ class ERASStatisticsExercisesViewController: UIViewController {
         
         questionCell.textLabel!.text = exerciseList[indexPath.row]
         
+        print(exerciseList.count)
+        print(exerciseIDList.count)
+        print(indexPath.row)
+        print(exerciseIDList)
+        
+        
         return questionCell
     }
     
@@ -46,8 +55,22 @@ class ERASStatisticsExercisesViewController: UIViewController {
     {
         //let erasDateCell = tableView.dequeueReusableCellWithIdentifier("erasDateCell", forIndexPath: indexPath) as! ERASResultsTableViewCell;
         /*let erasDateCell = tableView.viewWithTag(indexPath.row + 1) as! ERASResultsTableViewCell*/
+        chosenExerciseIndex = exerciseIDList[indexPath.row]
         performSegueWithIdentifier("toSpecificExerciseStatistics", sender: nil)
         
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "toSpecificExerciseStatistics"
+        {
+            let destination = segue.destinationViewController as! ERASStatisticsSpecificExerciseViewController
+            
+            print(self.report.reportDates)
+            destination.report = self.report
+            destination.chosenExerciseIndex = chosenExerciseIndex
+        }
+    }
+
 
 }

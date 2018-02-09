@@ -128,15 +128,16 @@ class ExercisesItemBarViewController: UIViewController, UITableViewDelegate, UIT
             
         self.tableView.reloadData()
         self.activityInidicator.stopAnimating()
+        self.tableView.hidden = false
             print("kkkkkkkkkkkkkkkkkkkkkkk\(self.patient.erasQuestionnaireIsDone)")
-            if self.patient.erasExercisesTodayIsDone
+            /*if self.patient.erasExercisesTodayIsDone
             {
                 self.accomplisedExercisesIndicatorLabel.hidden = false
             }
             else
             {
                 self.tableView.hidden = false
-            }
+            }*/
         })
     }
     
