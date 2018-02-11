@@ -225,7 +225,7 @@ class Patient: Model {
     
     func resetERASQuestionnaire(id: Int, token: String, completion: ((success: Bool) -> Void))
     {
-        let baseURL = mainURL + "/patients/\(id)/reset_questionnaire/2018-01-17"
+        let baseURL = mainURL + "/patients/\(id)/reset_questionnaire"
         let url = NSURL(string: baseURL)!
         let request = NSMutableURLRequest(URL: url)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")

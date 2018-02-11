@@ -12,6 +12,7 @@ class ERASExerciseStartedViewController: UIViewController {
     
     var exerciseID = 0
     
+    @IBOutlet weak var exerciseGIF: UIImageView!
     @IBOutlet var stopButton: UIButton!
     var nextView = ERASExerciseTabSpecificExerciseDetailsViewController()
     
@@ -21,6 +22,8 @@ class ERASExerciseStartedViewController: UIViewController {
         let statusBarView = UIView(frame: UIApplication.sharedApplication().statusBarFrame)
         let statusBarColor = UIColor(red: 0.97, green: 0.43, blue: 0.02, alpha: 1.0)
         statusBarView.backgroundColor = statusBarColor*/
+        
+        exerciseGIF.image = UIImage.gifWithName("exercise")
     }
     
 

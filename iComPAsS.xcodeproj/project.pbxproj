@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		6A02433F2000772F005B1E72 /* PatientERAS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A02433E2000772F005B1E72 /* PatientERAS.storyboard */; };
 		6A0243542000AE30005B1E72 /* ViewExercisesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0243532000AE30005B1E72 /* ViewExercisesViewController.swift */; };
+		6A07158A2030ED4600DACD00 /* ERASExerciseTabSpecificExerciseStepsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0715892030ED4600DACD00 /* ERASExerciseTabSpecificExerciseStepsTableViewCell.swift */; };
+		6A08AAEA202E95620039D442 /* ERASStatisticsNumericalOrNumericalBooleanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A08AAE9202E95620039D442 /* ERASStatisticsNumericalOrNumericalBooleanTableViewCell.swift */; };
+		6A08AAEC202E957D0039D442 /* ERASStatisticsBooleanQuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A08AAEB202E957D0039D442 /* ERASStatisticsBooleanQuestionTableViewCell.swift */; };
+		6A08AAF0202E9A8E0039D442 /* ERASStatisticsBooleanQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A08AAEF202E9A8E0039D442 /* ERASStatisticsBooleanQuestionViewController.swift */; };
+		6A08AAF2202E9ADE0039D442 /* ERASStatisticsNumericalOrNumericalBooleanQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A08AAF1202E9ADE0039D442 /* ERASStatisticsNumericalOrNumericalBooleanQuestionViewController.swift */; };
 		6A10120F2022CE5000504632 /* ERASResultsExercisesStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A10120E2022CE5000504632 /* ERASResultsExercisesStatusViewController.swift */; };
 		6A16C755200C291F0098091E /* ERASQuestionnaireBooleanNumericalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A16C754200C291F0098091E /* ERASQuestionnaireBooleanNumericalTableViewCell.swift */; };
 		6A1A439C202B7B9600B69FB6 /* ERASStatisticsSpecificExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1A439B202B7B9600B69FB6 /* ERASStatisticsSpecificExerciseTableViewCell.swift */; };
@@ -38,6 +43,7 @@
 		6ADCB1DF2001A21A00A91A65 /* FeedbackItemBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADCB1DE2001A21A00A91A65 /* FeedbackItemBarViewController.swift */; };
 		6ADCB1E12001ACB300A91A65 /* ERASTabBarMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADCB1E02001ACB300A91A65 /* ERASTabBarMenuViewController.swift */; };
 		6AF0CFC3202614E500D8C838 /* ERASExerciseStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF0CFC2202614E500D8C838 /* ERASExerciseStartedViewController.swift */; };
+		6AF2691F202F6B620020255B /* exercise.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6AF2691E202F6B620020255B /* exercise.gif */; };
 		6AFE34A5202A807C000E79CB /* ERASStatisticsQuestionnaireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFE34A4202A807C000E79CB /* ERASStatisticsQuestionnaireViewController.swift */; };
 		6AFE34AB202A8249000E79CB /* ERASStatisticsExercisesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFE34AA202A8249000E79CB /* ERASStatisticsExercisesViewController.swift */; };
 		6AFE34AD202A8301000E79CB /* ERASStatisticsTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFE34AC202A8301000E79CB /* ERASStatisticsTabBarViewController.swift */; };
@@ -205,6 +211,11 @@
 		39063E671AA4013A4CB9FAF2 /* Pods-iComPAsS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iComPAsS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iComPAsS/Pods-iComPAsS.debug.xcconfig"; sourceTree = "<group>"; };
 		6A02433E2000772F005B1E72 /* PatientERAS.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PatientERAS.storyboard; sourceTree = "<group>"; };
 		6A0243532000AE30005B1E72 /* ViewExercisesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExercisesViewController.swift; sourceTree = "<group>"; };
+		6A0715892030ED4600DACD00 /* ERASExerciseTabSpecificExerciseStepsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERASExerciseTabSpecificExerciseStepsTableViewCell.swift; sourceTree = "<group>"; };
+		6A08AAE9202E95620039D442 /* ERASStatisticsNumericalOrNumericalBooleanTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERASStatisticsNumericalOrNumericalBooleanTableViewCell.swift; sourceTree = "<group>"; };
+		6A08AAEB202E957D0039D442 /* ERASStatisticsBooleanQuestionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERASStatisticsBooleanQuestionTableViewCell.swift; sourceTree = "<group>"; };
+		6A08AAEF202E9A8E0039D442 /* ERASStatisticsBooleanQuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERASStatisticsBooleanQuestionViewController.swift; sourceTree = "<group>"; };
+		6A08AAF1202E9ADE0039D442 /* ERASStatisticsNumericalOrNumericalBooleanQuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERASStatisticsNumericalOrNumericalBooleanQuestionViewController.swift; sourceTree = "<group>"; };
 		6A10120E2022CE5000504632 /* ERASResultsExercisesStatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERASResultsExercisesStatusViewController.swift; sourceTree = "<group>"; };
 		6A16C754200C291F0098091E /* ERASQuestionnaireBooleanNumericalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERASQuestionnaireBooleanNumericalTableViewCell.swift; sourceTree = "<group>"; };
 		6A1A439B202B7B9600B69FB6 /* ERASStatisticsSpecificExerciseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERASStatisticsSpecificExerciseTableViewCell.swift; sourceTree = "<group>"; };
@@ -234,6 +245,7 @@
 		6ADCB1DE2001A21A00A91A65 /* FeedbackItemBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackItemBarViewController.swift; sourceTree = "<group>"; };
 		6ADCB1E02001ACB300A91A65 /* ERASTabBarMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERASTabBarMenuViewController.swift; sourceTree = "<group>"; };
 		6AF0CFC2202614E500D8C838 /* ERASExerciseStartedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERASExerciseStartedViewController.swift; sourceTree = "<group>"; };
+		6AF2691E202F6B620020255B /* exercise.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = exercise.gif; path = ../../../Downloads/exercise.gif; sourceTree = "<group>"; };
 		6AFE34A4202A807C000E79CB /* ERASStatisticsQuestionnaireViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERASStatisticsQuestionnaireViewController.swift; sourceTree = "<group>"; };
 		6AFE34AA202A8249000E79CB /* ERASStatisticsExercisesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERASStatisticsExercisesViewController.swift; sourceTree = "<group>"; };
 		6AFE34AC202A8301000E79CB /* ERASStatisticsTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERASStatisticsTabBarViewController.swift; sourceTree = "<group>"; };
@@ -410,6 +422,28 @@
 			name = PatientERAS;
 			sourceTree = "<group>";
 		};
+		6A08AAE7202E950B0039D442 /* Questions */ = {
+			isa = PBXGroup;
+			children = (
+				6AFE34A4202A807C000E79CB /* ERASStatisticsQuestionnaireViewController.swift */,
+				6A08AAE9202E95620039D442 /* ERASStatisticsNumericalOrNumericalBooleanTableViewCell.swift */,
+				6A08AAEB202E957D0039D442 /* ERASStatisticsBooleanQuestionTableViewCell.swift */,
+				6A08AAEF202E9A8E0039D442 /* ERASStatisticsBooleanQuestionViewController.swift */,
+				6A08AAF1202E9ADE0039D442 /* ERASStatisticsNumericalOrNumericalBooleanQuestionViewController.swift */,
+			);
+			name = Questions;
+			sourceTree = "<group>";
+		};
+		6A08AAE8202E95150039D442 /* Exercises */ = {
+			isa = PBXGroup;
+			children = (
+				6AFE34AA202A8249000E79CB /* ERASStatisticsExercisesViewController.swift */,
+				6AFE34AE202A951C000E79CB /* ERASStatisticsSpecificExerciseViewController.swift */,
+				6A1A439B202B7B9600B69FB6 /* ERASStatisticsSpecificExerciseTableViewCell.swift */,
+			);
+			name = Exercises;
+			sourceTree = "<group>";
+		};
 		6A23BA71201EA31E00916C9D /* Doctor ERAS */ = {
 			isa = PBXGroup;
 			children = (
@@ -440,6 +474,7 @@
 				6AB7AB512003D8EF000D871C /* ERASExerciseTabSubExerciseViewController.swift */,
 				6AAADBBF200406DB00F0ABE5 /* ERASExerciseTabSpecificExerciseDetailsViewController.swift */,
 				6AF0CFC2202614E500D8C838 /* ERASExerciseStartedViewController.swift */,
+				6A0715892030ED4600DACD00 /* ERASExerciseTabSpecificExerciseStepsTableViewCell.swift */,
 			);
 			name = "Exercises Tab";
 			sourceTree = "<group>";
@@ -478,11 +513,9 @@
 		6AFE34A9202A809E000E79CB /* Statistics */ = {
 			isa = PBXGroup;
 			children = (
-				6AFE34A4202A807C000E79CB /* ERASStatisticsQuestionnaireViewController.swift */,
-				6AFE34AA202A8249000E79CB /* ERASStatisticsExercisesViewController.swift */,
 				6AFE34AC202A8301000E79CB /* ERASStatisticsTabBarViewController.swift */,
-				6AFE34AE202A951C000E79CB /* ERASStatisticsSpecificExerciseViewController.swift */,
-				6A1A439B202B7B9600B69FB6 /* ERASStatisticsSpecificExerciseTableViewCell.swift */,
+				6A08AAE8202E95150039D442 /* Exercises */,
+				6A08AAE7202E950B0039D442 /* Questions */,
 			);
 			name = Statistics;
 			sourceTree = "<group>";
@@ -653,6 +686,7 @@
 			isa = PBXGroup;
 			children = (
 				6A8A32952017D77100098B03 /* sample_exercise.gif */,
+				6AF2691E202F6B620020255B /* exercise.gif */,
 				C4BF11DD1DA27D7E003AD11A /* LaunchScreen.storyboard */,
 				C4BF11971DA27740003AD11A /* Images.xcassets */,
 				C4BF11741DA27671003AD11A /* AppDelegate.swift */,
@@ -938,6 +972,7 @@
 			files = (
 				C4BF119F1DA278FB003AD11A /* Login.storyboard in Resources */,
 				C4BF11A01DA278FB003AD11A /* Patient.storyboard in Resources */,
+				6AF2691F202F6B620020255B /* exercise.gif in Resources */,
 				6A8A32962017D77100098B03 /* sample_exercise.gif in Resources */,
 				C473EEA11DA281DA00109E03 /* IQKeyboardManager.bundle in Resources */,
 				C4BF11981DA27740003AD11A /* Images.xcassets in Resources */,
@@ -1054,6 +1089,7 @@
 				C473EE9C1DA281C900109E03 /* IQTitleBarButtonItem.swift in Sources */,
 				C473EE9D1DA281C900109E03 /* IQToolbar.swift in Sources */,
 				C44808551E38713500A4F38C /* PatientTakeESASThreeViewController.swift in Sources */,
+				6A08AAEC202E957D0039D442 /* ERASStatisticsBooleanQuestionTableViewCell.swift in Sources */,
 				C4DD66DD1E486EF70035A147 /* ResetPasswordViewController.swift in Sources */,
 				C47BB9931E4C3009000BA6D6 /* PatientTakePainDetectTwoViewController.swift in Sources */,
 				6ADCB1E12001ACB300A91A65 /* ERASTabBarMenuViewController.swift in Sources */,
@@ -1066,6 +1102,7 @@
 				C48145061E716B4700EFFA64 /* PatientTakePainDetectFiveViewController.swift in Sources */,
 				C473EE871DA2816400109E03 /* IQUIViewController+Additions.swift in Sources */,
 				C4DD66DB1E4864330035A147 /* ForgotPasswordViewController.swift in Sources */,
+				6A08AAF0202E9A8E0039D442 /* ERASStatisticsBooleanQuestionViewController.swift in Sources */,
 				C47BB9891E497251000BA6D6 /* PatientTakePHQTwoViewController.swift in Sources */,
 				C4CD07DD1E12CF7700247DEE /* MessagesSentListTableViewController.swift in Sources */,
 				6A23BA75201EAE9100916C9D /* ERASResultsTableViewController.swift in Sources */,
@@ -1084,6 +1121,7 @@
 				C45D5A441DD71DE300812664 /* Message.swift in Sources */,
 				C47BB9951E4C358D000BA6D6 /* PatientTakePainDetectThreeViewController.swift in Sources */,
 				C4BF11D81DA27AA6003AD11A /* SwiftyJSON.swift in Sources */,
+				6A07158A2030ED4600DACD00 /* ERASExerciseTabSpecificExerciseStepsTableViewCell.swift in Sources */,
 				C48145021E71678D00EFFA64 /* PatientTakePainDetectFourViewController.swift in Sources */,
 				C473EE941DA281B200109E03 /* IQTextView.swift in Sources */,
 				C4BF11D51DA27A7E003AD11A /* SWRevealViewController.m in Sources */,
@@ -1107,10 +1145,12 @@
 				C47BB9971E4C466B000BA6D6 /* PatientTakePainDetectTenViewController.swift in Sources */,
 				C47BB99A1E4EB159000BA6D6 /* PHQ.swift in Sources */,
 				C43248761E718F5000F1CD73 /* PatientTakePainDetectElevenViewController.swift in Sources */,
+				6A08AAEA202E95620039D442 /* ERASStatisticsNumericalOrNumericalBooleanTableViewCell.swift in Sources */,
 				C4DD66D71E485EDC0035A147 /* DoctorPatientDateEsasResultViewController.swift in Sources */,
 				C41A25C01DD25B3900DB41A9 /* PatientDoctorProfileViewController.swift in Sources */,
 				C4E2AA381DD7900D00D7FC18 /* MessagesTableViewCell.swift in Sources */,
 				C47BB9851E496893000BA6D6 /* PatientTakePHQOneViewController.swift in Sources */,
+				6A08AAF2202E9ADE0039D442 /* ERASStatisticsNumericalOrNumericalBooleanQuestionViewController.swift in Sources */,
 				C430B85B1DC98A1300627C56 /* DoctorProfileDescriptionViewController.swift in Sources */,
 				6A1A439C202B7B9600B69FB6 /* ERASStatisticsSpecificExerciseTableViewCell.swift in Sources */,
 				6A65A3172002B17C00FD03C9 /* ERASExerciseTabTableViewCell.swift in Sources */,

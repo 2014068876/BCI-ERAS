@@ -23,6 +23,10 @@ class ERASReport: Model
     var reportQuestionnaire : [Question] = []
     var reportExercises : [Exercise] = []
     
+    var reportQuestionsList : [String] = []
+    var reportQuestionsIDList : [Int] = []
+    var reportQuestionsType : [String] = []
+    
     var reportExercisesList : [String] = []
     var reportExerciseIDList : [Int] = []
     
@@ -103,6 +107,15 @@ class ERASReport: Model
  
                     self.reportQuestionnaire.append(question)
                     print("-----------\(question.response)")
+                    
+                    if self.reportQuestionsList.contains(question.question) == false
+                    {
+                        self.reportQuestionsList.append(question.question)
+                        self.reportQuestionsIDList.append(question.id)
+                        self.reportQuestionsType.append(question.type)
+                        
+                    }
+                    
                     if self.reportDates.contains(question.timeAssigned) == false && question.response != ""
                     {
                         self.reportDates.append(question.timeAssigned)
