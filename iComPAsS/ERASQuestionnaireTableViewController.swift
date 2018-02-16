@@ -206,7 +206,7 @@ class ERASQuestionnaireTableViewController: UIViewController, UITableViewDelegat
                 else if (cell is ERASQuestionnaireNumericalTableViewCell)
                 {
                     let questionCell = cell as! ERASQuestionnaireNumericalTableViewCell
-                    let response = "\(questionCell.questionUISlider.value)"
+                    let response = "\(Int(questionCell.questionUISlider.value))"
                     let questionID = questionCell.question.id
                     
                     print(questionCell)

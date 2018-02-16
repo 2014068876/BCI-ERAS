@@ -33,12 +33,6 @@ class ERASReport: Model
     var reportExercisesResponses : [String : [Exercise]] = [:]
     var reportQuestionnaireResponses : [String : [Question]] = [:]
     
-    var uuid = ""
-    
-    override init()
-    {
-        uuid = NSUUID.init().UUIDString
-    }
     /*
     init(id: Int, token: String, patientID: Int)
     {

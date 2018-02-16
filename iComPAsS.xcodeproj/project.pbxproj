@@ -10,6 +10,7 @@
 		6A02433F2000772F005B1E72 /* PatientERAS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A02433E2000772F005B1E72 /* PatientERAS.storyboard */; };
 		6A0243542000AE30005B1E72 /* ViewExercisesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0243532000AE30005B1E72 /* ViewExercisesViewController.swift */; };
 		6A07158A2030ED4600DACD00 /* ERASExerciseTabSpecificExerciseStepsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0715892030ED4600DACD00 /* ERASExerciseTabSpecificExerciseStepsTableViewCell.swift */; };
+		6A0715902030FFC100DACD00 /* MZTimerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A07158F2030FFC100DACD00 /* MZTimerLabel.m */; };
 		6A08AAEA202E95620039D442 /* ERASStatisticsNumericalOrNumericalBooleanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A08AAE9202E95620039D442 /* ERASStatisticsNumericalOrNumericalBooleanTableViewCell.swift */; };
 		6A08AAEC202E957D0039D442 /* ERASStatisticsBooleanQuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A08AAEB202E957D0039D442 /* ERASStatisticsBooleanQuestionTableViewCell.swift */; };
 		6A08AAF0202E9A8E0039D442 /* ERASStatisticsBooleanQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A08AAEF202E9A8E0039D442 /* ERASStatisticsBooleanQuestionViewController.swift */; };
@@ -38,6 +39,8 @@
 		6ACE8DED200A721800402A94 /* ERASQuestionnaireNumericalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACE8DEC200A721800402A94 /* ERASQuestionnaireNumericalTableViewCell.swift */; };
 		6ACE8DF1200A724300402A94 /* ERASQuestionnaireBooleanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACE8DF0200A724300402A94 /* ERASQuestionnaireBooleanTableViewCell.swift */; };
 		6ACE8DF3200A725D00402A94 /* ERASQuestionnaireTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACE8DF2200A725D00402A94 /* ERASQuestionnaireTextTableViewCell.swift */; };
+		6AD3D88D203612B700AAE36E /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD3D88C203612B700AAE36E /* Feedback.swift */; };
+		6AD3D890203623CE00AAE36E /* ERASDoctorFeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD3D88F203623CE00AAE36E /* ERASDoctorFeedbackViewController.swift */; };
 		6ADCB1D92001A1E400A91A65 /* ExercisesItemBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADCB1D82001A1E400A91A65 /* ExercisesItemBarViewController.swift */; };
 		6ADCB1DD2001A20300A91A65 /* RemindersItemBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADCB1DC2001A20300A91A65 /* RemindersItemBarViewController.swift */; };
 		6ADCB1DF2001A21A00A91A65 /* FeedbackItemBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADCB1DE2001A21A00A91A65 /* FeedbackItemBarViewController.swift */; };
@@ -212,6 +215,8 @@
 		6A02433E2000772F005B1E72 /* PatientERAS.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PatientERAS.storyboard; sourceTree = "<group>"; };
 		6A0243532000AE30005B1E72 /* ViewExercisesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExercisesViewController.swift; sourceTree = "<group>"; };
 		6A0715892030ED4600DACD00 /* ERASExerciseTabSpecificExerciseStepsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERASExerciseTabSpecificExerciseStepsTableViewCell.swift; sourceTree = "<group>"; };
+		6A07158E2030FFC100DACD00 /* MZTimerLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MZTimerLabel.h; path = ../../../Desktop/MZTimerLabel.h; sourceTree = "<group>"; };
+		6A07158F2030FFC100DACD00 /* MZTimerLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MZTimerLabel.m; path = ../../../Desktop/MZTimerLabel.m; sourceTree = "<group>"; };
 		6A08AAE9202E95620039D442 /* ERASStatisticsNumericalOrNumericalBooleanTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERASStatisticsNumericalOrNumericalBooleanTableViewCell.swift; sourceTree = "<group>"; };
 		6A08AAEB202E957D0039D442 /* ERASStatisticsBooleanQuestionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERASStatisticsBooleanQuestionTableViewCell.swift; sourceTree = "<group>"; };
 		6A08AAEF202E9A8E0039D442 /* ERASStatisticsBooleanQuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERASStatisticsBooleanQuestionViewController.swift; sourceTree = "<group>"; };
@@ -240,6 +245,8 @@
 		6ACE8DEC200A721800402A94 /* ERASQuestionnaireNumericalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERASQuestionnaireNumericalTableViewCell.swift; sourceTree = "<group>"; };
 		6ACE8DF0200A724300402A94 /* ERASQuestionnaireBooleanTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERASQuestionnaireBooleanTableViewCell.swift; sourceTree = "<group>"; };
 		6ACE8DF2200A725D00402A94 /* ERASQuestionnaireTextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERASQuestionnaireTextTableViewCell.swift; sourceTree = "<group>"; };
+		6AD3D88C203612B700AAE36E /* Feedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
+		6AD3D88F203623CE00AAE36E /* ERASDoctorFeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERASDoctorFeedbackViewController.swift; sourceTree = "<group>"; };
 		6ADCB1D82001A1E400A91A65 /* ExercisesItemBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExercisesItemBarViewController.swift; sourceTree = "<group>"; };
 		6ADCB1DC2001A20300A91A65 /* RemindersItemBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindersItemBarViewController.swift; sourceTree = "<group>"; };
 		6ADCB1DE2001A21A00A91A65 /* FeedbackItemBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackItemBarViewController.swift; sourceTree = "<group>"; };
@@ -422,6 +429,15 @@
 			name = PatientERAS;
 			sourceTree = "<group>";
 		};
+		6A07158D2030FFAF00DACD00 /* MZTimerLabel */ = {
+			isa = PBXGroup;
+			children = (
+				6A07158E2030FFC100DACD00 /* MZTimerLabel.h */,
+				6A07158F2030FFC100DACD00 /* MZTimerLabel.m */,
+			);
+			name = MZTimerLabel;
+			sourceTree = "<group>";
+		};
 		6A08AAE7202E950B0039D442 /* Questions */ = {
 			isa = PBXGroup;
 			children = (
@@ -447,6 +463,7 @@
 		6A23BA71201EA31E00916C9D /* Doctor ERAS */ = {
 			isa = PBXGroup;
 			children = (
+				6AD3D88E2036238000AAE36E /* Feedback */,
 				6AFE34A9202A809E000E79CB /* Statistics */,
 				6AFE34A8202A8093000E79CB /* Results */,
 			);
@@ -494,6 +511,14 @@
 				6A4C9802200560A70053B1A9 /* ERASFeedbackTabTableViewCell.swift */,
 			);
 			name = "Feedback Tab";
+			sourceTree = "<group>";
+		};
+		6AD3D88E2036238000AAE36E /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				6AD3D88F203623CE00AAE36E /* ERASDoctorFeedbackViewController.swift */,
+			);
+			name = Feedback;
 			sourceTree = "<group>";
 		};
 		6AFE34A8202A8093000E79CB /* Results */ = {
@@ -721,6 +746,7 @@
 				C47BB9991E4EB159000BA6D6 /* PHQ.swift */,
 				C4A69B631E52074300A6353E /* PainDetect.swift */,
 				6A6BE2322009CD480087B7A4 /* Question.swift */,
+				6AD3D88C203612B700AAE36E /* Feedback.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -816,6 +842,7 @@
 		C4BF11DB1DA27AC3003AD11A /* Open Source */ = {
 			isa = PBXGroup;
 			children = (
+				6A07158D2030FFAF00DACD00 /* MZTimerLabel */,
 				6A8A32912017D4E200098B03 /* SwiftGif.swift */,
 				C448087A1E39C69A00A4F38C /* DLRadioButton */,
 				C44808511E386FEE00A4F38C /* BEMCheckBox */,
@@ -1070,6 +1097,8 @@
 				C448086B1E38795200A4F38C /* BEMPathManager.m in Sources */,
 				C4CD07D51E0BDA6300247DEE /* IdToken+CoreDataProperties.swift in Sources */,
 				C4BF11751DA27671003AD11A /* AppDelegate.swift in Sources */,
+				6A0715902030FFC100DACD00 /* MZTimerLabel.m in Sources */,
+				6AD3D88D203612B700AAE36E /* Feedback.swift in Sources */,
 				6AFE34AD202A8301000E79CB /* ERASStatisticsTabBarViewController.swift in Sources */,
 				6A23BA77201EAFCE00916C9D /* ERASResultsTableViewCell.swift in Sources */,
 				6A16C755200C291F0098091E /* ERASQuestionnaireBooleanNumericalTableViewCell.swift in Sources */,
@@ -1080,6 +1109,7 @@
 				6A2A05B0202182930088BDA5 /* ERASResultsOptionsTabBarController.swift in Sources */,
 				6AB7AB522003D8EF000D871C /* ERASExerciseTabSubExerciseViewController.swift in Sources */,
 				C4A76E7B1E920CA6003A4F45 /* PatientTakePainDetectNineViewController.swift in Sources */,
+				6AD3D890203623CE00AAE36E /* ERASDoctorFeedbackViewController.swift in Sources */,
 				C4BF11EB1DA27E18003AD11A /* PatientHelpTableViewController.swift in Sources */,
 				C4CD07DA1E0D067000247DEE /* DoctorProfileOtherDetailViewController.swift in Sources */,
 				6AF0CFC3202614E500D8C838 /* ERASExerciseStartedViewController.swift in Sources */,

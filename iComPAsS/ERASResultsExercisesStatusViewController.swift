@@ -72,6 +72,17 @@ class ERASResultsExercisesStatusViewController: UIViewController, UITableViewDel
         
         return exerciseCell
     }
+    
+    
+    @IBAction func openFeedbackView(sender: AnyObject)
+    {
+        performSegueWithIdentifier("fromExerciseToFeedback", sender: nil)
+    }
+    @IBAction func closeView(sender: UIBarButtonItem)
+    {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
 }
 /*
 extension Array

@@ -89,8 +89,12 @@ class ERASResultsTableViewController: UITableViewController {
         if segue.identifier == "toERASResultsOptions"
         {
             let resultsTabBar = segue.destinationViewController as! ERASResultsOptionsTabBarController
+            /*
+            let navigationController = segue.destinationViewController as! UINavigationController
             
-            resultsTabBar.navigationController?.title = chosenReportDate
+            let resultsTabBar = navigationController.viewControllers[0] as! ERASResultsOptionsTabBarController
+            */
+            //resultsTabBar.navigationController?.title = chosenReportDate
             resultsTabBar.reportQuestionnaire = report.reportQuestionnaireResponses[chosenReportDate]!
             resultsTabBar.reportExercises = report.reportExercisesResponses[chosenReportDate]!
         }

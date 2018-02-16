@@ -42,6 +42,23 @@ class ERASResultsQuestionnaireResponsesViewController: UIViewController {
         
         return questionCell
     }
-
+    
+    @IBAction func openFeedbackView(sender: UIBarButtonItem)
+    {
+        performSegueWithIdentifier("fromQuestionToFeedback", sender: nil)
+    }
+    
+    @IBAction func closeView(sender: UIBarButtonItem)
+    {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    /*
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "fromExerciseToFeedback" || segue.identifier == "fromQuestionToFeedback"
+        {
+        
+        }
+    }*/
 
 }

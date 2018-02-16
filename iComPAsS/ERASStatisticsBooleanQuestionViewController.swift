@@ -59,20 +59,30 @@ class ERASStatisticsBooleanQuestionViewController: UIViewController {
             }
         }
         
+        let totalAnswers = yesAnswer.count + noAnswer.count
+        print(yesAnswer.count)
+        print(noAnswer.count)
+        
+        let yes : Double = Double(yesAnswer.count) / Double(totalAnswers)
+        let no : Double = Double(noAnswer.count) / Double(totalAnswers)
+        
+        let yesDecimalPlaces = String(format: "%.2f", yes * 100.0)
+        let noDecimalPlaces = String(format: "%.2f", no * 100.0)
+        
         pieChartView.animate(xAxisDuration: 1.0, easingOption: .EaseInCubic)
         pieChartView.animate(yAxisDuration: 1.0, easingOption: .EaseInCubic)
         
-        pieChartEntry.append(ChartDataEntry(value: Double(yesAnswer.count), xIndex: 0))
-        pieChartEntry.append(ChartDataEntry(value: Double(noAnswer.count), xIndex: 1))
+        pieChartEntry.append(ChartDataEntry(value: Double(yesDecimalPlaces)!, xIndex: 0))
+        pieChartEntry.append(ChartDataEntry(value: Double(noDecimalPlaces)!, xIndex: 1))
         
         let pieChartDataSet = PieChartDataSet(yVals: pieChartEntry, label: "")
 
         pieChartDataSet.sliceSpace = 2
         pieChartDataSet.selectionShift = 5
-        pieChartDataSet.colors = [UIColor.greenColor(), UIColor.redColor()]
+        pieChartDataSet.colors = [UIColor(red:0.12, green:0.51, blue:0.30, alpha:1.0), UIColor(red:0.59, green:0.16, blue:0.11, alpha:1.0)]
         
 
-        let data = PieChartData(xVals: ["Yes", "No"], dataSet: pieChartDataSet)
+        let data = PieChartData(xVals: ["Yes (\(yesAnswer.count))", "No (\(noAnswer.count))"], dataSet: pieChartDataSet)
         
         pieChartView.data = data
         /*var dataEntries = [PieChartDataEntry]()

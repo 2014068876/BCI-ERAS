@@ -12,6 +12,8 @@ class ERASExerciseStartedViewController: UIViewController {
     
     var exerciseID = 0
     
+    
+    @IBOutlet weak var timerLabel: MZTimerLabel!
     @IBOutlet weak var exerciseGIF: UIImageView!
     @IBOutlet var stopButton: UIButton!
     var nextView = ERASExerciseTabSpecificExerciseDetailsViewController()
@@ -26,6 +28,9 @@ class ERASExerciseStartedViewController: UIViewController {
         exerciseGIF.image = UIImage.gifWithName("exercise")
     }
     
+    override func viewDidAppear(animated: Bool) {
+        timerLabel.start()
+    }
 
     @IBAction func stopExercise(sender: UIButton)
     {
