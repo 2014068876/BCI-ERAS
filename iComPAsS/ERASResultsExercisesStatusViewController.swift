@@ -23,6 +23,13 @@ class ERASResultsExercisesStatusViewController: UIViewController, UITableViewDel
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 138
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let unformattedTime = dateFormatter.dateFromString(exercisesReport[0].timeAssigned)
+        dateFormatter.dateFormat = "MMM dd, yyyy"
+        let formattedTime = dateFormatter.stringFromDate(unformattedTime!)
+        self.navigationItem.title = formattedTime
         //tableView.reloadData()
     }
 
@@ -40,7 +47,17 @@ class ERASResultsExercisesStatusViewController: UIViewController, UITableViewDel
     {
         let exerciseCell = tableView.dequeueReusableCellWithIdentifier("exerciseCell", forIndexPath: indexPath) as! ERASResultsExercisesStatusTableViewCell
         exerciseCell.exerciseTitleLabel.text = self.exercisesReport[indexPath.row].description
-        exerciseCell.exerciseStatusLabel.text = self.exercisesReport[indexPath.row].statusDescription
+        
+        var status = ""
+        
+        switch(self.exercisesReport[indexPath.row].statusDescription)
+        {
+            case "not yet started": status = "Not Yet Started."; break;
+            case "accomplished": status = "Accomplished."; break;
+            case "in progress": status = "In Progress."; break;
+            default: break;
+        }
+        exerciseCell.exerciseStatusLabel.text = status
         
       
         
@@ -65,7 +82,12 @@ class ERASResultsExercisesStatusViewController: UIViewController, UITableViewDel
             }
             
             let time = tempTimeStarted + tempTimeCompleted + tempTimeElapsed
-            exerciseCell.timesPerformedLabel.text = exerciseCell.timesPerformedLabel.text! + time + "\n"
+            
+            if tempTimeStarted != "" || tempTimeCompleted != "" || tempTimeElapsed != ""
+            {
+                exerciseCell.timesPerformedLabel.text = exerciseCell.timesPerformedLabel.text! + time + "\n"
+            }
+            
        }
         if exerciseCell.timesPerformedLabel.text == ""
         {

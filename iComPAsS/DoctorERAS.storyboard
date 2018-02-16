@@ -14,7 +14,6 @@
         <!--Reminders-->
         <scene sceneID="6Wt-PB-ky9">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dF0-JP-qn3" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="ERASResultsOptionsNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="uAW-gR-qCD" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Reminders" id="OEb-8Z-PcU">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-13"/>
@@ -30,10 +29,11 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dF0-JP-qn3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3897" y="-1334"/>
         </scene>
-        <!--Results Exercises Status View Controller-->
+        <!--title-->
         <scene sceneID="vm3-1c-LJV">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="qbI-Tc-AKW" customClass="ERASResultsExercisesStatusViewController" customModule="iComPAsS" customModuleProvider="target" sceneMemberID="viewController">
@@ -75,7 +75,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8Q-V3-Tdi">
-                                                    <rect key="frame" x="85" y="59" width="265" height="21"/>
+                                                    <rect key="frame" x="85" y="58" width="270" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -99,9 +99,9 @@
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="wSN-BS-yxp" secondAttribute="bottom" constant="10" id="1Pc-9G-xQQ"/>
                                                 <constraint firstItem="BDF-gF-tMc" firstAttribute="top" secondItem="p7I-mj-ciu" secondAttribute="bottom" constant="24" id="Hyn-YD-DWa"/>
-                                                <constraint firstItem="p8Q-V3-Tdi" firstAttribute="top" secondItem="p7I-mj-ciu" secondAttribute="bottom" constant="7" id="RzK-H4-4T8"/>
-                                                <constraint firstItem="p8Q-V3-Tdi" firstAttribute="leading" secondItem="vjc-yw-Qxq" secondAttribute="trailing" constant="8" symbolic="YES" id="T1G-0D-t03"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="p8Q-V3-Tdi" secondAttribute="trailing" constant="22" id="Y3Y-as-5yD"/>
+                                                <constraint firstItem="p8Q-V3-Tdi" firstAttribute="top" secondItem="p7I-mj-ciu" secondAttribute="bottom" constant="6" id="RzK-H4-4T8"/>
+                                                <constraint firstItem="p8Q-V3-Tdi" firstAttribute="leading" secondItem="vjc-yw-Qxq" secondAttribute="trailing" constant="8" id="T1G-0D-t03"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="p8Q-V3-Tdi" secondAttribute="trailing" constant="17" id="Y3Y-as-5yD"/>
                                                 <constraint firstItem="vjc-yw-Qxq" firstAttribute="leading" secondItem="BDF-gF-tMc" secondAttribute="leading" id="awK-uF-ABT"/>
                                                 <constraint firstItem="p7I-mj-ciu" firstAttribute="top" secondItem="UUC-p0-jsL" secondAttribute="topMargin" id="ele-L0-pou"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="p7I-mj-ciu" secondAttribute="trailing" constant="10" id="gJN-FF-6WY"/>
@@ -135,8 +135,7 @@
                             <constraint firstItem="Y3i-wI-nTI" firstAttribute="top" secondItem="oaV-9v-fZ1" secondAttribute="bottom" constant="8" id="h8R-DS-NCa"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Adx-b9-nnK">
-                        <barButtonItem key="backBarButtonItem" title="hello" id="Myn-iT-jbT"/>
+                    <navigationItem key="navigationItem" title="title" id="Adx-b9-nnK">
                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="hb5-fo-dXi">
                             <color key="tintColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -614,6 +613,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.96862745100000003" green="0.42745098040000001" blue="0.019607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.96862745100000003" green="0.42745098040000001" blue="0.019607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="qs7-d7-O9h" kind="relationship" relationship="viewControllers" id="Dh9-Na-c2o"/>
@@ -700,7 +700,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oYT-Z2-BDm">
-                        <barButtonItem key="backBarButtonItem" title="hello" id="Aho-aB-7GL"/>
                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="QzW-Cf-q8a">
                             <color key="tintColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -792,7 +791,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="1iP-PK-SwN"/>
                                 </constraints>
-                                <color key="barTintColor" red="0.96862745100000003" green="0.42745098040000001" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.96862745100000003" green="0.42745098040000001" blue="0.019607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </textAttributes>
@@ -895,6 +894,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.96862745100000003" green="0.42745098040000001" blue="0.019607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.96862745100000003" green="0.42745098040000001" blue="0.019607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
                                 <color key="value" red="0.96862745098039216" green="0.42745098039215684" blue="0.019607843137254902" alpha="1" colorSpace="calibratedRGB"/>
@@ -935,7 +936,6 @@
         <!--Questionnaire Results-->
         <scene sceneID="F7M-WZ-AcX">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="agU-73-8x2" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="F8d-mM-7Il" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Questionnaire Results" image="ic_assignment_white" id="u7z-Fy-HvP"/>
                     <toolbarItems/>
@@ -943,12 +943,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.96862745100000003" green="0.42745098040000001" blue="0.019607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
                         <segue destination="RlQ-Ct-4Ec" kind="relationship" relationship="rootViewController" id="TBN-h1-m0N"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="agU-73-8x2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2188" y="-1661.0194902548726"/>
         </scene>
@@ -962,6 +966,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.96862745100000003" green="0.42745098040000001" blue="0.019607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

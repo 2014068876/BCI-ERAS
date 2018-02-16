@@ -23,7 +23,14 @@ class ERASResultsQuestionnaireResponsesViewController: UIViewController {
         let tabbarController = tabBarController as! ERASResultsOptionsTabBarController
         questionnaireReport = tabbarController.reportQuestionnaire
         selectedPatientID = tabbarController.selectedPatientID
-        self.navigationController!.title = questionnaireReport[0].timeAssigned
+        //tabbarController.navigationController!.title = questionnaireReport[0].timeAssigned
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let unformattedTime = dateFormatter.dateFromString(questionnaireReport[0].timeAssigned)
+        dateFormatter.dateFormat = "MMM dd, yyyy"
+        let formattedTime = dateFormatter.stringFromDate(unformattedTime!)
+        self.navigationItem.title = formattedTime
+        //self.navigationItem.title!
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -47,6 +54,7 @@ class ERASResultsQuestionnaireResponsesViewController: UIViewController {
     
     @IBAction func openFeedbackView(sender: UIBarButtonItem)
     {
+        let baritem = sender
         performSegueWithIdentifier("fromQuestionToFeedback", sender: nil)
     }
     
