@@ -8,8 +8,11 @@
 
 import Foundation
 
-class Feedback
+class Feedback : Model
 {
-    var doctorsName = ""
+    var doctorName = ""
+    var doctorID = 0
     var feedback = ""
+    var feedbackTime = ""
+    var feedackDate = ""
 }

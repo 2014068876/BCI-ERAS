@@ -20,11 +20,18 @@ class ERASDoctorFeedbackViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var roguePlaceHolder: UITextView!
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     var textViewPlaceholder = "What would you want to say to the patient?"
+    var patientID = 0
+    var blankFeedbackAlert = UIAlertController(title: "Blank Feedback", message: "Please provide a feedback.", preferredStyle: UIAlertControllerStyle.Alert)
+    
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        //
+        blankFeedbackAlert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default) { (action: UIAlertAction) -> Void in })
         
        // UIApplication.sharedApplication().statusBarStyle = .Default
         
@@ -36,11 +43,8 @@ class ERASDoctorFeedbackViewController: UIViewController, UITextViewDelegate {
         
         roguePlaceHolder.hidden = false
         roguePlaceHolder.selectedTextRange = roguePlaceHolder.textRangeFromPosition(roguePlaceHolder.beginningOfDocument, toPosition: roguePlaceHolder.beginningOfDocument)
-    }
-    
-    @IBAction func submitFeedback(sender: AnyObject)
-    {
         
+        activityIndicator.hidden = true
     }
    
     func textViewDidBeginEditing(textView: UITextView)
@@ -101,5 +105,34 @@ class ERASDoctorFeedbackViewController: UIViewController, UITextViewDelegate {
     @IBAction func closeView(sender: UIBarButtonItem)
     {
         self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func submitDoctorFeedback(sender: UIBarButtonItem)
+    {
+        if textView.text != ""
+        {
+            let def = NSUserDefaults.standardUserDefaults()
+            let token = def.objectForKey("userToken") as! String
+            let id = def.objectForKey("userID") as! Int
+            
+            activityIndicator.hidden = false
+            activityIndicator.startAnimating()
+            
+            let doctor = Doctor()
+            
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            
+            let timestamp = dateFormatter.stringFromDate(NSDate())
+            
+           doctor.giveFeedback(id, token: token, feedback: textView.text, patientID: patientID, exerciseDate: timestamp, completion: {(success) -> Void in
+                self.activityIndicator.stopAnimating()
+                self.dismissViewControllerAnimated(true, completion: nil)
+            })
+        }
+        else
+        {
+            presentViewController(blankFeedbackAlert, animated: true, completion: nil)
+        }
     }
 }

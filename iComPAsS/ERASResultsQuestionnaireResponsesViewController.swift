@@ -11,6 +11,7 @@ import UIKit
 class ERASResultsQuestionnaireResponsesViewController: UIViewController {
     
     var questionnaireReport: [Question] = []
+    var selectedPatientID = 0
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -21,6 +22,7 @@ class ERASResultsQuestionnaireResponsesViewController: UIViewController {
         
         let tabbarController = tabBarController as! ERASResultsOptionsTabBarController
         questionnaireReport = tabbarController.reportQuestionnaire
+        selectedPatientID = tabbarController.selectedPatientID
         self.navigationController!.title = questionnaireReport[0].timeAssigned
     }
     
@@ -52,13 +54,15 @@ class ERASResultsQuestionnaireResponsesViewController: UIViewController {
     {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
-    /*
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        if segue.identifier == "fromExerciseToFeedback" || segue.identifier == "fromQuestionToFeedback"
+        if segue.identifier == "questionsToFeedback" || segue.identifier == "exercisesToFeedback"
         {
-        
+            let destination = segue.destinationViewController as! ERASDoctorFeedbackViewController
+            
+            destination.patientID = selectedPatientID
         }
-    }*/
+    }
 
 }

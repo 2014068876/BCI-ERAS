@@ -12,12 +12,14 @@ class ERASResultsExercisesStatusViewController: UIViewController, UITableViewDel
     
     @IBOutlet weak var tableView: UITableView!
     var exercisesReport: [Exercise] = []
+    var selectedPatientID = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         let tabbarController = tabBarController as! ERASResultsOptionsTabBarController
         exercisesReport = tabbarController.reportExercises
+        selectedPatientID = tabbarController.selectedPatientID
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 138
@@ -83,6 +85,15 @@ class ERASResultsExercisesStatusViewController: UIViewController, UITableViewDel
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "questionsToFeedback" || segue.identifier == "exercisesToFeedback"
+        {
+            let destination = segue.destinationViewController as! ERASDoctorFeedbackViewController
+            
+            destination.patientID = selectedPatientID
+        }
+    }
 }
 /*
 extension Array

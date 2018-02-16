@@ -26,6 +26,9 @@ class ERASExerciseStartedViewController: UIViewController {
         statusBarView.backgroundColor = statusBarColor*/
         
         exerciseGIF.image = UIImage.gifWithName("exercise")
+        
+        timerLabel.timeFormat = "mm:ss:SS"
+        //timerLabel.
     }
     
     override func viewDidAppear(animated: Bool) {

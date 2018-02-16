@@ -88,6 +88,59 @@ class Patient: Model {
     var assignedQuestions : [Question] = []
     var erasQuestionnaireIsDone = false
     var erasExercisesTodayIsDone = false
+    var exerciseFeedbacks : [Feedback] = []
+    
+    func getFeedbacks(id: Int, token: String, completion: ((success: Bool) -> Void))
+    {
+        let baseURL = mainURL + "/eras/all_exercise_feedback/\(id)"
+        let url = NSURL(string: baseURL)!
+        let request = NSMutableURLRequest(URL: url)
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { data, response, error in
+            
+            var successVal = true
+            if error == nil
+            {
+                //encode the data that came in, from String to SwiftyJSON
+                let swiftyJSON = JSON(data: data!)
+                print(swiftyJSON)
+                
+                self.exerciseFeedbacks.removeAll()
+                
+                for feedbacks in swiftyJSON["all_feedback"].arrayValue
+                {
+                    let feedback = Feedback()
+                    
+                    let dateFormatter = NSDateFormatter()
+                    dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+                    let unconvertedTime = dateFormatter.dateFromString(feedbacks["exercise_date"].stringValue)
+                    dateFormatter.dateFormat = "MMMM dd, yyyy"
+                    
+                    let convertedTime = dateFormatter.stringFromDate(unconvertedTime!)
+                    feedback.feedackDate = convertedTime
+                    feedback.feedback = feedbacks["feedback"].stringValue
+                    feedback.feedbackTime = feedbacks["feedback_time"].stringValue
+                    feedback.doctorID = feedbacks["doctor_id"].intValue
+                    feedback.doctorName = feedbacks["doctor_name"].stringValue
+                    
+                    self.exerciseFeedbacks.append(feedback)
+                }
+                
+            } else
+            {
+                print("There was an error")
+                successVal = false
+            }
+            
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                completion(success: successVal)
+            })
+        }
+        task.resume()
+        
+    }
     
     func stopExercise(id: Int, token: String, completionTime: String, exerciseID: Int, completion: ((success: Bool) -> Void))
     {

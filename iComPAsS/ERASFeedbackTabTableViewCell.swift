@@ -10,8 +10,12 @@ import UIKit
 
 class ERASFeedbackTabTableViewCell: UITableViewCell {
 
+
+    @IBOutlet weak var doctorProfilePicture: UIImageView!
     @IBOutlet weak var doctorNameLabel: UILabel!
-    @IBOutlet weak var doctorFeedback: UITextView!
+    @IBOutlet weak var feedbackDate: UILabel!
+    @IBOutlet weak var feedbackLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
