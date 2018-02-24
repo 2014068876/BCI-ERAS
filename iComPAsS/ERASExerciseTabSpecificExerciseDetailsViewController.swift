@@ -28,7 +28,7 @@ class ERASExerciseTabSpecificExerciseDetailsViewController: UIViewController {
         tableView.estimatedRowHeight = 42
         
         buttonActivityIndicator.hidden = true
-        exerciseGIF.image = UIImage.gifWithName("exercise")
+        exerciseGIF.image = UIImage.gifWithName(String(chosenSubexerciseID))
 
         self.title = exerciseTitle;
         exerciseInstructions =

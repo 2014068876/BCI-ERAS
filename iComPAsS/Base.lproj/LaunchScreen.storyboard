@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -36,27 +37,28 @@
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="USTIICS" translatesAutoresizingMaskIntoConstraints="NO" id="bie-Og-zQl">
-                                <rect key="frame" x="68" y="298" width="70" height="70"/>
+                                <rect key="frame" x="65" y="294" width="70" height="78"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="VSI-AN-rNR"/>
-                                    <constraint firstAttribute="width" constant="70" id="hVL-ac-l7g"/>
+                                    <constraint firstAttribute="width" constant="70" id="6MC-mw-asL"/>
+                                    <constraint firstAttribute="height" constant="78" id="HK3-4X-TZE"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="eYb-oz-yUr" firstAttribute="leading" secondItem="bie-Og-zQl" secondAttribute="trailing" constant="15" id="5EB-ed-C8q"/>
-                            <constraint firstItem="bie-Og-zQl" firstAttribute="baseline" secondItem="eYb-oz-yUr" secondAttribute="baseline" id="DIK-2s-Dml"/>
+                            <constraint firstItem="bie-Og-zQl" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="49" id="9r3-N6-Mks"/>
                             <constraint firstItem="eYb-oz-yUr" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="FmY-pR-7nB"/>
                             <constraint firstItem="eYb-oz-yUr" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Kpf-ZB-37g"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="bie-Og-zQl" secondAttribute="bottom" constant="295" id="LFn-47-XVX"/>
                             <constraint firstItem="fcO-9g-kbp" firstAttribute="leading" secondItem="eYb-oz-yUr" secondAttribute="trailing" constant="15" id="STk-3z-1sY"/>
+                            <constraint firstItem="eYb-oz-yUr" firstAttribute="leading" secondItem="bie-Og-zQl" secondAttribute="trailing" constant="18" id="lrv-BF-RDG"/>
                             <constraint firstItem="fcO-9g-kbp" firstAttribute="baseline" secondItem="eYb-oz-yUr" secondAttribute="baseline" id="rLX-Df-zx5"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-221" y="597"/>
+            <point key="canvasLocation" x="-221.59999999999999" y="596.85157421289364"/>
         </scene>
     </scenes>
     <resources>

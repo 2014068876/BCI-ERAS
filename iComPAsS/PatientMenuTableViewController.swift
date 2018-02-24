@@ -205,8 +205,8 @@ class PatientMenuTableViewController: UITableViewController {
     func loadPatientProfile()
     {
         let def = NSUserDefaults.standardUserDefaults()
-        let token = def.objectForKey("userToken") as! String
-        let id = def.objectForKey("userID") as! Int
+        let token = (def.objectForKey("userToken") as! String) ?? ""
+        let id = (def.objectForKey("userID") as! Int) ?? 0
         
         //load
         self.patient.getPatientProfile(id, token: token, completion: {(success) -> Void in

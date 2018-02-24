@@ -12,6 +12,7 @@ class ERASResultsQuestionnaireResponsesViewController: UIViewController {
     
     var questionnaireReport: [Question] = []
     var selectedPatientID = 0
+    var chosenDate = ""
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -23,6 +24,8 @@ class ERASResultsQuestionnaireResponsesViewController: UIViewController {
         let tabbarController = tabBarController as! ERASResultsOptionsTabBarController
         questionnaireReport = tabbarController.reportQuestionnaire
         selectedPatientID = tabbarController.selectedPatientID
+        chosenDate = tabbarController.chosenDate
+        
         //tabbarController.navigationController!.title = questionnaireReport[0].timeAssigned
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
@@ -70,6 +73,7 @@ class ERASResultsQuestionnaireResponsesViewController: UIViewController {
             let destination = segue.destinationViewController as! ERASDoctorFeedbackViewController
             
             destination.patientID = selectedPatientID
+            destination.chosenDate = chosenDate
         }
     }
 

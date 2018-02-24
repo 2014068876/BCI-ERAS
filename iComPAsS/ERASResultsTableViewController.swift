@@ -98,6 +98,7 @@ class ERASResultsTableViewController: UITableViewController {
             resultsTabBar.reportQuestionnaire = report.reportQuestionnaireResponses[chosenReportDate]!
             resultsTabBar.reportExercises = report.reportExercisesResponses[chosenReportDate]!
             resultsTabBar.selectedPatientID = selectedPatient
+            resultsTabBar.chosenDate = chosenReportDate
         }
         if segue.identifier == "toERASStatistics"
         {

@@ -18,7 +18,7 @@ class Model {
     var requestKeySuccess = false
     var resetPassSuccess = false
     //var mainURL = "https://api.usthbci-icompass.com/v2"
-    var mainURL = "http://dev.usthbci-icompass.com/api"
+    var mainURL = "http://stg.usthbci-icompass.com/api"
     //var mainURL = "http://192.168.0.15/flores_ws/final-optimized-api-master"
   
     

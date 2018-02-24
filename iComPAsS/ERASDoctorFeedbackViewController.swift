@@ -24,12 +24,23 @@ class ERASDoctorFeedbackViewController: UIViewController, UITextViewDelegate {
     
     var textViewPlaceholder = "What would you want to say to the patient?"
     var patientID = 0
+    var chosenDate = ""
     var blankFeedbackAlert = UIAlertController(title: "Blank Feedback", message: "Please provide a feedback.", preferredStyle: UIAlertControllerStyle.Alert)
     
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        
+        let unconvertedTimestamp = dateFormatter.dateFromString(chosenDate)
+        dateFormatter.dateFormat = "MMM dd, yyyy"
+        
+        let timestamp = dateFormatter.stringFromDate(unconvertedTimestamp!)
+        
+        dateTodayLabel.text = timestamp
         //
         blankFeedbackAlert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default) { (action: UIAlertAction) -> Void in })
         
@@ -121,9 +132,12 @@ class ERASDoctorFeedbackViewController: UIViewController, UITextViewDelegate {
             let doctor = Doctor()
             
             let dateFormatter = NSDateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            
+            let unconvertedTimestamp = dateFormatter.dateFromString(chosenDate)
             dateFormatter.dateFormat = "yyyy-MM-dd"
             
-            let timestamp = dateFormatter.stringFromDate(NSDate())
+            let timestamp = dateFormatter.stringFromDate(unconvertedTimestamp!)
             
            doctor.giveFeedback(id, token: token, feedback: textView.text, patientID: patientID, exerciseDate: timestamp, completion: {(success) -> Void in
                 self.activityIndicator.stopAnimating()
