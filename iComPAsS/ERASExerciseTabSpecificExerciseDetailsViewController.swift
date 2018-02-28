@@ -31,13 +31,13 @@ class ERASExerciseTabSpecificExerciseDetailsViewController: UIViewController {
         exerciseGIF.image = UIImage.gifWithName(String(chosenSubexerciseID))
 
         self.title = exerciseTitle;
-        exerciseInstructions =
+        /*exerciseInstructions =
         [
             "Jump while raising arms and separating legs to sides.",
             "Land on forefoot with legs apart and arms overhead.",
             "Jump again while lower arms and returning legs to midline.",
             "Land on forefoot with arms and legs in original position and repeat."
-        ]
+        ]*/
     }
     
     override func viewDidAppear(animated: Bool) {

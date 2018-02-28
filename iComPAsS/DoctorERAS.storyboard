@@ -150,6 +150,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="feedbackButton" destination="D83-yc-rXy" id="oHo-dO-oZv"/>
                         <outlet property="tableView" destination="oaV-9v-fZ1" id="5u1-n3-V7i"/>
                     </connections>
                 </viewController>
@@ -714,6 +715,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="feedbackButton" destination="utI-CO-LLV" id="4uQ-a6-Ukp"/>
                         <outlet property="tableView" destination="aFF-cM-7zn" id="RRL-qF-7BG"/>
                     </connections>
                 </viewController>
@@ -939,7 +941,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="F8d-mM-7Il" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Questionnaire Results" image="ic_assignment_white" id="u7z-Fy-HvP"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="3qa-yn-Yhx">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3qa-yn-Yhx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.96862745100000003" green="0.42745098040000001" blue="0.019607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -962,7 +964,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GjS-ff-DdI" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Exercises Status" image="ic_directions_run_white" id="O8w-aT-HGx"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Wuf-Kk-Zef">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wuf-Kk-Zef">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.96862745100000003" green="0.42745098040000001" blue="0.019607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

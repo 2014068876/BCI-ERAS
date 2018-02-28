@@ -14,12 +14,21 @@ class ERASResultsQuestionnaireResponsesViewController: UIViewController {
     var selectedPatientID = 0
     var chosenDate = ""
     
+    @IBOutlet weak var feedbackButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let def = NSUserDefaults.standardUserDefaults()
         
+        let id = def.objectForKey("userID") as! Int
+        
+        if id == selectedPatientID
+        {
+            feedbackButton.enabled = false
+            feedbackButton.tintColor = UIColor.clearColor()
+        }
         
         let tabbarController = tabBarController as! ERASResultsOptionsTabBarController
         questionnaireReport = tabbarController.reportQuestionnaire

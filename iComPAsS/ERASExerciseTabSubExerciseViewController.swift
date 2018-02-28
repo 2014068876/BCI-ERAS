@@ -76,6 +76,7 @@ class ERASExerciseTabSubExerciseViewController: UIViewController, UITableViewDel
             destination.chosenSubexerciseID = specificExerciseID
             //destination.exerciseTitle = subExerciseList[chosenExerciseIndex]
             destination.exerciseTitle = subExercisesList[chosenExerciseIndex].description
+            destination.exerciseInstructions = subExercisesList[chosenExerciseIndex].steps
         }
     }
     

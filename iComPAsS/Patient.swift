@@ -409,6 +409,7 @@ class Patient: Model {
                     exercise.statusDescription = receivedExercise["status"]["description"].stringValue
                     exercise.statusTimestamp = receivedExercise["status"]["timestamp"].stringValue
                     exercise.count = receivedExercise["count"].intValue
+                    exercise.steps = receivedExercise["steps"].stringValue.componentsSeparatedByString("|")
                     
                     self.patientAssignedExercises.append(exercise)
                     

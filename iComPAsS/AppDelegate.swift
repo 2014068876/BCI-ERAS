@@ -23,13 +23,114 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         IQKeyboardManager.sharedManager().enable = true
         
-        let appID = "b09fe4d1-bb2c-4f16-bcdb-4f47d2e0298f"
+        //let appID = "b09fe4d1-bb2c-4f16-bcdb-4f47d2e0298f"
+        let appID = "ca1ed24c-f7eb-4fb9-a7e8-8f508bf8d5a4"
         OneSignal.initWithLaunchOptions(launchOptions, appId: appID)
         
         // Sync hashed email if you have a login system or collect it.
         //   Will be used to reach the user at the most optimal time of day.
         // OneSignal.syncHashedEmail(userEmail)
+        
+        var aps: [String: AnyObject] = [:]
+        if let notification = launchOptions?[UIApplicationLaunchOptionsRemoteNotificationKey] as? [String: AnyObject]
+        {
+            aps = notification["aps"] as! [String: AnyObject]
+        }
+        /*
+        if launchOptions != nil
+        {
+            if (launchOptions.)
+        }*/
+        
+        print(aps)
+        
+        guard let alert = aps["alert"] as? NSDictionary, let body = alert["body"] as? String, let title = alert["title"] as? String
+            else {return true}
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "MMM dd, yyyy 'at' hh:mm a"
+        let timeCreated = dateFormatter.stringFromDate(NSDate())
+        
+        let reminder = Reminder(title: title, body: body, timeCreated: timeCreated)
+        /*
+         reminder.title = title
+         reminder.body = body
+         reminder.timeCreated = timeCreated
+         
+         */
+        let def = NSUserDefaults.standardUserDefaults()
+        var remindersArray: [Reminder] = []
+        
+        var toBeDecodedRemindersArray = def.objectForKey("remindersArray") as? NSData
+        
+        if toBeDecodedRemindersArray != nil
+        {
+            remindersArray = NSKeyedUnarchiver.unarchiveObjectWithData(toBeDecodedRemindersArray!) as! [Reminder]
+        }
+        /*
+         if decodedRemindersArray.isEmpty == false
+         {
+         remindersArray = decodedRemindersArray
+         }*/
+        
+        remindersArray.append(reminder)
+        
+        let encodedRemindersArray: NSData = NSKeyedArchiver.archivedDataWithRootObject(remindersArray)
+        def.setObject(encodedRemindersArray, forKey: "remindersArray")
+        def.synchronize()
+        
+
         return true
+    }
+
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
+        let aps = userInfo["aps"] as! [String: AnyObject]
+        
+        print(aps)
+        
+        guard let alert = aps["alert"] as? NSDictionary, let body = alert["body"] as? String, let title = alert["title"] as? String
+            else {return}
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "MMM dd, yyyy 'at' hh:mm a"
+        let timeCreated = dateFormatter.stringFromDate(NSDate())
+        
+        let reminder = Reminder(title: title, body: body, timeCreated: timeCreated)
+        /*
+        reminder.title = title
+        reminder.body = body
+        reminder.timeCreated = timeCreated
+        
+        */
+        let def = NSUserDefaults.standardUserDefaults()
+        var remindersArray: [Reminder] = []
+        
+        var toBeDecodedRemindersArray = def.objectForKey("remindersArray") as? NSData
+        
+        if toBeDecodedRemindersArray != nil
+        {
+            remindersArray = NSKeyedUnarchiver.unarchiveObjectWithData(toBeDecodedRemindersArray!) as! [Reminder]
+        }
+        /*
+        if decodedRemindersArray.isEmpty == false
+        {
+            remindersArray = decodedRemindersArray
+        }*/
+        
+        remindersArray.append(reminder)
+        
+        let encodedRemindersArray: NSData = NSKeyedArchiver.archivedDataWithRootObject(remindersArray)
+        def.setObject(encodedRemindersArray, forKey: "remindersArray")
+        def.synchronize()
+        
+        toBeDecodedRemindersArray = def.objectForKey("remindersArray") as? NSData
+        
+        if toBeDecodedRemindersArray != nil
+        {
+            remindersArray = NSKeyedUnarchiver.unarchiveObjectWithData(toBeDecodedRemindersArray!) as! [Reminder]
+            print(remindersArray[0].title)
+            print(remindersArray[0].timeCreated)
+        }
     }
 
     func applicationWillResignActive(application: UIApplication) {

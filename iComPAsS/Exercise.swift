@@ -32,4 +32,6 @@ class Exercise
     
     var count = 0
     
+    var steps: [String] = []
+    
 }

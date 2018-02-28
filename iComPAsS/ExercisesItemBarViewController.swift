@@ -156,6 +156,14 @@ class ExercisesItemBarViewController: UIViewController, UITableViewDelegate, UIT
             destination.exerciseTitle = subExercisesList[chosenExerciseIndex].description
             destination.chosenSubexerciseID = self.specificExerciseID
         }
+        if segue.identifier == "myProgress"
+        {
+            let destination = segue.destinationViewController as! ERASResultsTableViewController
+            
+            let def = NSUserDefaults.standardUserDefaults()
+            let id = def.objectForKey("userID") as! Int
+            destination.selectedPatient = id
+        }
     }
     
     func updateProgressOfExercisesUnderEachCategory(assignedExercises: [Exercise])

@@ -10,6 +10,7 @@ import UIKit
 
 class ERASResultsExercisesStatusViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var feedbackButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     var exercisesReport: [Exercise] = []
     var selectedPatientID = 0
@@ -18,6 +19,16 @@ class ERASResultsExercisesStatusViewController: UIViewController, UITableViewDel
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let def = NSUserDefaults.standardUserDefaults()
+        
+        let id = def.objectForKey("userID") as! Int
+        
+        if id == selectedPatientID
+        {
+            feedbackButton.enabled = false
+            feedbackButton.tintColor = UIColor.clearColor()
+        }
+        
         let tabbarController = tabBarController as! ERASResultsOptionsTabBarController
         exercisesReport = tabbarController.reportExercises
         selectedPatientID = tabbarController.selectedPatientID
