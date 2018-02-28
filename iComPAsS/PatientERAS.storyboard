@@ -1032,40 +1032,28 @@
                                             <outlet property="reminderTitle" destination="fUl-PN-9eq" id="b3o-r6-G73"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="noReminderCell" rowHeight="80" id="Xh7-k9-CU1">
-                                        <rect key="frame" x="0.0" y="108" width="375" height="80"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xh7-k9-CU1" id="uYs-sy-oX8">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All caught up! 👍🏻" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebe-dR-RPT">
-                                                    <rect key="frame" x="8" y="29" width="359" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.96862745100000003" green="0.42745098040000001" blue="0.019607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="ebe-dR-RPT" firstAttribute="trailing" secondItem="uYs-sy-oX8" secondAttribute="trailingMargin" id="6kL-KL-uDH"/>
-                                                <constraint firstItem="ebe-dR-RPT" firstAttribute="top" secondItem="uYs-sy-oX8" secondAttribute="topMargin" constant="21" id="CXr-DC-ocv"/>
-                                                <constraint firstItem="ebe-dR-RPT" firstAttribute="leading" secondItem="uYs-sy-oX8" secondAttribute="leadingMargin" id="DDI-Q0-s1o"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="ebe-dR-RPT" secondAttribute="bottom" constant="21" id="Ra9-IG-cWU"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="iq4-z2-9XL" id="eaQ-us-zjw"/>
                                     <outlet property="delegate" destination="iq4-z2-9XL" id="WWY-lZ-2nB"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All caught up! 👍🏻" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5FM-nI-hbC">
+                                <rect key="frame" x="10" y="124" width="359" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.96862745100000003" green="0.42745098040000001" blue="0.019607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="ihv-kY-aBl" secondAttribute="trailing" id="033-HD-1pJ"/>
+                            <constraint firstItem="5FM-nI-hbC" firstAttribute="leading" secondItem="C3h-cs-L71" secondAttribute="leading" constant="10" id="4rO-Nb-9ga"/>
                             <constraint firstItem="ihv-kY-aBl" firstAttribute="leading" secondItem="C3h-cs-L71" secondAttribute="leading" id="AnQ-Xp-zrm"/>
+                            <constraint firstItem="5FM-nI-hbC" firstAttribute="top" secondItem="uMa-bX-f6I" secondAttribute="bottom" constant="60" id="Xcb-v3-y3k"/>
+                            <constraint firstAttribute="trailing" secondItem="5FM-nI-hbC" secondAttribute="trailing" constant="6" id="fMO-vA-aAN"/>
                             <constraint firstItem="qhz-35-Z4B" firstAttribute="top" secondItem="ihv-kY-aBl" secondAttribute="bottom" id="fWm-Wp-jdL"/>
+                            <constraint firstItem="qhz-35-Z4B" firstAttribute="top" secondItem="5FM-nI-hbC" secondAttribute="bottom" constant="473" id="umy-AT-pJH"/>
                             <constraint firstItem="ihv-kY-aBl" firstAttribute="top" secondItem="uMa-bX-f6I" secondAttribute="bottom" id="wZC-Ke-iHS"/>
                         </constraints>
                     </view>
@@ -1077,6 +1065,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="hamburgerMenu" destination="WfV-KT-QjI" id="pEv-Qt-l8X"/>
+                        <outlet property="noRemindersLabel" destination="5FM-nI-hbC" id="rev-Wg-p8V"/>
                         <outlet property="tableView" destination="ihv-kY-aBl" id="6Ty-WB-09C"/>
                     </connections>
                 </viewController>

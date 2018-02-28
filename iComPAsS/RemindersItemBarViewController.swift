@@ -15,9 +15,13 @@ class RemindersItemBarViewController: UIViewController {
     var reminders: [Reminder] = []
     var reminderToBeDeleted = 0
     
+    @IBOutlet weak var noRemindersLabel: UILabel!
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        tableView.hidden = false
+        noRemindersLabel.hidden = true
         
         let def = NSUserDefaults.standardUserDefaults()
         
@@ -26,6 +30,17 @@ class RemindersItemBarViewController: UIViewController {
         if toBeDecodedRemindersArray != nil
         {
             reminders = (NSKeyedUnarchiver.unarchiveObjectWithData(toBeDecodedRemindersArray!) as! [Reminder]).reverse()
+        }
+        
+        if reminders.count == 0
+        {
+            tableView.hidden = true
+            noRemindersLabel.hidden = false
+        }
+        else
+        {
+            tableView.hidden = false
+            noRemindersLabel.hidden = true
         }
         
         if self.revealViewController() != nil
@@ -46,26 +61,37 @@ class RemindersItemBarViewController: UIViewController {
         {
             reminders = (NSKeyedUnarchiver.unarchiveObjectWithData(toBeDecodedRemindersArray!) as! [Reminder]).reverse()
         }
-
+        
+        if reminders.count == 0
+        {
+            tableView.hidden = true
+            noRemindersLabel.hidden = false
+        }
+        else
+        {
+            tableView.hidden = false
+            noRemindersLabel.hidden = true
+        }
+        
         tableView.reloadData()
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        if reminders.count == 0
+        /*if reminders.count == 0
         {
             return 1
         }
         else
-        {
+        {*/
             return reminders.count
-        }
+        /*}*/
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        if reminders.count != 0
-        {
+        /*if reminders.count != 0
+        {*/
             let reminderCell = tableView.dequeueReusableCellWithIdentifier("reminderCell", forIndexPath: indexPath) as! ERASRemindersTabTableViewCell
             
             let reminder = reminders[indexPath.row]
@@ -77,11 +103,11 @@ class RemindersItemBarViewController: UIViewController {
             reminderCell.reminderTime.text = reminder.timeCreated
             
             return reminderCell
-        }
+        /*}
         else
         {
             return tableView.dequeueReusableCellWithIdentifier("noReminderCell", forIndexPath: indexPath)
-        }
+        }*/
     }
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath)
     {
@@ -91,8 +117,8 @@ class RemindersItemBarViewController: UIViewController {
         
             if editingStyle == .Delete
             {
-                if reminders.count != 0
-                {
+               /* if reminders.count != 0
+                {*/
                     removeReminderFromArray(indexPath.row)
                     tableView.beginUpdates()
                     
@@ -102,9 +128,15 @@ class RemindersItemBarViewController: UIViewController {
                     
                     if reminders.count == 0
                     {
-                        self.tableView.reloadData()
+                        tableView.hidden = true
+                        noRemindersLabel.hidden = false
                     }
-                }
+                    else
+                    {
+                        tableView.hidden = false
+                        noRemindersLabel.hidden = true
+                    }
+                /*}*/
             }
        // }
     }
