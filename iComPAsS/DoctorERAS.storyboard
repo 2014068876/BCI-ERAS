@@ -19,7 +19,7 @@
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-13"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hvy-KZ-Dll">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="hvy-KZ-Dll">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.1019607843" green="0.10980392160000001" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
@@ -471,8 +471,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eO7-aF-GGd">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eO7-aF-GGd">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="qs7-d7-O9h" id="MMl-GM-2RQ"/>
@@ -481,12 +482,6 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="eO7-aF-GGd" firstAttribute="leading" secondItem="HEr-Sr-JCe" secondAttribute="leading" id="WyT-RQ-BFw"/>
-                            <constraint firstItem="eO7-aF-GGd" firstAttribute="top" secondItem="2ud-Sa-pCo" secondAttribute="bottom" id="amX-6F-V94"/>
-                            <constraint firstItem="Q1O-ZX-MhE" firstAttribute="top" secondItem="eO7-aF-GGd" secondAttribute="bottom" id="c9T-3t-oge"/>
-                            <constraint firstAttribute="trailing" secondItem="eO7-aF-GGd" secondAttribute="trailing" id="dSu-sS-A4X"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Questionnaire Statistics" image="ic_assignment_white" selectedImage="ic_assignment_white" id="Aa8-PA-gfz"/>
                     <connections>
@@ -921,7 +916,7 @@
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-13"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="k5M-vu-eL8">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="k5M-vu-eL8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="1" green="0.59999999999999998" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -941,7 +936,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="F8d-mM-7Il" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Questionnaire Results" image="ic_assignment_white" id="u7z-Fy-HvP"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3qa-yn-Yhx">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="3qa-yn-Yhx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.96862745100000003" green="0.42745098040000001" blue="0.019607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -964,7 +959,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GjS-ff-DdI" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Exercises Status" image="ic_directions_run_white" id="O8w-aT-HGx"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wuf-Kk-Zef">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Wuf-Kk-Zef">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.96862745100000003" green="0.42745098040000001" blue="0.019607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

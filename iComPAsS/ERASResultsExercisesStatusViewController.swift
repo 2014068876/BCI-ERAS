@@ -23,11 +23,7 @@ class ERASResultsExercisesStatusViewController: UIViewController, UITableViewDel
         
         let id = def.objectForKey("userID") as! Int
         
-        if id == selectedPatientID
-        {
-            feedbackButton.enabled = false
-            feedbackButton.tintColor = UIColor.clearColor()
-        }
+        
         
         let tabbarController = tabBarController as! ERASResultsOptionsTabBarController
         exercisesReport = tabbarController.reportExercises
@@ -43,6 +39,12 @@ class ERASResultsExercisesStatusViewController: UIViewController, UITableViewDel
         dateFormatter.dateFormat = "MMM dd, yyyy"
         let formattedTime = dateFormatter.stringFromDate(unformattedTime!)
         self.navigationItem.title = formattedTime
+        
+        if id == selectedPatientID
+        {
+            feedbackButton.enabled = false
+            feedbackButton.tintColor = UIColor.clearColor()
+        }
         //tableView.reloadData()
     }
 

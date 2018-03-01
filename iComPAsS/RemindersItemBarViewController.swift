@@ -12,16 +12,17 @@ class RemindersItemBarViewController: UIViewController {
 
     @IBOutlet weak var hamburgerMenu : UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var noNotificationsView: UIView!
     var reminders: [Reminder] = []
     var reminderToBeDeleted = 0
     
-    @IBOutlet weak var noRemindersLabel: UILabel!
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
         tableView.hidden = false
-        noRemindersLabel.hidden = true
+        noNotificationsView.hidden = true
         
         let def = NSUserDefaults.standardUserDefaults()
         
@@ -35,12 +36,12 @@ class RemindersItemBarViewController: UIViewController {
         if reminders.count == 0
         {
             tableView.hidden = true
-            noRemindersLabel.hidden = false
+            noNotificationsView.hidden = false
         }
         else
         {
             tableView.hidden = false
-            noRemindersLabel.hidden = true
+            noNotificationsView.hidden = true
         }
         
         if self.revealViewController() != nil
@@ -65,12 +66,12 @@ class RemindersItemBarViewController: UIViewController {
         if reminders.count == 0
         {
             tableView.hidden = true
-            noRemindersLabel.hidden = false
+            noNotificationsView.hidden = false
         }
         else
         {
             tableView.hidden = false
-            noRemindersLabel.hidden = true
+            noNotificationsView.hidden = true
         }
         
         tableView.reloadData()
@@ -129,12 +130,12 @@ class RemindersItemBarViewController: UIViewController {
                     if reminders.count == 0
                     {
                         tableView.hidden = true
-                        noRemindersLabel.hidden = false
+                        noNotificationsView.hidden = false
                     }
                     else
                     {
                         tableView.hidden = false
-                        noRemindersLabel.hidden = true
+                        noNotificationsView.hidden = true
                     }
                 /*}*/
             }

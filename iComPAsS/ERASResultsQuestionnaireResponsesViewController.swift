@@ -24,11 +24,7 @@ class ERASResultsQuestionnaireResponsesViewController: UIViewController {
         
         let id = def.objectForKey("userID") as! Int
         
-        if id == selectedPatientID
-        {
-            feedbackButton.enabled = false
-            feedbackButton.tintColor = UIColor.clearColor()
-        }
+        
         
         let tabbarController = tabBarController as! ERASResultsOptionsTabBarController
         questionnaireReport = tabbarController.reportQuestionnaire
@@ -42,6 +38,12 @@ class ERASResultsQuestionnaireResponsesViewController: UIViewController {
         dateFormatter.dateFormat = "MMM dd, yyyy"
         let formattedTime = dateFormatter.stringFromDate(unformattedTime!)
         self.navigationItem.title = formattedTime
+        
+        if id == selectedPatientID
+        {
+            feedbackButton.enabled = false
+            feedbackButton.tintColor = UIColor.clearColor()
+        }
         //self.navigationItem.title!
     }
     

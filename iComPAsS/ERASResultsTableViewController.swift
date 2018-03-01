@@ -20,6 +20,7 @@ class ERASResultsTableViewController: UITableViewController {
         super.viewDidLoad()
         
         activityIndicator.startAnimating()
+        viewERASStatisticsButton.hidden = true
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -34,6 +35,7 @@ class ERASResultsTableViewController: UITableViewController {
             self.tableView.reloadData()
             self.activityIndicator.stopAnimating()
             self.activityIndicator.hidden = true
+            self.viewERASStatisticsButton.hidden = false
         })
     }
 

@@ -299,6 +299,7 @@
 		6AAADBBF200406DB00F0ABE5 /* ERASExerciseTabSpecificExerciseDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERASExerciseTabSpecificExerciseDetailsViewController.swift; sourceTree = "<group>"; };
 		6AB3D73520216E5B00B5CF68 /* ERASResultsQuestionnaireResponsesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERASResultsQuestionnaireResponsesViewController.swift; sourceTree = "<group>"; };
 		6AB7AB512003D8EF000D871C /* ERASExerciseTabSubExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERASExerciseTabSubExerciseViewController.swift; sourceTree = "<group>"; };
+		6ACC2ED52047C711001619E8 /* SFCompactDisplay-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactDisplay-Regular.otf"; sourceTree = "<group>"; };
 		6ACE8DEC200A721800402A94 /* ERASQuestionnaireNumericalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERASQuestionnaireNumericalTableViewCell.swift; sourceTree = "<group>"; };
 		6ACE8DF0200A724300402A94 /* ERASQuestionnaireBooleanTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERASQuestionnaireBooleanTableViewCell.swift; sourceTree = "<group>"; };
 		6ACE8DF2200A725D00402A94 /* ERASQuestionnaireTextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERASQuestionnaireTextTableViewCell.swift; sourceTree = "<group>"; };
@@ -803,6 +804,7 @@
 		C4BF119A1DA277C1003AD11A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6ACC2ED52047C711001619E8 /* SFCompactDisplay-Regular.otf */,
 				6A9CDD01203D08D1004C47A6 /* exercisesGIF */,
 				6A8A32952017D77100098B03 /* sample_exercise.gif */,
 				6AF2691E202F6B620020255B /* exercise.gif */,
