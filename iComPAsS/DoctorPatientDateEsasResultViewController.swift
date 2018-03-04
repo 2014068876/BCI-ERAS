@@ -48,7 +48,7 @@ class DoctorPatientDateEsasResultViewController: UIViewController, UIWebViewDele
         esasResultsWebView.scrollView.bouncesZoom = true
         let parameters = "token=\(token)&esas_id=\(esasID)"
 //        let urlFront = NSURL(string: "http://zishgarces.com/_apps/esas-results-magkasama/body.php?\(parameters)")
-        let urlFront = NSURL(string: "https://web.usthbci-icompass.com/diagrams/mobile/esas-results/body.php?\(parameters)")
+        let urlFront = NSURL(string: "https://stg.usthbci-icompass.com/web/diagrams/mobile/esas-results/body.php?\(parameters)")
         let requestObjFront = NSURLRequest(URL: urlFront!)
         esasResultsWebView.loadRequest(requestObjFront)
     }

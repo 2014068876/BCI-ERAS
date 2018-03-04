@@ -89,6 +89,7 @@ class DoctorPatientProfileViewController: UIViewController {
             self.patientPersonalInfo.hidden = false
             self.patientPrescriptionInfo.hidden = true
             self.patientESASResultsInfo.hidden = true
+            self.patientERASResultsInfo.hidden = true
             self.patientPHQResultsInfo.hidden = true
             self.patientPainDetectresultsInfo.hidden = true
             self.summaryResults.hidden = true
@@ -99,6 +100,7 @@ class DoctorPatientProfileViewController: UIViewController {
             self.patientPersonalInfo.hidden = true
             self.patientPrescriptionInfo.hidden = false
             self.patientESASResultsInfo.hidden = true
+            self.patientERASResultsInfo.hidden = true
             self.patientPainDetectresultsInfo.hidden = true
             self.summaryResults.hidden = true
             self.patientPHQResultsInfo.hidden = true
@@ -110,10 +112,11 @@ class DoctorPatientProfileViewController: UIViewController {
             self.patientPrescriptionInfo.hidden = true
             self.patientPHQResultsInfo.hidden = true
             self.patientPainDetectresultsInfo.hidden = true
-            self.patientERASResultsInfo.hidden = true
             self.patientESASResultsInfo.hidden = false
+            self.patientERASResultsInfo.hidden = true
             self.summaryResults.hidden = false
             self.resultsSegmentedControl.hidden = false
+            self.resultsSegmentedControl.selectedSegmentIndex = 0
         }
         else
         {
@@ -121,6 +124,7 @@ class DoctorPatientProfileViewController: UIViewController {
             self.patientPHQResultsInfo.hidden = true
             self.patientPrescriptionInfo.hidden = true
             self.patientESASResultsInfo.hidden = true
+            self.patientERASResultsInfo.hidden = true
             self.summaryResults.hidden = true
             self.resultsSegmentedControl.hidden = true
             self.patientPainDetectresultsInfo.hidden = true
