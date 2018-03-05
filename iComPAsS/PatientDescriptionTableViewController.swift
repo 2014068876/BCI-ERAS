@@ -10,13 +10,14 @@ import UIKit
 
 class PatientDescriptionTableViewController: UITableViewController {
 
-    let section = ["Allergies","Diagnosis","Initial Height","Initial Weight", "Weights"]
+    let section = ["Surgery","Allergies","Diagnosis","Initial Height","Initial Weight", "Weights"]
     var item = [String]()
     var items = [[String]]()
     var patient = Patient()
     override func viewDidLoad() {
         super.viewDidLoad()
         item.append("")
+        items.append(item)
         items.append(item)
         items.append(item)
         items.append(item)
@@ -61,10 +62,11 @@ class PatientDescriptionTableViewController: UITableViewController {
         items.append(item)
         item.append(String(patient.weight) + " kg")
         items.append(item)*/
-        items[0][0] = patient.allergies
-        items[1][0] = patient.diagnosis
-        items[2][0] = String(patient.height) + " cm"
-        items[3][0] = String(patient.weight) + " kg"
+        items[0][0] = patient.patientSurgery
+        items[1][0] = patient.allergies
+        items[2][0] = patient.diagnosis
+        items[3][0] = String(patient.height) + " cm"
+        items[4][0] = String(patient.weight) + " kg"
         item.removeLast()
         items.removeLast()
         if patient.weights.count > 0 {

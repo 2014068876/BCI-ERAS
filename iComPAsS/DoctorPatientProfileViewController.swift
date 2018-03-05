@@ -196,6 +196,7 @@ class DoctorPatientProfileViewController: UIViewController {
             case PatientProfile.showERASResults:
                 let vc = destination as? ERASResultsTableViewController
                 vc?.selectedPatient = selectedPatient
+                vc?.patient = self.patient
             default: break
             }
         }

@@ -23,8 +23,9 @@ class ExercisesItemBarViewController: UIViewController, UITableViewDelegate, UIT
     var exerciseList = [""]
     var chosenExerciseIndex = 0
     var subExercisesList = [Exercise()]
-    
+    //var assignedExercises : [Exercise] = []
     var specificExerciseID = 0
+    var chosenSpecificExercise = Exercise()
     
     var categorySubExercisesCounter: [String : Int] = [:]
     
@@ -80,6 +81,13 @@ class ExercisesItemBarViewController: UIViewController, UITableViewDelegate, UIT
         }
         if subExercisesList.count == 1
         {
+            for exercise in assignedExercises
+            {
+                if exercise.description == assignedExercises[chosenExerciseIndex].description
+                {
+                    self.chosenSpecificExercise = exercise
+                }
+            }
             performSegueWithIdentifier("specificExerciseDetailsView", sender: nil)
         }
         else
@@ -122,6 +130,7 @@ class ExercisesItemBarViewController: UIViewController, UITableViewDelegate, UIT
         
         
         patient.getAssignedExercises(id, token: token, completion: {(success) -> Void in
+        //self.assignedExercises = self.patient.patientAssignedExercises
         self.exerciseList = self.patient.patientAssignedExercisesCategory
         self.initializeCategorySubExercisesCounter()
         self.updateProgressOfExercisesUnderEachCategory(self.patient.patientAssignedExercises)
@@ -153,6 +162,8 @@ class ExercisesItemBarViewController: UIViewController, UITableViewDelegate, UIT
         {
             let destination = segue.destinationViewController as! ERASExerciseTabSpecificExerciseDetailsViewController
             
+            destination.exercise = self.chosenSpecificExercise
+            destination.exerciseInstructions = self.chosenSpecificExercise.steps
             destination.exerciseTitle = subExercisesList[chosenExerciseIndex].description
             destination.chosenSubexerciseID = self.specificExerciseID
         }

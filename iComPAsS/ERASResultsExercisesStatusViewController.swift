@@ -15,6 +15,7 @@ class ERASResultsExercisesStatusViewController: UIViewController, UITableViewDel
     var exercisesReport: [Exercise] = []
     var selectedPatientID = 0
     var chosenDate = ""
+    var patient = Patient()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,7 @@ class ERASResultsExercisesStatusViewController: UIViewController, UITableViewDel
         exercisesReport = tabbarController.reportExercises
         selectedPatientID = tabbarController.selectedPatientID
         chosenDate = tabbarController.chosenDate
+        patient = tabbarController.patient
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 138
@@ -128,6 +130,7 @@ class ERASResultsExercisesStatusViewController: UIViewController, UITableViewDel
         {
             let destination = segue.destinationViewController as! ERASDoctorFeedbackViewController
             
+            destination.patient = self.patient
             destination.patientID = selectedPatientID
             destination.chosenDate = chosenDate
         }

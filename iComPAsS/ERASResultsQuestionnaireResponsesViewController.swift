@@ -13,6 +13,7 @@ class ERASResultsQuestionnaireResponsesViewController: UIViewController {
     var questionnaireReport: [Question] = []
     var selectedPatientID = 0
     var chosenDate = ""
+    var patient = Patient()
     
     @IBOutlet weak var feedbackButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
@@ -30,7 +31,7 @@ class ERASResultsQuestionnaireResponsesViewController: UIViewController {
         questionnaireReport = tabbarController.reportQuestionnaire
         selectedPatientID = tabbarController.selectedPatientID
         chosenDate = tabbarController.chosenDate
-        
+        patient = tabbarController.patient
         //tabbarController.navigationController!.title = questionnaireReport[0].timeAssigned
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
@@ -68,7 +69,7 @@ class ERASResultsQuestionnaireResponsesViewController: UIViewController {
     
     @IBAction func openFeedbackView(sender: UIBarButtonItem)
     {
-        let baritem = sender
+        
         performSegueWithIdentifier("fromQuestionToFeedback", sender: nil)
     }
     
@@ -83,6 +84,7 @@ class ERASResultsQuestionnaireResponsesViewController: UIViewController {
         {
             let destination = segue.destinationViewController as! ERASDoctorFeedbackViewController
             
+            destination.patient = self.patient
             destination.patientID = selectedPatientID
             destination.chosenDate = chosenDate
         }

@@ -14,6 +14,7 @@ class ERASExerciseTabSpecificExerciseDetailsViewController: UIViewController {
     //var exercise = Exercise()
     var chosenSubexerciseID = 0
     var exerciseInstructions : [String] = []
+    var exercise = Exercise()
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var exerciseGIF: UIImageView!

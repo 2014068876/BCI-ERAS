@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Sync hashed email if you have a login system or collect it.
         //   Will be used to reach the user at the most optimal time of day.
         // OneSignal.syncHashedEmail(userEmail)
-        
+        print("inside didFinishLaunchingWithOptions")
         var aps: [String: AnyObject] = [:]
         if let notification = launchOptions?[UIApplicationLaunchOptionsRemoteNotificationKey] as? [String: AnyObject]
         {
@@ -82,12 +82,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         return true
     }
-
+    
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
         let aps = userInfo["aps"] as! [String: AnyObject]
         
         print(aps)
-        
+        print("inside didReceiveRemoteNotification")
         guard let alert = aps["alert"] as? NSDictionary, let body = alert["body"] as? String, let title = alert["title"] as? String
             else {return}
         

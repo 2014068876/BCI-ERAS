@@ -24,8 +24,11 @@ class ERASDoctorFeedbackViewController: UIViewController, UITextViewDelegate {
     
     var textViewPlaceholder = "What would you want to say to the patient?"
     var patientID = 0
+    var patient = Patient()
     var chosenDate = ""
     var blankFeedbackAlert = UIAlertController(title: "Blank Feedback", message: "Please provide a feedback.", preferredStyle: UIAlertControllerStyle.Alert)
+    var feedbackIsDoneAlert = UIAlertController(title: "Completed Feedback", message: "You have already provided a feedback for today.", preferredStyle: UIAlertControllerStyle.Alert)
+    var feedbackWarning = UIAlertController(title: "Warning", message: "You can only submit a feedback once. Are you sure you want to proceed?", preferredStyle: UIAlertControllerStyle.Alert)
     
     
     override func viewDidLoad()
@@ -36,7 +39,7 @@ class ERASDoctorFeedbackViewController: UIViewController, UITextViewDelegate {
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         
         let unconvertedTimestamp = dateFormatter.dateFromString(chosenDate)
-        dateFormatter.dateFormat = "MMM dd, yyyy"
+        dateFormatter.dateFormat = "MMMM dd, yyyy"
         
         let timestamp = dateFormatter.stringFromDate(unconvertedTimestamp!)
         
@@ -44,8 +47,21 @@ class ERASDoctorFeedbackViewController: UIViewController, UITextViewDelegate {
         //
         blankFeedbackAlert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default) { (action: UIAlertAction) -> Void in })
         
+        feedbackIsDoneAlert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default) { (action: UIAlertAction) -> Void in
+            self.dismissViewControllerAnimated(true, completion: nil)
+            })
+        
+        feedbackWarning.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default) { (action: UIAlertAction) -> Void in
+                //do nothing
+            })
+        feedbackWarning.addAction(UIAlertAction(title: "Submit", style: UIAlertActionStyle.Default) { (action: UIAlertAction) -> Void in
+                self.submitFeedback()
+            })
+        
        // UIApplication.sharedApplication().statusBarStyle = .Default
         
+        patientNameLabel.text = "\(patient.lastName), \(patient.firstName)"
+        patientDiagnosisLabel.text = patient.diagnosis
         patientProfilePicture.layer.cornerRadius = patientProfilePicture.bounds.height / 2
         patientProfilePicture.clipsToBounds = true
         
@@ -55,9 +71,39 @@ class ERASDoctorFeedbackViewController: UIViewController, UITextViewDelegate {
         roguePlaceHolder.hidden = false
         roguePlaceHolder.selectedTextRange = roguePlaceHolder.textRangeFromPosition(roguePlaceHolder.beginningOfDocument, toPosition: roguePlaceHolder.beginningOfDocument)
         
-        activityIndicator.hidden = true
+        activityIndicator.hidden = false
+        activityIndicator.startAnimating()
     }
-   
+    
+    override func viewDidAppear(animated: Bool) {
+        let def = NSUserDefaults.standardUserDefaults()
+        let token = def.objectForKey("userToken") as! String
+        let id = def.objectForKey("userID") as! Int
+        
+        if let imageURL = NSURL(string: self.patient.profilePicture){
+            dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED,0)){
+                let contentsOfURL = NSData(contentsOfURL: imageURL)
+                dispatch_async(dispatch_get_main_queue()){
+                    if let imagedData = contentsOfURL{
+                        self.patientProfilePicture.image = UIImage(data: imagedData)
+                    }
+                }
+            }
+        }
+        
+        patient.getFeedbacks(patientID, token: token, completion: {(success) -> Void in
+            self.activityIndicator.stopAnimating()
+            self.activityIndicator.hidden = true
+            
+            if self.patient.checkIfFeedbackIsDone(self.dateTodayLabel.text!) == true
+            {
+                self.presentViewController(self.feedbackIsDoneAlert, animated: true, completion: nil)
+            }
+        })
+
+    }
+    
+    
     func textViewDidBeginEditing(textView: UITextView)
     {/*
         if textView.textColor == UIColor.lightGrayColor()
@@ -122,31 +168,36 @@ class ERASDoctorFeedbackViewController: UIViewController, UITextViewDelegate {
     {
         if textView.text != ""
         {
-            let def = NSUserDefaults.standardUserDefaults()
-            let token = def.objectForKey("userToken") as! String
-            let id = def.objectForKey("userID") as! Int
-            
-            activityIndicator.hidden = false
-            activityIndicator.startAnimating()
-            
-            let doctor = Doctor()
-            
-            let dateFormatter = NSDateFormatter()
-            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-            
-            let unconvertedTimestamp = dateFormatter.dateFromString(chosenDate)
-            dateFormatter.dateFormat = "yyyy-MM-dd"
-            
-            let timestamp = dateFormatter.stringFromDate(unconvertedTimestamp!)
-            
-           doctor.giveFeedback(id, token: token, feedback: textView.text, patientID: patientID, exerciseDate: timestamp, completion: {(success) -> Void in
-                self.activityIndicator.stopAnimating()
-                self.dismissViewControllerAnimated(true, completion: nil)
-            })
+           presentViewController(feedbackWarning, animated: true, completion: nil)
         }
         else
         {
             presentViewController(blankFeedbackAlert, animated: true, completion: nil)
         }
+    }
+    
+    func submitFeedback()
+    {
+        let def = NSUserDefaults.standardUserDefaults()
+        let token = def.objectForKey("userToken") as! String
+        let id = def.objectForKey("userID") as! Int
+        
+        activityIndicator.hidden = false
+        activityIndicator.startAnimating()
+        
+        let doctor = Doctor()
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        
+        let unconvertedTimestamp = dateFormatter.dateFromString(chosenDate)
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        let timestamp = dateFormatter.stringFromDate(unconvertedTimestamp!)
+        
+        doctor.giveFeedback(id, token: token, feedback: textView.text, patientID: patientID, exerciseDate: timestamp, completion: {(success) -> Void in
+            self.activityIndicator.stopAnimating()
+            self.dismissViewControllerAnimated(true, completion: nil)
+        })
     }
 }

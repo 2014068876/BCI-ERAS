@@ -89,6 +89,23 @@ class Patient: Model {
     var erasQuestionnaireIsDone = false
     var erasExercisesTodayIsDone = false
     var exerciseFeedbacks : [Feedback] = []
+    var patientSurgery = ""
+    
+    func checkIfFeedbackIsDone(date: String) -> Bool
+    {
+        var result = false
+        var dateArray: [String] = []
+        for exerciseFeedback in exerciseFeedbacks
+        {
+            dateArray.append(exerciseFeedback.feedackDate)
+        }
+        
+        if dateArray.contains(date)
+        {
+            result = true
+        }
+        return result
+    }
     
     func getFeedbacks(id: Int, token: String, completion: ((success: Bool) -> Void))
     {
@@ -496,6 +513,7 @@ class Patient: Model {
                 
                 //ERAS attributes
                 self.erasEnabled = swiftyJSON["profile"]["eras_enabled"].intValue
+                self.patientSurgery = (swiftyJSON["profile"]["operation_info"])["description"].stringValue
                 
             } else {
                 //print("There was an error")

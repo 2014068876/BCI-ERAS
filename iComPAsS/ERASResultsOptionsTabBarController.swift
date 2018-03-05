@@ -14,6 +14,7 @@ class ERASResultsOptionsTabBarController: UITabBarController {
     var reportExercises : [Exercise] = []
     var selectedPatientID = 0
     var chosenDate = ""
+    var patient = Patient()
     
     override func viewDidLoad() {
         super.viewDidLoad()

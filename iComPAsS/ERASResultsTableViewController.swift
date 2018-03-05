@@ -13,6 +13,7 @@ class ERASResultsTableViewController: UITableViewController {
     var report = ERASReport()
     var selectedPatient = 0
     var chosenReportDate = ""
+    var patient = Patient()
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     @IBOutlet weak var viewERASStatisticsButton: UIButton!
@@ -20,6 +21,14 @@ class ERASResultsTableViewController: UITableViewController {
         super.viewDidLoad()
         
         activityIndicator.startAnimating()
+        
+        let def = NSUserDefaults.standardUserDefaults()
+        let id = def.objectForKey("userID") as! Int
+        
+        if id != selectedPatient
+        {
+            viewERASStatisticsButton.hidden = true
+        }
         //viewERASStatisticsButton.hidden = true
     }
     
@@ -35,6 +44,11 @@ class ERASResultsTableViewController: UITableViewController {
             self.tableView.reloadData()
             self.activityIndicator.stopAnimating()
             self.activityIndicator.hidden = true
+            
+            if id != self.selectedPatient
+            {
+                self.viewERASStatisticsButton.hidden = false
+            }
             //self.viewERASStatisticsButton.hidden = false
         })
     }
@@ -101,6 +115,7 @@ class ERASResultsTableViewController: UITableViewController {
             resultsTabBar.reportExercises = report.reportExercisesResponses[chosenReportDate]!
             resultsTabBar.selectedPatientID = selectedPatient
             resultsTabBar.chosenDate = chosenReportDate
+            resultsTabBar.patient = self.patient
         }
         if segue.identifier == "toERASStatistics"
         {
