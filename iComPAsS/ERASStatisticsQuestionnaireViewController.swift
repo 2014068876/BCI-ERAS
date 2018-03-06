@@ -29,6 +29,17 @@ class ERASStatisticsQuestionnaireViewController: UIViewController {
         questionsIDList = report.reportQuestionsIDList
         questionsType = report.reportQuestionsType
         
+        let questionCount = questionList.count
+        for index in 0..<questionCount
+        {
+            if questionsType[index] == "text"
+            {
+                questionList.removeAtIndex(index)
+                questionsIDList.removeAtIndex(index)
+                questionsType.removeAtIndex(index)
+            }
+        }
+        
         tableView.reloadData()
     }
     

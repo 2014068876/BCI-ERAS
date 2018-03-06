@@ -112,7 +112,7 @@ class ERASStatisticsNumericalOrNumericalBooleanQuestionViewController: UIViewCon
             lineChartEntry.append(value)
         }
         
-        let chartLine = LineChartDataSet(yVals: lineChartEntry, label: "Average exercise time in seconds per day")
+        let chartLine = LineChartDataSet(yVals: lineChartEntry, label: "Pain score per day")
         
         chartLine.colors = [UIColor.orangeColor()]
         chartLine.circleColors = [UIColor.orangeColor()]
@@ -141,7 +141,7 @@ class ERASStatisticsNumericalOrNumericalBooleanQuestionViewController: UIViewCon
         lineChartView.drawGridBackgroundEnabled = false
         lineChartView.animate(xAxisDuration: 1.0, easingOption: .EaseInSine)
         lineChartView.descriptionText = ""
-        lineChartView.noDataText = "Patient haven't perform the exercise yet."
+        lineChartView.noDataText = "Patient hasn't perform the exercise yet."
         
     }
     

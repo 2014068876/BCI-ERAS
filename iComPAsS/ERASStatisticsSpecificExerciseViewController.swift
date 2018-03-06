@@ -110,7 +110,7 @@ class ERASStatisticsSpecificExerciseViewController: UIViewController {
         lineChart.drawGridBackgroundEnabled = false
         lineChart.animate(xAxisDuration: 1.0, easingOption: .EaseInSine)
         lineChart.descriptionText = ""
-        lineChart.noDataText = "Patient haven't perform the exercise yet."
+        lineChart.noDataText = "Patient hasn't perform the exercise yet."
         
     }
     

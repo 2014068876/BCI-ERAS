@@ -21,7 +21,7 @@ class Patient: Model {
     var diagnosis = ""
     var weight = 0
     var height = 0
-    var esasEnabled = 1
+    var esasEnabled = 0
     var allergies = ""
     var birthDay = NSDate()
     var weights: [String] = []
@@ -85,6 +85,7 @@ class Patient: Model {
     var patientAssignedExercisesCategory: [String] = []
     var feedback: [String] = [""]
     var erasEnabled = 1
+    var esasFeatureEnabled = 1
     var assignedQuestions : [Question] = []
     var erasQuestionnaireIsDone = false
     var erasExercisesTodayIsDone = false
@@ -141,7 +142,7 @@ class Patient: Model {
                     feedback.feedbackTime = feedbacks["feedback_time"].stringValue
                     feedback.doctorID = feedbacks["doctor_id"].intValue
                     feedback.doctorName = feedbacks["doctor_name"].stringValue
-                    
+                    feedback.doctorProfilePictureURL = feedbacks["doctor_photo_link"].stringValue
                     self.exerciseFeedbacks.append(feedback)
                 }
                 
@@ -514,6 +515,7 @@ class Patient: Model {
                 //ERAS attributes
                 self.erasEnabled = swiftyJSON["profile"]["eras_enabled"].intValue
                 self.patientSurgery = (swiftyJSON["profile"]["operation_info"])["description"].stringValue
+                self.esasFeatureEnabled = swiftyJSON["profile"]["esas_persistent"].intValue
                 
             } else {
                 //print("There was an error")

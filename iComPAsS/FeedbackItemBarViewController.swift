@@ -55,7 +55,7 @@ class FeedbackItemBarViewController: UIViewController, UITableViewDelegate, UITa
         
         
     }
-    
+    //"https://stg.usthbci-icompass.com/web/profile-images/default.jpg"
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return feedbacks.count
@@ -67,11 +67,21 @@ class FeedbackItemBarViewController: UIViewController, UITableViewDelegate, UITa
         
         let feedback = feedbacks[indexPath.row]
         feedbackCell.doctorProfilePicture.layer.cornerRadius = feedbackCell.doctorProfilePicture.bounds.height / 2
+        if let imageURL = NSURL(string: feedback.doctorProfilePictureURL){
+            dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED,0)){
+                let contentsOfURL = NSData(contentsOfURL: imageURL)
+                dispatch_async(dispatch_get_main_queue()){
+                    if let imagedData = contentsOfURL{
+                        feedbackCell.doctorProfilePicture.image = UIImage(data: imagedData)
+                    }
+                }
+            }
+        }
         feedbackCell.doctorProfilePicture.clipsToBounds = true
         feedbackCell.doctorNameLabel.text = feedback.doctorName
         feedbackCell.feedbackDate.text = "Feedback for \(feedback.feedackDate)"
         feedbackCell.feedbackLabel.text = feedback.feedback
-
+        feedbackCell.selectionStyle = UITableViewCellSelectionStyle.None
         return feedbackCell
     }
 

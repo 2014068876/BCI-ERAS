@@ -12,6 +12,7 @@ class Feedback : Model
 {
     var doctorName = ""
     var doctorID = 0
+    var doctorProfilePictureURL = ""
     var feedback = ""
     var feedbackTime = ""
     var feedackDate = ""

@@ -53,11 +53,11 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="138"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="j0x-AC-vrf" id="UUC-p0-jsL">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="137"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="138"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercise Title" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p7I-mj-ciu">
-                                                    <rect key="frame" x="18" y="8" width="344" height="44"/>
+                                                    <rect key="frame" x="19" y="8" width="344" height="44"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="44" id="DJ4-KD-N9P"/>
                                                     </constraints>
@@ -66,7 +66,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Times Performed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BDF-gF-tMc">
-                                                    <rect key="frame" x="18" y="76" width="245" height="21"/>
+                                                    <rect key="frame" x="19" y="76" width="245" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="245" id="O7K-oo-0uV"/>
                                                     </constraints>
@@ -75,13 +75,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8Q-V3-Tdi">
-                                                    <rect key="frame" x="85" y="58" width="270" height="21"/>
+                                                    <rect key="frame" x="86" y="58" width="270" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vjc-yw-Qxq">
-                                                    <rect key="frame" x="18" y="59" width="59" height="21"/>
+                                                    <rect key="frame" x="19" y="59" width="59" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="59" id="HoG-1d-sek"/>
                                                     </constraints>
@@ -90,7 +90,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:02 AM to 9:10 AM (7 minutes 4 seconds)XXXX" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSN-BS-yxp">
-                                                    <rect key="frame" x="56" y="99" width="294" height="20"/>
+                                                    <rect key="frame" x="57" y="99" width="294" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -224,7 +224,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="134"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="K5Q-7q-p1z" id="kGn-Ou-RXf">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="133"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="134"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    February 01, 2018" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQD-Kf-4rS">
@@ -238,7 +238,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99:99:99 AM to 99:99:99 AM XX" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1KW-Xc-ENG">
-                                                    <rect key="frame" x="24" y="104.5" width="215" height="17"/>
+                                                    <rect key="frame" x="24" y="105" width="215" height="17"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="215" id="vHS-oD-V3L"/>
                                                     </constraints>
@@ -247,7 +247,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Times Performed: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6P-nr-bGa">
-                                                    <rect key="frame" x="24" y="56" width="135" height="20.5"/>
+                                                    <rect key="frame" x="24" y="56" width="135" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="135" id="3LL-j0-3xe"/>
                                                     </constraints>
@@ -274,7 +274,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99 min 99 secs" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TsZ-xE-kIl">
-                                                    <rect key="frame" x="254" y="104.5" width="100" height="17"/>
+                                                    <rect key="frame" x="254" y="105" width="100" height="17"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="G4b-6a-uAy"/>
                                                     </constraints>
@@ -640,7 +640,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="91"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z8H-4A-jc6" id="id2-76-5C9">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="91"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. Is there any pain on your postop site?" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oU2-hx-Fad">
@@ -872,6 +872,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="Lmt-Ap-a5F" id="8ra-3b-Glz"/>
                         <outlet property="dateTodayLabel" destination="fiC-ev-eSA" id="P61-gr-HS3"/>
+                        <outlet property="feedbackView" destination="vfD-xo-eFe" id="BSA-sr-eKM"/>
                         <outlet property="patientDiagnosisLabel" destination="NLu-qv-ITe" id="aS9-gb-iGZ"/>
                         <outlet property="patientNameLabel" destination="dGa-VY-B5X" id="Tzo-bI-qu0"/>
                         <outlet property="patientProfilePicture" destination="cij-e1-Ujd" id="MYV-5e-wfd"/>

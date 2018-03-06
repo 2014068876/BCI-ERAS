@@ -19,6 +19,7 @@ class ERASDoctorFeedbackViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var dateTodayLabel: UILabel!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var roguePlaceHolder: UITextView!
+    @IBOutlet var feedbackView: UIView!
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
@@ -71,6 +72,7 @@ class ERASDoctorFeedbackViewController: UIViewController, UITextViewDelegate {
         roguePlaceHolder.hidden = false
         roguePlaceHolder.selectedTextRange = roguePlaceHolder.textRangeFromPosition(roguePlaceHolder.beginningOfDocument, toPosition: roguePlaceHolder.beginningOfDocument)
         
+        feedbackView.userInteractionEnabled = false
         activityIndicator.hidden = false
         activityIndicator.startAnimating()
     }
@@ -92,6 +94,7 @@ class ERASDoctorFeedbackViewController: UIViewController, UITextViewDelegate {
         }
         
         patient.getFeedbacks(patientID, token: token, completion: {(success) -> Void in
+            self.feedbackView.userInteractionEnabled = true
             self.activityIndicator.stopAnimating()
             self.activityIndicator.hidden = true
             

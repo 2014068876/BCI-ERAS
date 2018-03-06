@@ -102,8 +102,8 @@ class PatientMenuTableViewController: UITableViewController {
     {
         let count = super.tableView(tableView, numberOfRowsInSection: section)
         
-        self.loadPatientProfile()
-        let esasEnabled = self.patient.esasEnabled
+        //self.loadPatientProfile()
+        let esasEnabled = self.patient.esasFeatureEnabled
         let erasEnabled = self.patient.erasEnabled
         let featuresEnablement = "\(esasEnabled)\(erasEnabled)"
         print(featuresEnablement)
@@ -121,7 +121,7 @@ class PatientMenuTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let esasEnabled = self.patient.esasEnabled
+        let esasEnabled = self.patient.esasFeatureEnabled
         let erasEnabled = self.patient.erasEnabled
         let featuresEnablement = "\(esasEnabled)\(erasEnabled)"
           print(featuresEnablement)
@@ -172,13 +172,14 @@ class PatientMenuTableViewController: UITableViewController {
         let nsIndexPath = NSIndexPath.init(forRow: indexPath.row, inSection: 0)
         let cell = super.tableView(tableView, cellForRowAtIndexPath: nsIndexPath)
         
-        let esasEnabled = self.patient.esasEnabled
+        let esasEnabled = self.patient.esasFeatureEnabled
         let erasEnabled = self.patient.erasEnabled
         let featuresEnablement = "\(esasEnabled)\(erasEnabled)"
           print(featuresEnablement)
         
         if (featuresEnablement == "01")
         {
+            print(indexPath.row)
             if indexPath.row == 3 || indexPath.row == 5 || indexPath.row == 6
             {
                 return 0.0
@@ -186,6 +187,7 @@ class PatientMenuTableViewController: UITableViewController {
         }
         if (featuresEnablement == "10")
         {
+            print(indexPath.row)
             if indexPath.row == 4
             {
                   return 0.0
@@ -193,6 +195,7 @@ class PatientMenuTableViewController: UITableViewController {
         }
         if (featuresEnablement == "00")
         {
+            print(indexPath.row)
             if indexPath.row == 3 || indexPath.row == 4 || indexPath.row == 5 || indexPath.row == 6
             {
                 return 0.0
