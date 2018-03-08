@@ -41,6 +41,7 @@ class ERASResultsTableViewController: UITableViewController {
         print(selectedPatient)
         report.initializeReport(id, token: token, patientID: selectedPatient, completion: {(success) -> Void in
             print(self.report.reportDates)
+            self.report.reportDates = self.report.reportDates.reverse()
             self.tableView.reloadData()
             self.activityIndicator.stopAnimating()
             self.activityIndicator.hidden = true

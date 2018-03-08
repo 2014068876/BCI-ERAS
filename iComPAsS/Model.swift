@@ -51,10 +51,6 @@ class Model {
             }
             else
             {
-                let swiftyJSON = JSON(data: data!)
-                print("******************There was an error****************")
-                print(swiftyJSON["meta"]["token"].stringValue)
-                print("******************There was an error****************")
                 successVal = false
             }
             

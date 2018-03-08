@@ -219,14 +219,17 @@ class ERASReport: Model
     
     func loadDictionaryWithReportDates()
     {
+        var counter = 0
         for date in reportDates
         {
             /*
             reportQuestionnaireResponses[date] = []
             reportExercisesResponses[date] = []
             */
+            print("\(date) at index: \(counter)")
             reportQuestionnaireResponses.updateValue([], forKey: date)
             reportExercisesResponses.updateValue([], forKey: date)
+            counter += 1
             
         }
     }

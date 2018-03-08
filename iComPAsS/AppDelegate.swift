@@ -27,6 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let appID = "ca1ed24c-f7eb-4fb9-a7e8-8f508bf8d5a4"
         OneSignal.initWithLaunchOptions(launchOptions, appId: appID)
         
+        
         // Sync hashed email if you have a login system or collect it.
         //   Will be used to reach the user at the most optimal time of day.
         // OneSignal.syncHashedEmail(userEmail)

@@ -200,6 +200,9 @@ class ERASDoctorFeedbackViewController: UIViewController, UITextViewDelegate {
         
         doctor.giveFeedback(id, token: token, feedback: textView.text, patientID: patientID, exerciseDate: timestamp, completion: {(success) -> Void in
             self.activityIndicator.stopAnimating()
+            let noCloseButton = SCLAlertView.SCLAppearance(showCloseButton: false)
+            let alertView = SCLAlertView(appearance: noCloseButton)
+            alertView.showSucess("Feedback Submitted", subTitle: "The feedback will be received by your patient!", duration: 3)
             self.dismissViewControllerAnimated(true, completion: nil)
         })
     }

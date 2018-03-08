@@ -46,7 +46,7 @@ class FeedbackItemBarViewController: UIViewController, UITableViewDelegate, UITa
         let id = def.objectForKey("userID") as! Int
         
         patient.getFeedbacks(id, token: token, completion: {(success) -> Void in
-            self.feedbacks = self.patient.exerciseFeedbacks
+            self.feedbacks = self.patient.exerciseFeedbacks.reverse()
             self.tableView.reloadData()
             self.activityIndicator.stopAnimating()
             self.activityIndicator.hidden = true

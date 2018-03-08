@@ -74,6 +74,7 @@
 		6ADCB1DD2001A20300A91A65 /* RemindersItemBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADCB1DC2001A20300A91A65 /* RemindersItemBarViewController.swift */; };
 		6ADCB1DF2001A21A00A91A65 /* FeedbackItemBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADCB1DE2001A21A00A91A65 /* FeedbackItemBarViewController.swift */; };
 		6ADCB1E12001ACB300A91A65 /* ERASTabBarMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADCB1E02001ACB300A91A65 /* ERASTabBarMenuViewController.swift */; };
+		6ADDD9892050E35900915B99 /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADDD9882050E35900915B99 /* SCLAlertView.swift */; };
 		6AF0CFC3202614E500D8C838 /* ERASExerciseStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF0CFC2202614E500D8C838 /* ERASExerciseStartedViewController.swift */; };
 		6AF2691F202F6B620020255B /* exercise.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6AF2691E202F6B620020255B /* exercise.gif */; };
 		6AFE34A5202A807C000E79CB /* ERASStatisticsQuestionnaireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFE34A4202A807C000E79CB /* ERASStatisticsQuestionnaireViewController.swift */; };
@@ -310,6 +311,7 @@
 		6ADCB1DC2001A20300A91A65 /* RemindersItemBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindersItemBarViewController.swift; sourceTree = "<group>"; };
 		6ADCB1DE2001A21A00A91A65 /* FeedbackItemBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackItemBarViewController.swift; sourceTree = "<group>"; };
 		6ADCB1E02001ACB300A91A65 /* ERASTabBarMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERASTabBarMenuViewController.swift; sourceTree = "<group>"; };
+		6ADDD9882050E35900915B99 /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLAlertView.swift; sourceTree = "<group>"; };
 		6AF0CFC2202614E500D8C838 /* ERASExerciseStartedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERASExerciseStartedViewController.swift; sourceTree = "<group>"; };
 		6AF2691E202F6B620020255B /* exercise.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = exercise.gif; path = ../../../Downloads/exercise.gif; sourceTree = "<group>"; };
 		6AFE34A4202A807C000E79CB /* ERASStatisticsQuestionnaireViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERASStatisticsQuestionnaireViewController.swift; sourceTree = "<group>"; };
@@ -939,6 +941,7 @@
 		C4BF11DB1DA27AC3003AD11A /* Open Source */ = {
 			isa = PBXGroup;
 			children = (
+				6ADDD9882050E35900915B99 /* SCLAlertView.swift */,
 				6A07158D2030FFAF00DACD00 /* MZTimerLabel */,
 				6A8A32912017D4E200098B03 /* SwiftGif.swift */,
 				C448087A1E39C69A00A4F38C /* DLRadioButton */,
@@ -1310,6 +1313,7 @@
 				6A1A439C202B7B9600B69FB6 /* ERASStatisticsSpecificExerciseTableViewCell.swift in Sources */,
 				6A65A3172002B17C00FD03C9 /* ERASExerciseTabTableViewCell.swift in Sources */,
 				C473EE911DA281A000109E03 /* IQKeyboardManager.swift in Sources */,
+				6ADDD9892050E35900915B99 /* SCLAlertView.swift in Sources */,
 				C4BF11B31DA27A15003AD11A /* DoctorChangePasswordViewController.swift in Sources */,
 				C473EE881DA2816400109E03 /* IQUIWindow+Hierarchy.swift in Sources */,
 				C4BF11AA1DA279B4003AD11A /* MessagesListTableViewController.swift in Sources */,

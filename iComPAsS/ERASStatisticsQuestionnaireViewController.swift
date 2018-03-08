@@ -29,16 +29,24 @@ class ERASStatisticsQuestionnaireViewController: UIViewController {
         questionsIDList = report.reportQuestionsIDList
         questionsType = report.reportQuestionsType
         
+        var newQuestionList: [String] = []
+        var newQuestionsIDList: [Int] = []
+        var newQuestionsType: [String] = []
+        
         let questionCount = questionList.count
         for index in 0..<questionCount
         {
-            if questionsType[index] == "text"
+            if questionsType[index] != "text"
             {
-                questionList.removeAtIndex(index)
-                questionsIDList.removeAtIndex(index)
-                questionsType.removeAtIndex(index)
+                newQuestionList.append(questionList[index])
+                newQuestionsIDList.append(questionsIDList[index])
+                newQuestionsType.append(questionsType[index])
             }
         }
+        
+        questionList = newQuestionList
+        questionsIDList = newQuestionsIDList
+        questionsType = newQuestionsType
         
         tableView.reloadData()
     }
