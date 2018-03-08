@@ -133,7 +133,8 @@ class ERASStatisticsBooleanQuestionViewController: UIViewController {
         questionStatisticsCell.datesLabel.text = ""
         questionStatisticsCell.responsesLabel.text = ""
         
-        for (date, questions) in self.report.reportQuestionnaireResponses
+        var sortedReportQuestionnaireResponses = (self.report.reportQuestionnaireResponses).sort { $0.0 < $1.0 }
+        for (date, questions) in sortedReportQuestionnaireResponses
         {
             for question in questions
             {

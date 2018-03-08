@@ -18,7 +18,9 @@ class ERASQuestionnaireTableViewController: UIViewController, UITableViewDelegat
     var questions : [Question] = []
     var patient = Patient()
     
+    
     var unansweredQuestionAlert = UIAlertController(title: "Remaining Questions", message: "Please answer all the questions.", preferredStyle: UIAlertControllerStyle.Alert)
+    var questionnaireSubmitSuccessful = UIAlertController(title: "Submitted", message: "Your response was sent to your doctor.", preferredStyle: UIAlertControllerStyle.Alert)
     
     override func viewDidLoad()
     {
@@ -28,6 +30,9 @@ class ERASQuestionnaireTableViewController: UIViewController, UITableViewDelegat
         tableView.estimatedRowHeight = 44
         
         unansweredQuestionAlert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default) { (action: UIAlertAction) -> Void in })
+        questionnaireSubmitSuccessful.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default) { (action: UIAlertAction) -> Void in
+            self.performSegueWithIdentifier("toERASTabs", sender: nil)
+        })
         
         if self.revealViewController() != nil
         {
@@ -125,7 +130,7 @@ class ERASQuestionnaireTableViewController: UIViewController, UITableViewDelegat
                 let questionCell = cell as! ERASQuestionnaireTextTableViewCell
                 let response = questionCell.questionTextView.text
                 
-                cell?.backgroundColor = UIColor(red:0.95, green:0.66, blue:0.63, alpha:1.0)
+                //cell?.backgroundColor = UIColor(red:0.95, green:0.66, blue:0.63, alpha:1.0)
                 
                 if (response == "")
                 {
@@ -236,7 +241,7 @@ class ERASQuestionnaireTableViewController: UIViewController, UITableViewDelegat
                 else { print("mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm")}
             }
             
-            performSegueWithIdentifier("toERASTabs", sender: nil)
+            presentViewController(questionnaireSubmitSuccessful, animated: true, completion: nil)
         }
         else
         {

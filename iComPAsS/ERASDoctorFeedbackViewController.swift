@@ -30,6 +30,7 @@ class ERASDoctorFeedbackViewController: UIViewController, UITextViewDelegate {
     var blankFeedbackAlert = UIAlertController(title: "Blank Feedback", message: "Please provide a feedback.", preferredStyle: UIAlertControllerStyle.Alert)
     var feedbackIsDoneAlert = UIAlertController(title: "Completed Feedback", message: "You have already provided a feedback for today.", preferredStyle: UIAlertControllerStyle.Alert)
     var feedbackWarning = UIAlertController(title: "Warning", message: "You can only submit a feedback once. Are you sure you want to proceed?", preferredStyle: UIAlertControllerStyle.Alert)
+    var feedbackSuccessfulSubmit = UIAlertController(title: "Success", message: "The feedback was sent to your patient.", preferredStyle: UIAlertControllerStyle.Alert)
     
     
     override func viewDidLoad()
@@ -57,6 +58,9 @@ class ERASDoctorFeedbackViewController: UIViewController, UITextViewDelegate {
             })
         feedbackWarning.addAction(UIAlertAction(title: "Submit", style: UIAlertActionStyle.Default) { (action: UIAlertAction) -> Void in
                 self.submitFeedback()
+            })
+        feedbackSuccessfulSubmit.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default) { (action: UIAlertAction) -> Void in
+                self.dismissViewControllerAnimated(true, completion: nil)
             })
         
        // UIApplication.sharedApplication().statusBarStyle = .Default
@@ -200,10 +204,10 @@ class ERASDoctorFeedbackViewController: UIViewController, UITextViewDelegate {
         
         doctor.giveFeedback(id, token: token, feedback: textView.text, patientID: patientID, exerciseDate: timestamp, completion: {(success) -> Void in
             self.activityIndicator.stopAnimating()
-            let noCloseButton = SCLAlertView.SCLAppearance(showCloseButton: false)
+            /*let noCloseButton = SCLAlertView.SCLAppearance(showCloseButton: false)
             let alertView = SCLAlertView(appearance: noCloseButton)
-            alertView.showSucess("Feedback Submitted", subTitle: "The feedback will be received by your patient!", duration: 3)
-            self.dismissViewControllerAnimated(true, completion: nil)
+            alertView.showSucess("Feedback Submitted", subTitle: "The feedback will be received by your patient!", duration: 3)*/
+            self.presentViewController(self.feedbackSuccessfulSubmit, animated: true, completion: nil)
         })
     }
 }

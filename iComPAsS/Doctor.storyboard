@@ -577,7 +577,7 @@
                                 <segments>
                                     <segment title="Personal"/>
                                     <segment title="Prescriptions"/>
-                                    <segment title="Results"/>
+                                    <segment title="Assessments"/>
                                 </segments>
                                 <color key="tintColor" red="1" green="0.59999999999999998" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
@@ -2315,7 +2315,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_navigate_next" translatesAutoresizingMaskIntoConstraints="NO" id="6lO-K4-WRE">
-                                            <rect key="frame" x="343" y="6" width="24" height="30"/>
+                                            <rect key="frame" x="343" y="6" width="24" height="29"/>
                                         </imageView>
                                     </subviews>
                                     <constraints>

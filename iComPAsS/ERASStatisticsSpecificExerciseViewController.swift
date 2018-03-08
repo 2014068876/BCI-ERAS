@@ -21,7 +21,7 @@ class ERASStatisticsSpecificExerciseViewController: UIViewController {
         
         print(self.report.getTimeElapsedAverages(chosenExerciseIndex))
         
-        updateGraph(formatDate(self.report.reportDates), valuesToBePlotted: self.report.getTimeElapsedAverages(chosenExerciseIndex))
+        updateGraph(formatDate(self.report.reportDates).reverse(), valuesToBePlotted: self.report.getTimeElapsedAverages(chosenExerciseIndex))
     
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 155
@@ -147,7 +147,7 @@ class ERASStatisticsSpecificExerciseViewController: UIViewController {
         let dateFormatter = NSDateFormatter()
         
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        let unconvertedTime = dateFormatter.dateFromString(report.reportDates[indexPath.row])
+        let unconvertedTime = dateFormatter.dateFromString(report.reportDates.reverse()[indexPath.row])
         
         dateFormatter.dateFormat = "MMMM dd, yyyy"
         let convertedTime = dateFormatter.stringFromDate(unconvertedTime!)
@@ -157,9 +157,9 @@ class ERASStatisticsSpecificExerciseViewController: UIViewController {
         exerciseStatisticsCell.timesLabel.text = ""
         exerciseStatisticsCell.timesElapsedLabel.text = ""
         
-        let exercises = report.reportExercisesResponses[report.reportDates[indexPath.row]]!
+        let exercises = report.reportExercisesResponses[report.reportDates.reverse()[indexPath.row]]!
         
-        for exercise in exercises
+        for exercise in exercises.reverse()
         {
             if exercise.exerciseID == chosenExerciseIndex
             {

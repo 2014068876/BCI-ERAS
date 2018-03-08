@@ -32,6 +32,14 @@ class ERASExerciseTabSpecificExerciseDetailsViewController: UIViewController {
         exerciseGIF.image = UIImage.gifWithName(String(chosenSubexerciseID))
 
         self.title = exerciseTitle;
+        
+        if (exercise.exerciseID == 1)
+        {
+            self.title = "Deep Breathing Exercise"
+            let pipedInstructions = exercise.description.stringByReplacingOccurrencesOfString(". ", withString: "|")
+            let addedInstructions = pipedInstructions.componentsSeparatedByString("|")
+            self.exerciseInstructions.appendContentsOf(addedInstructions)
+        }
         /*exerciseInstructions =
         [
             "Jump while raising arms and separating legs to sides.",

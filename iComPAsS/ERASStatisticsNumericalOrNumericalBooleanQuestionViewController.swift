@@ -24,7 +24,8 @@ class ERASStatisticsNumericalOrNumericalBooleanQuestionViewController: UIViewCon
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 92
         
-        updateGraph(formatDate(report.reportDates), valuesToBePlotted: convertAndGetResponses(report, chosenQuestionIndex: chosenQuestionIndex))
+        
+        updateGraph(formatDate(report.reportDates).reverse(), valuesToBePlotted: convertAndGetResponses(report, chosenQuestionIndex: chosenQuestionIndex).reverse())
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -40,7 +41,8 @@ class ERASStatisticsNumericalOrNumericalBooleanQuestionViewController: UIViewCon
         questionStatisticsCell.datesLabel.text = ""
         questionStatisticsCell.responsesLabel.text = ""
         
-        for (date, questions) in self.report.reportQuestionnaireResponses
+        var sortedReportQuestionnaireResponses = (self.report.reportQuestionnaireResponses).sort { $0.0 < $1.0 }
+        for (date, questions) in sortedReportQuestionnaireResponses
         {
             for question in questions
             {

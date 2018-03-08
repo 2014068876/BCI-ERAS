@@ -20,9 +20,12 @@ class ERASResultsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("called viewDidLoad")
+        
         activityIndicator.startAnimating()
         
         let def = NSUserDefaults.standardUserDefaults()
+        let token = def.objectForKey("userToken") as! String
         let id = def.objectForKey("userID") as! Int
         
         if id != selectedPatient
@@ -30,15 +33,13 @@ class ERASResultsTableViewController: UITableViewController {
             viewERASStatisticsButton.hidden = true
         }
         //viewERASStatisticsButton.hidden = true
-    }
-    
-    override func viewDidAppear(animated: Bool) {
         
-        let def = NSUserDefaults.standardUserDefaults()
-        let token = def.objectForKey("userToken") as! String
-        let id = def.objectForKey("userID") as! Int
+       
         
         print(selectedPatient)
+        print("called viewDidAppear")
+        self.activityIndicator.startAnimating()
+        self.tableView.reloadData()
         report.initializeReport(id, token: token, patientID: selectedPatient, completion: {(success) -> Void in
             print(self.report.reportDates)
             self.report.reportDates = self.report.reportDates.reverse()
@@ -52,6 +53,11 @@ class ERASResultsTableViewController: UITableViewController {
             }
             //self.viewERASStatisticsButton.hidden = false
         })
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        
+        
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
