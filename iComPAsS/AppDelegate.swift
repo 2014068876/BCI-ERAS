@@ -76,13 +76,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //let appID = "b09fe4d1-bb2c-4f16-bcdb-4f47d2e0298f"
         let appID = "ca1ed24c-f7eb-4fb9-a7e8-8f508bf8d5a4"
         //**********OneSignal.initWithLaunchOptions(launchOptions, appId: appID)
-        let onesignalInitSettings = [kOSSettingsKeyAutoPrompt: false]
         
         // Replace 'YOUR_APP_ID' with your OneSignal App ID.
-        OneSignal.initWithLaunchOptions(launchOptions, appId: appID, handleNotificationReceived: notificationReceivedBlock, handleNotificationAction: nil, settings: nil)
-        
-        OneSignal.inFocusDisplayType()
-        OneSignal.setInFocusDisplayType(OSNotificationDisplayType.InAppAlert)
+        OneSignal.initWithLaunchOptions(launchOptions, appId: appID, handleNotificationReceived: notificationReceivedBlock, handleNotificationAction: nil, settings: [kOSSettingsKeyAutoPrompt: false, kOSSettingsKeyInFocusDisplayOption: OSNotificationDisplayType.InAppAlert.rawValue])
+
+        /*OneSignal.inFocusDisplayType()
+        OneSignal.setInFocusDisplayType(OSNotificationDisplayType.InAppAlert)*/
         // Recommend moving the below line to prompt for push after informing the user about
         //   how your app will use them.
 
