@@ -653,9 +653,8 @@
                                     <segue destination="xlf-8C-sDH" kind="embed" identifier="showPainDetectResult" id="6m3-bT-ees"/>
                                 </connections>
                             </containerView>
-                            <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Ep-ak-y80">
+                            <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ep-ak-y80">
                                 <rect key="frame" x="0.0" y="298" width="375" height="369"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <segue destination="lAJ-W8-dwl" kind="embed" identifier="showERASResults" id="uHL-TJ-imd"/>
                                 </connections>
@@ -666,6 +665,7 @@
                             <constraint firstItem="hoV-3j-fvb" firstAttribute="leading" secondItem="Nd5-Uz-auE" secondAttribute="leading" id="1Og-sG-9rW"/>
                             <constraint firstItem="7LF-Nz-Fdx" firstAttribute="top" secondItem="Exf-zY-O4Z" secondAttribute="bottom" constant="8" symbolic="YES" id="22y-9T-yYn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7LF-Nz-Fdx" secondAttribute="trailing" constant="19" id="4NM-vW-lwE"/>
+                            <constraint firstItem="9Ep-ak-y80" firstAttribute="top" secondItem="7LF-Nz-Fdx" secondAttribute="bottom" constant="8" id="5rz-jf-lKP"/>
                             <constraint firstItem="Vq9-ki-RQS" firstAttribute="bottom" secondItem="DPY-vC-x7f" secondAttribute="top" id="5wX-gX-cHI"/>
                             <constraint firstItem="DPY-vC-x7f" firstAttribute="top" secondItem="EO4-DV-Cdb" secondAttribute="bottom" id="7Gs-c2-aJS"/>
                             <constraint firstItem="bFm-Sa-gGO" firstAttribute="bottom" secondItem="XSt-hh-wOC" secondAttribute="bottom" id="9nQ-d5-BCS"/>
@@ -705,7 +705,10 @@
                             <constraint firstItem="7LF-Nz-Fdx" firstAttribute="leading" secondItem="kFy-qR-Trp" secondAttribute="leadingMargin" constant="18" id="ur4-Jr-CtK"/>
                             <constraint firstItem="EO4-DV-Cdb" firstAttribute="top" secondItem="7LF-Nz-Fdx" secondAttribute="bottom" constant="8" id="wBU-lF-t60"/>
                             <constraint firstItem="Nd5-Uz-auE" firstAttribute="leading" secondItem="fRR-cT-66z" secondAttribute="leading" id="wwu-DI-Zaa"/>
+                            <constraint firstItem="DPY-vC-x7f" firstAttribute="top" secondItem="9Ep-ak-y80" secondAttribute="bottom" id="yWy-nK-Kj9"/>
                             <constraint firstItem="EO4-DV-Cdb" firstAttribute="leading" secondItem="kFy-qR-Trp" secondAttribute="leading" id="ytd-sD-LU7"/>
+                            <constraint firstAttribute="trailing" secondItem="9Ep-ak-y80" secondAttribute="trailing" id="zD8-3K-qdD"/>
+                            <constraint firstItem="9Ep-ak-y80" firstAttribute="leading" secondItem="kFy-qR-Trp" secondAttribute="leading" id="zue-Q5-cEU"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="List of Patients" id="kjP-nb-wKX">
@@ -1895,7 +1898,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="O96-Y3-GPk">
-                                <rect key="frame" x="169" y="268.5" width="37" height="37"/>
+                                <rect key="frame" x="169" y="269" width="37" height="37"/>
                                 <color key="color" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                         </subviews>
@@ -1959,7 +1962,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MlP-KU-BnA">
-                                <rect key="frame" x="154.5" y="585" width="64" height="30"/>
+                                <rect key="frame" x="155" y="585" width="64" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" id="hdi-NL-XMG"/>
@@ -1972,7 +1975,7 @@
                                 </connections>
                             </button>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="slr-rO-aF7">
-                                <rect key="frame" x="168.5" y="315" width="37" height="37"/>
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
                                 <color key="color" red="1" green="0.59999999999999998" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                         </subviews>

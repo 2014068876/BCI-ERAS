@@ -228,7 +228,7 @@ class ERASQuestionnaireTableViewController: UIViewController, UITableViewDelegat
                     if questionCell.questionYesRadioButton.selected
                     {
                         let roundedOffNumericalInput = Int(questionCell.numericalInput.text!)
-                        response = "Yes. \(String(roundedOffNumericalInput))"
+                        response = "Yes. \(Int(String(roundedOffNumericalInput))!)"
                     }
                     else if questionCell.questionNoRadioButton.selected
                     {

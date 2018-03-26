@@ -92,19 +92,18 @@ class Patient: Model {
     var exerciseFeedbacks : [Feedback] = []
     var patientSurgery = ""
     
-    func checkIfFeedbackIsDone(date: String) -> Bool
+    func checkIfFeedbackIsDone(date: String) -> String
     {
-        var result = false
-        var dateArray: [String] = []
+        var result = ""
+        
         for exerciseFeedback in exerciseFeedbacks
         {
-            dateArray.append(exerciseFeedback.feedackDate)
+            if date == exerciseFeedback.feedackDate
+            {
+                result = exerciseFeedback.feedback
+            }
         }
         
-        if dateArray.contains(date)
-        {
-            result = true
-        }
         return result
     }
     

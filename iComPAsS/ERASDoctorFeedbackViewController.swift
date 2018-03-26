@@ -32,6 +32,7 @@ class ERASDoctorFeedbackViewController: UIViewController, UITextViewDelegate {
     var feedbackWarning = UIAlertController(title: "Warning", message: "You can only submit a feedback once. Are you sure you want to proceed?", preferredStyle: UIAlertControllerStyle.Alert)
     var feedbackSuccessfulSubmit = UIAlertController(title: "Success", message: "The feedback was sent to your patient.", preferredStyle: UIAlertControllerStyle.Alert)
     
+    var givenFeedback = ""
     
     override func viewDidLoad()
     {
@@ -50,7 +51,11 @@ class ERASDoctorFeedbackViewController: UIViewController, UITextViewDelegate {
         blankFeedbackAlert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default) { (action: UIAlertAction) -> Void in })
         
         feedbackIsDoneAlert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default) { (action: UIAlertAction) -> Void in
-            self.dismissViewControllerAnimated(true, completion: nil)
+            //self.dismissViewControllerAnimated(true, completion: nil)
+            self.textView.text = self.givenFeedback
+            self.textView.editable = false
+            self.submitButton.enabled = false
+            self.submitButton.tintColor = UIColor.clearColor()
             })
         
         feedbackWarning.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default) { (action: UIAlertAction) -> Void in
@@ -102,8 +107,10 @@ class ERASDoctorFeedbackViewController: UIViewController, UITextViewDelegate {
             self.activityIndicator.stopAnimating()
             self.activityIndicator.hidden = true
             
-            if self.patient.checkIfFeedbackIsDone(self.dateTodayLabel.text!) == true
+            let givenFeedback = self.patient.checkIfFeedbackIsDone(self.dateTodayLabel.text!)
+            if  givenFeedback != ""
             {
+                self.givenFeedback = givenFeedback
                 self.presentViewController(self.feedbackIsDoneAlert, animated: true, completion: nil)
             }
         })

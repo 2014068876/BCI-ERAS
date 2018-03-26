@@ -93,7 +93,7 @@ class PatientViewProfileViewController: UIViewController {
             }
         }
         
-        if patient.esasEnabled == 1 {
+        if patient.esasFeatureEnabled == 1 && patient.esasEnabled == 1 {
             presentViewController(alert, animated: true, completion: nil)
         }
         

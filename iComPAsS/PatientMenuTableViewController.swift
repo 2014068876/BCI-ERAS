@@ -175,7 +175,7 @@ class PatientMenuTableViewController: UITableViewController {
         let esasEnabled = self.patient.esasFeatureEnabled
         let erasEnabled = self.patient.erasEnabled
         let featuresEnablement = "\(esasEnabled)\(erasEnabled)"
-          print(featuresEnablement)
+          print(">>>>>> \(featuresEnablement)")
         
         if (featuresEnablement == "01")
         {
