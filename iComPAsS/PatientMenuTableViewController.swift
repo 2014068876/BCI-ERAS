@@ -75,7 +75,7 @@ class PatientMenuTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         for index in 0..<tableView.numberOfRowsInSection(indexPath.section) {
             let cellIndexPath = NSIndexPath(forRow: index, inSection: indexPath.section)
-            let cell = tableView.cellForRowAtIndexPath(cellIndexPath)!
+            let cell = tableView.cellForRowAtIndexPath(cellIndexPath) ?? UITableViewCell()
             if index == indexPath.row {
                 cell.backgroundColor = UIColor(red: 254/255, green: 255/255, blue: 197/255, alpha: 1)
             } else {
